@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController
+{
+    NSArray *name;
+    NSArray *location;
+//    NSArray *instructor;
+//    NSArray *startDate;
+//    NSArray *endDate;
+    NSArray *days;
+    NSArray *type;
+}
+
 
 @end
