@@ -71,7 +71,7 @@
                   symbolName = "-[Classes addListOfClassesObject:]"
                   moduleName = "SCDC"
                   urlString = "file://localhost/Users/Leen/Dropbox/SCDC/SCDC/SCDC/Classes.m"
-                  timestampString = "414374273.287279"
+                  timestampString = "414426151.630773"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -85,7 +85,7 @@
                   symbolName = "-[Classes addListOfClassesObject:]"
                   moduleName = "SCDC"
                   urlString = "file://localhost/Users/Leen/Dropbox/SCDC/SCDC/SCDC/Classes.m"
-                  timestampString = "414374273.287743"
+                  timestampString = "414426151.631167"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -98,7 +98,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SCDC/ViewController.m"

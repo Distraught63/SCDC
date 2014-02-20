@@ -15,7 +15,6 @@
 		1D89941918A6CB4400F88DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89941818A6CB4400F88DBA /* main.m */; };
 		1D89941D18A6CB4400F88DBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89941C18A6CB4400F88DBA /* AppDelegate.m */; };
 		1D89942018A6CB4400F88DBA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */; };
-		1D89942318A6CB4400F88DBA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D89942118A6CB4400F88DBA /* Main_iPad.storyboard */; };
 		1D89942618A6CB4400F88DBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89942518A6CB4400F88DBA /* ViewController.m */; };
 		1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D89942718A6CB4400F88DBA /* Images.xcassets */; };
 		1D89942F18A6CB4400F88DBA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89942E18A6CB4400F88DBA /* XCTest.framework */; };
@@ -24,6 +23,7 @@
 		1D89943918A6CB4400F88DBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D89943718A6CB4400F88DBA /* InfoPlist.strings */; };
 		1D89943B18A6CB4400F88DBA /* SCDCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89943A18A6CB4400F88DBA /* SCDCTests.m */; };
 		1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */; };
+		1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */; };
 		1DF3987618A86E1900BD0354 /* Classes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF3987518A86E1900BD0354 /* Classes.m */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,6 @@
 		1D89941B18A6CB4400F88DBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D89941C18A6CB4400F88DBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D89941F18A6CB4400F88DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		1D89942218A6CB4400F88DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		1D89942418A6CB4400F88DBA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1D89942518A6CB4400F88DBA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1D89942718A6CB4400F88DBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -62,6 +61,8 @@
 		1D89943A18A6CB4400F88DBA /* SCDCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCDCTests.m; sourceTree = "<group>"; };
 		1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassCodeViewController.h; sourceTree = "<group>"; };
 		1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassCodeViewController.m; sourceTree = "<group>"; };
+		1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		1DF3987418A86E1900BD0354 /* Classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classes.h; sourceTree = "<group>"; };
 		1DF3987518A86E1900BD0354 /* Classes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,10 +128,11 @@
 				1DF3987518A86E1900BD0354 /* Classes.m */,
 				1D89941B18A6CB4400F88DBA /* AppDelegate.h */,
 				1D89941C18A6CB4400F88DBA /* AppDelegate.m */,
+				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
+				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
 				1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */,
 				1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */,
-				1D89942118A6CB4400F88DBA /* Main_iPad.storyboard */,
 				1D89942418A6CB4400F88DBA /* ViewController.h */,
 				1D89942518A6CB4400F88DBA /* ViewController.m */,
 				1D89942718A6CB4400F88DBA /* Images.xcassets */,
@@ -246,7 +248,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D89942318A6CB4400F88DBA /* Main_iPad.storyboard in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,
 				1D89942018A6CB4400F88DBA /* Main_iPhone.storyboard in Resources */,
 				1D89941718A6CB4400F88DBA /* InfoPlist.strings in Resources */,
@@ -274,6 +275,7 @@
 				1DF3987618A86E1900BD0354 /* Classes.m in Sources */,
 				1D70C7C318A81054006BAD81 /* aClass.m in Sources */,
 				1D89941918A6CB4400F88DBA /* main.m in Sources */,
+				1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,14 +312,6 @@
 				1D89941F18A6CB4400F88DBA /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		1D89942118A6CB4400F88DBA /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D89942218A6CB4400F88DBA /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		1D89943718A6CB4400F88DBA /* InfoPlist.strings */ = {
