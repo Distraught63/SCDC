@@ -95,7 +95,7 @@
                     <navigationItem key="navigationItem" title="Pass Code Check" id="wct-Rw-tAz">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="mZN-cG-5Ct">
                             <connections>
-                                <segue destination="kfr-bF-9Dq" kind="unwind" unwindAction="unwindMainMenu:" id="rhG-ZI-41o"/>
+                                <segue destination="kfr-bF-9Dq" kind="unwind" unwindAction="unwindMainMenu:" id="Ihl-xZ-iWm"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="dCo-yH-70A"/>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="901" y="-621"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="YZK-on-5sg">
             <objects>
-                <viewController id="kdc-zE-eZi" sceneMemberID="viewController">
+                <viewController id="kdc-zE-eZi" customClass="MainMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PQ5-Tk-604"/>
                         <viewControllerLayoutGuide type="bottom" id="CCC-K5-RxG"/>
@@ -135,7 +135,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="q1d-Cy-OHj" kind="push" id="Ln5-gK-5rY"/>
+                                    <segue destination="q1d-Cy-OHj" kind="modal" id="TwD-S3-W6i"/>
                                 </connections>
                             </button>
                         </subviews>
