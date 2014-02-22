@@ -61,10 +61,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//    static NSString *CellIdentifier = @"Cell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    
+    static NSString *nameIdentifier = @"classes";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nameIdentifier];
+    
+    UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
+    
+    
+    classNameLabel.text = name[indexPath.row];
     
     return cell;
 }
