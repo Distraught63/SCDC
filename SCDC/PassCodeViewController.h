@@ -10,10 +10,9 @@
 
 @interface PassCodeViewController : UIViewController {
 
-    IBOutlet UITextField *passwordField;
+   // IBOutlet UITextField *passwordField;
 }
 
-- (IBAction)enterPassword;
-
+//- (IBAction)enterPassword;
 
 @end

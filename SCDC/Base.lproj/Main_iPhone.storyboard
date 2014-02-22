@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="1072" y="17"/>
         </scene>
-        <!--Pass Code View Controller - Log In-->
+        <!--Pass Code View Controller - Faculty Login-->
         <scene sceneID="b7o-9B-bAG">
             <objects>
                 <viewController id="W7R-69-7mk" customClass="PassCodeViewController" sceneMemberID="viewController">
@@ -75,24 +75,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pass Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLq-jl-GNU">
-                                <rect key="frame" x="123" y="137" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Enter Passcode" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRe-z0-AIv">
-                                <rect key="frame" x="112" y="194" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UM-ME-YPu">
+                                <rect key="frame" x="0.0" y="61" width="320" height="507"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.47058826684951782" green="0.47058826684951782" blue="0.47058826684951782" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="tintColor" red="0.0" green="0.58156040450000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Log In" id="wct-Rw-tAz">
+                    <navigationItem key="navigationItem" title="Faculty Login" id="wct-Rw-tAz">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="mZN-cG-5Ct">
                             <connections>
                                 <segue destination="kfr-bF-9Dq" kind="unwind" unwindAction="unwindMainMenu:" id="Ihl-xZ-iWm"/>
@@ -104,7 +95,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcG-6f-kZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kfr-bF-9Dq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="617" y="-697"/>
+            <point key="canvasLocation" x="629" y="-697"/>
         </scene>
         <!--Table View Controller - Classes-->
         <scene sceneID="5Ya-DC-9aj">

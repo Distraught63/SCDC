@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
 		1D89940D18A6CB4400F88DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940C18A6CB4400F88DBA /* Foundation.framework */; };
 		1D89940F18A6CB4400F88DBA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940E18A6CB4400F88DBA /* CoreGraphics.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D4D268118B83D3D0019392A /* scdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scdc.jpg; sourceTree = "<group>"; };
 		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
 		1D70C7C218A81054006BAD81 /* aClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aClass.m; sourceTree = "<group>"; };
 		1D89940918A6CB4400F88DBA /* SCDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 			children = (
 				1D89941418A6CB4400F88DBA /* SCDC-Info.plist */,
 				1D89941518A6CB4400F88DBA /* InfoPlist.strings */,
+				1D4D268118B83D3D0019392A /* scdc.jpg */,
 				1D89941818A6CB4400F88DBA /* main.m */,
 				1D89941A18A6CB4400F88DBA /* SCDC-Prefix.pch */,
 			);
@@ -253,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4D268218B83D3D0019392A /* scdc.jpg in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,
 				1D89942018A6CB4400F88DBA /* Main_iPhone.storyboard in Resources */,
 				1D89941718A6CB4400F88DBA /* InfoPlist.strings in Resources */,
