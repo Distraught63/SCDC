@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PassCodeViewController : UIViewController
+@interface PassCodeViewController : UIViewController {
+
+    IBOutlet UITextField *passwordField;
+}
+
+- (IBAction)enterPassword;
+
 
 @end
