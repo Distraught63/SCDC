@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D446EAF18E4DF67001778E5 /* ClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAC18E4DF67001778E5 /* ClassInfo.m */; };
+		1D446EB018E4DF67001778E5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAE18E4DF67001778E5 /* Student.m */; };
+		1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EB218E4DF76001778E5 /* FTPHelper.m */; };
+		1D446EBF18E4E004001778E5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EB618E4E004001778E5 /* FMDatabase.m */; };
+		1D446EC018E4E004001778E5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EB818E4E004001778E5 /* FMDatabaseAdditions.m */; };
+		1D446EC118E4E004001778E5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EBA18E4E004001778E5 /* FMDatabasePool.m */; };
+		1D446EC218E4E004001778E5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EBC18E4E004001778E5 /* FMDatabaseQueue.m */; };
+		1D446EC318E4E004001778E5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EBE18E4E004001778E5 /* FMResultSet.m */; };
+		1D446EDA18E4E08E001778E5 /* BRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EC718E4E08E001778E5 /* BRRequest.m */; };
+		1D446EDB18E4E08E001778E5 /* BRRequest+_UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EC918E4E08E001778E5 /* BRRequest+_UserData.m */; };
+		1D446EDC18E4E08E001778E5 /* BRRequestCreateDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ECB18E4E08E001778E5 /* BRRequestCreateDirectory.m */; };
+		1D446EDD18E4E08E001778E5 /* BRRequestDelete.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ECD18E4E08E001778E5 /* BRRequestDelete.m */; };
+		1D446EDE18E4E08E001778E5 /* BRRequestDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ECF18E4E08E001778E5 /* BRRequestDownload.m */; };
+		1D446EDF18E4E08E001778E5 /* BRRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ED118E4E08E001778E5 /* BRRequestError.m */; };
+		1D446EE018E4E08E001778E5 /* BRRequestListDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ED318E4E08E001778E5 /* BRRequestListDirectory.m */; };
+		1D446EE118E4E08E001778E5 /* BRRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ED518E4E08E001778E5 /* BRRequestQueue.m */; };
+		1D446EE218E4E08E001778E5 /* BRRequestUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ED718E4E08E001778E5 /* BRRequestUpload.m */; };
+		1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ED918E4E08E001778E5 /* BRStreamInfo.m */; };
 		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
@@ -41,6 +59,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D446EAB18E4DF67001778E5 /* ClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfo.h; sourceTree = "<group>"; };
+		1D446EAC18E4DF67001778E5 /* ClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassInfo.m; sourceTree = "<group>"; };
+		1D446EAD18E4DF67001778E5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		1D446EAE18E4DF67001778E5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		1D446EB118E4DF76001778E5 /* FTPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPHelper.h; sourceTree = "<group>"; };
+		1D446EB218E4DF76001778E5 /* FTPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPHelper.m; sourceTree = "<group>"; };
+		1D446EB518E4E004001778E5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		1D446EB618E4E004001778E5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		1D446EB718E4E004001778E5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		1D446EB818E4E004001778E5 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		1D446EB918E4E004001778E5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		1D446EBA18E4E004001778E5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		1D446EBB18E4E004001778E5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		1D446EBC18E4E004001778E5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		1D446EBD18E4E004001778E5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		1D446EBE18E4E004001778E5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		1D446EC518E4E08E001778E5 /* BRGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRGlobal.h; sourceTree = "<group>"; };
+		1D446EC618E4E08E001778E5 /* BRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequest.h; sourceTree = "<group>"; };
+		1D446EC718E4E08E001778E5 /* BRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequest.m; sourceTree = "<group>"; };
+		1D446EC818E4E08E001778E5 /* BRRequest+_UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BRRequest+_UserData.h"; sourceTree = "<group>"; };
+		1D446EC918E4E08E001778E5 /* BRRequest+_UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BRRequest+_UserData.m"; sourceTree = "<group>"; };
+		1D446ECA18E4E08E001778E5 /* BRRequestCreateDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestCreateDirectory.h; sourceTree = "<group>"; };
+		1D446ECB18E4E08E001778E5 /* BRRequestCreateDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestCreateDirectory.m; sourceTree = "<group>"; };
+		1D446ECC18E4E08E001778E5 /* BRRequestDelete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestDelete.h; sourceTree = "<group>"; };
+		1D446ECD18E4E08E001778E5 /* BRRequestDelete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestDelete.m; sourceTree = "<group>"; };
+		1D446ECE18E4E08E001778E5 /* BRRequestDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestDownload.h; sourceTree = "<group>"; };
+		1D446ECF18E4E08E001778E5 /* BRRequestDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestDownload.m; sourceTree = "<group>"; };
+		1D446ED018E4E08E001778E5 /* BRRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestError.h; sourceTree = "<group>"; };
+		1D446ED118E4E08E001778E5 /* BRRequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestError.m; sourceTree = "<group>"; };
+		1D446ED218E4E08E001778E5 /* BRRequestListDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestListDirectory.h; sourceTree = "<group>"; };
+		1D446ED318E4E08E001778E5 /* BRRequestListDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestListDirectory.m; sourceTree = "<group>"; };
+		1D446ED418E4E08E001778E5 /* BRRequestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestQueue.h; sourceTree = "<group>"; };
+		1D446ED518E4E08E001778E5 /* BRRequestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestQueue.m; sourceTree = "<group>"; };
+		1D446ED618E4E08E001778E5 /* BRRequestUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRRequestUpload.h; sourceTree = "<group>"; };
+		1D446ED718E4E08E001778E5 /* BRRequestUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestUpload.m; sourceTree = "<group>"; };
+		1D446ED818E4E08E001778E5 /* BRStreamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStreamInfo.h; sourceTree = "<group>"; };
+		1D446ED918E4E08E001778E5 /* BRStreamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStreamInfo.m; sourceTree = "<group>"; };
 		1D4D268118B83D3D0019392A /* scdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scdc.jpg; sourceTree = "<group>"; };
 		1D4D268318B84CCF0019392A /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = SCDC/logo2.png; sourceTree = SOURCE_ROOT; };
 		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
@@ -98,6 +153,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D446EAA18E4DF57001778E5 /* Database Items */ = {
+			isa = PBXGroup;
+			children = (
+				1D446EAB18E4DF67001778E5 /* ClassInfo.h */,
+				1D446EAC18E4DF67001778E5 /* ClassInfo.m */,
+				1D446EAD18E4DF67001778E5 /* Student.h */,
+				1D446EAE18E4DF67001778E5 /* Student.m */,
+			);
+			name = "Database Items";
+			sourceTree = "<group>";
+		};
+		1D446EB418E4DFF1001778E5 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				1D446EB518E4E004001778E5 /* FMDatabase.h */,
+				1D446EB618E4E004001778E5 /* FMDatabase.m */,
+				1D446EB718E4E004001778E5 /* FMDatabaseAdditions.h */,
+				1D446EB818E4E004001778E5 /* FMDatabaseAdditions.m */,
+				1D446EB918E4E004001778E5 /* FMDatabasePool.h */,
+				1D446EBA18E4E004001778E5 /* FMDatabasePool.m */,
+				1D446EBB18E4E004001778E5 /* FMDatabaseQueue.h */,
+				1D446EBC18E4E004001778E5 /* FMDatabaseQueue.m */,
+				1D446EBD18E4E004001778E5 /* FMResultSet.h */,
+				1D446EBE18E4E004001778E5 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		1D446EC418E4E029001778E5 /* BlackRaccoon */ = {
+			isa = PBXGroup;
+			children = (
+				1D446EC518E4E08E001778E5 /* BRGlobal.h */,
+				1D446EC618E4E08E001778E5 /* BRRequest.h */,
+				1D446EC718E4E08E001778E5 /* BRRequest.m */,
+				1D446EC818E4E08E001778E5 /* BRRequest+_UserData.h */,
+				1D446EC918E4E08E001778E5 /* BRRequest+_UserData.m */,
+				1D446ECA18E4E08E001778E5 /* BRRequestCreateDirectory.h */,
+				1D446ECB18E4E08E001778E5 /* BRRequestCreateDirectory.m */,
+				1D446ECC18E4E08E001778E5 /* BRRequestDelete.h */,
+				1D446ECD18E4E08E001778E5 /* BRRequestDelete.m */,
+				1D446ECE18E4E08E001778E5 /* BRRequestDownload.h */,
+				1D446ECF18E4E08E001778E5 /* BRRequestDownload.m */,
+				1D446ED018E4E08E001778E5 /* BRRequestError.h */,
+				1D446ED118E4E08E001778E5 /* BRRequestError.m */,
+				1D446ED218E4E08E001778E5 /* BRRequestListDirectory.h */,
+				1D446ED318E4E08E001778E5 /* BRRequestListDirectory.m */,
+				1D446ED418E4E08E001778E5 /* BRRequestQueue.h */,
+				1D446ED518E4E08E001778E5 /* BRRequestQueue.m */,
+				1D446ED618E4E08E001778E5 /* BRRequestUpload.h */,
+				1D446ED718E4E08E001778E5 /* BRRequestUpload.m */,
+				1D446ED818E4E08E001778E5 /* BRStreamInfo.h */,
+				1D446ED918E4E08E001778E5 /* BRStreamInfo.m */,
+			);
+			name = BlackRaccoon;
+			sourceTree = "<group>";
+		};
 		1D89940018A6CB4400F88DBA = {
 			isa = PBXGroup;
 			children = (
@@ -131,13 +242,18 @@
 		1D89941218A6CB4400F88DBA /* SCDC */ = {
 			isa = PBXGroup;
 			children = (
-				1DF3987418A86E1900BD0354 /* Classes.h */,
+				1D446EB418E4DFF1001778E5 /* FMDB */,
+				1D446EC418E4E029001778E5 /* BlackRaccoon */,
+				1D446EAA18E4DF57001778E5 /* Database Items */,
 				1DF3987518A86E1900BD0354 /* Classes.m */,
+				1DF3987418A86E1900BD0354 /* Classes.h */,
 				1D89941B18A6CB4400F88DBA /* AppDelegate.h */,
 				1D89941C18A6CB4400F88DBA /* AppDelegate.m */,
 				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
 				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
+				1D446EB118E4DF76001778E5 /* FTPHelper.h */,
+				1D446EB218E4DF76001778E5 /* FTPHelper.m */,
 				55C1925C18B82A520093B1E7 /* ClassesViewController.h */,
 				55C1925D18B82A520093B1E7 /* ClassesViewController.m */,
 				1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */,
@@ -282,12 +398,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D446EAF18E4DF67001778E5 /* ClassInfo.m in Sources */,
 				1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */,
 				1D89942618A6CB4400F88DBA /* ViewController.m in Sources */,
+				1D446EBF18E4E004001778E5 /* FMDatabase.m in Sources */,
+				1D446EDD18E4E08E001778E5 /* BRRequestDelete.m in Sources */,
 				1D89941D18A6CB4400F88DBA /* AppDelegate.m in Sources */,
+				1D446EC218E4E004001778E5 /* FMDatabaseQueue.m in Sources */,
+				1D446EE218E4E08E001778E5 /* BRRequestUpload.m in Sources */,
+				1D446EC318E4E004001778E5 /* FMResultSet.m in Sources */,
+				1D446EDA18E4E08E001778E5 /* BRRequest.m in Sources */,
+				1D446EE018E4E08E001778E5 /* BRRequestListDirectory.m in Sources */,
+				1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */,
 				1DF3987618A86E1900BD0354 /* Classes.m in Sources */,
 				1D70C7C318A81054006BAD81 /* aClass.m in Sources */,
+				1D446EDC18E4E08E001778E5 /* BRRequestCreateDirectory.m in Sources */,
+				1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */,
+				1D446EC018E4E004001778E5 /* FMDatabaseAdditions.m in Sources */,
 				1D89941918A6CB4400F88DBA /* main.m in Sources */,
+				1D446EB018E4DF67001778E5 /* Student.m in Sources */,
+				1D446EDF18E4E08E001778E5 /* BRRequestError.m in Sources */,
+				1D446EDB18E4E08E001778E5 /* BRRequest+_UserData.m in Sources */,
+				1D446EC118E4E004001778E5 /* FMDatabasePool.m in Sources */,
+				1D446EDE18E4E08E001778E5 /* BRRequestDownload.m in Sources */,
+				1D446EE118E4E08E001778E5 /* BRRequestQueue.m in Sources */,
 				1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */,
 				55C1925E18B82A520093B1E7 /* ClassesViewController.m in Sources */,
 			);
