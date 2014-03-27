@@ -25,6 +25,7 @@
 		1D446EE118E4E08E001778E5 /* BRRequestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ED518E4E08E001778E5 /* BRRequestQueue.m */; };
 		1D446EE218E4E08E001778E5 /* BRRequestUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ED718E4E08E001778E5 /* BRRequestUpload.m */; };
 		1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446ED918E4E08E001778E5 /* BRStreamInfo.m */; };
+		1D446EE618E4E107001778E5 /* Dates.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EE518E4E107001778E5 /* Dates.m */; };
 		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
@@ -96,6 +97,8 @@
 		1D446ED718E4E08E001778E5 /* BRRequestUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRRequestUpload.m; sourceTree = "<group>"; };
 		1D446ED818E4E08E001778E5 /* BRStreamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStreamInfo.h; sourceTree = "<group>"; };
 		1D446ED918E4E08E001778E5 /* BRStreamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStreamInfo.m; sourceTree = "<group>"; };
+		1D446EE418E4E107001778E5 /* Dates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dates.h; sourceTree = "<group>"; };
+		1D446EE518E4E107001778E5 /* Dates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dates.m; sourceTree = "<group>"; };
 		1D4D268118B83D3D0019392A /* scdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scdc.jpg; sourceTree = "<group>"; };
 		1D4D268318B84CCF0019392A /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = SCDC/logo2.png; sourceTree = SOURCE_ROOT; };
 		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
 				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
+				1D446EE418E4E107001778E5 /* Dates.h */,
+				1D446EE518E4E107001778E5 /* Dates.m */,
 				1D446EB118E4DF76001778E5 /* FTPHelper.h */,
 				1D446EB218E4DF76001778E5 /* FTPHelper.m */,
 				55C1925C18B82A520093B1E7 /* ClassesViewController.h */,
@@ -422,6 +427,7 @@
 				1D446EC118E4E004001778E5 /* FMDatabasePool.m in Sources */,
 				1D446EDE18E4E08E001778E5 /* BRRequestDownload.m in Sources */,
 				1D446EE118E4E08E001778E5 /* BRRequestQueue.m in Sources */,
+				1D446EE618E4E107001778E5 /* Dates.m in Sources */,
 				1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */,
 				55C1925E18B82A520093B1E7 /* ClassesViewController.m in Sources */,
 			);

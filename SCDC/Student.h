@@ -19,8 +19,8 @@
 @property (readonly,retain) NSString *firstName;
 @property (readonly,retain) NSString *lasttName;
 
+//Contact Info
 @property (nonatomic,strong) NSString *email;
 @property (nonatomic,strong) NSString *phone;
-@property (nonatomic,strong) NSString *location;
 
 @end

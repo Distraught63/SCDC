@@ -10,4 +10,8 @@
 
 @implementation Student
 
+
+//Creates the get and set methods for these instances.
+@synthesize studentId,firstName,lasttName, phone, email;
+
 @end
