@@ -9,12 +9,48 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //Database Creation
+    self.databaseName = @"Customers.db";
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = [documentPaths objectAtIndex:0];
+    self.databasePath = [documentDir stringByAppendingPathComponent:self.databaseName];
+    
+    
+    [self createAndCheckDatabase];
+    [self createAndCheckWithRemote:nil];
+    
     return YES;
+    
 }
+-(void) createAndCheckWithRemote:(CustomersViewController *)delegate
+{
+    
+    NSLog(@"Downloading remote database...");
+    
+    FTPHelper *ftp = [[FTPHelper alloc] init];
+    
+    [ftp downloadFile:delegate];
+    
+}
+
+//Creates the database from the database stored in supporting files in case there was no internet connection.
+-(void) createAndCheckDatabase
+{
+    BOOL success;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    success = [fileManager fileExistsAtPath:self.databasePath];
+    
+    if(success) return;
+    
+    NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseName];
+    
+    [fileManager copyItemAtPath:databasePathFromApp toPath: self.databasePath error:nil];
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 GAI. All rights reserved.
 //
 
+
+//Note: Code between two // are changes made by Tim so that the view is updated when the download is complete.
+
 #import <Foundation/Foundation.h>
 
 //---------- include files
@@ -15,13 +18,14 @@
 #import "BRRequestDownload.h"
 #import "BRRequestDelete.h"
 #import "BRRequest+_UserData.h"
+
 //
 @class CustomersViewController;
 //
 
 
-#define path1 @"/Dropbox/Customers.db"//@"Users/Leen/Dropbox/" //@"/public_html/SCDC/AppFiles/Customers.db"
-#define hostname1 @"155.41.119.21"//@"ftp.leenalshenibr.com"
+#define path1 @"/Dropbox/scdc.db"
+#define hostname1 @"155.41.119.21"
 #define username1 @"leen"
 #define password1 @"S"
 
@@ -38,6 +42,7 @@
     NSMutableData *downloadData;
     NSData *uploadData;
 }
+
 //
 @property (nonatomic,weak) CustomersViewController * delegate;
 //

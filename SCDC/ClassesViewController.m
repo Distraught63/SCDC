@@ -7,6 +7,9 @@
 //
 
 #import "ClassesViewController.h"
+#import "Classes.h"
+#import "AddCustomerViewController.h"
+#import "AppDelegate.h"
 
 @interface ClassesViewController ()
 
@@ -14,19 +17,33 @@
 
 @implementation ClassesViewController
 
-
+@synthesize classes;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self populateClasses];
     
+    //
+    AppDelegate * appDelegate = [[UIApplication sharedApplication]delegate];
     
-    name = [NSMutableArray arrayWithObjects:@"Introduction to MS Powerpoint",@"Introduction to Multimedia", @"Introduction to Basic Computer Skills",@"Introduction to MS Word ", @"Introduction to Basic Computers ",nil];
-
+    //
     
+    [appDelegate createAndCheckWithRemote:self];
 }
+
+
+//Gets the list of classes from the database and stores them in the classes array.In other words, populates the classes array.
+-(void) populateClasses
+{
+    self.classes = [[NSMutableArray alloc] init];
+    
+    DatabaseAccess *db = [[DatabaseAccess alloc] init];
+    
+    self.classes = [db getClasses];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -34,9 +51,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)unwindToClassess:(UIStoryboardSegue *)segue:(UIStoryboardSegue *)segue
+{
+    //To Show changes (The added customer)
+    
+//    AddCustomerViewController *source = [segue sourceViewController];
+//    Customer *newCustomer = source.customer;
+//    if (newCustomer != nil) {
+//        [self.class addObject:newClass];
+//        [self.tableView reloadData];
+//    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [name count];
+    return [classes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -47,7 +76,7 @@
     
     UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
     
-    classNameLabel.text = name[indexPath.row];
+    classNameLabel.text = classes[indexPath.row];
     
     return cell;
 }

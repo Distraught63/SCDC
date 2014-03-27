@@ -7,13 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DatabaseAccess.h"
+#import "FTPHelper.h"
+#import "FMDatabase.h"
+#import "Utility.h"
 
 @interface ClassesViewController : UITableViewController
 {
-     NSArray *name;
 }
-//- (IBAction)unwindClassess:(UIStoryboardSegue *)segue;
 
 
+
+@property (nonatomic,strong) NSMutableArray *classes;
+
+//Gets the array of classes
+-(void) populateClasses;
+
+//Navigate back to this view
+- (IBAction)unwindToClassess:(UIStoryboardSegue *)segue;
+
+//Refresh the view when the download is complete
+-(void) ftpDidFinishRefreshing;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  Class.h
+//  ClassInfo.h
 //  SCDC
 //
 //  Created by Leen  on 3/27/14.
@@ -13,7 +13,7 @@
 
 //From schema
 @property (nonatomic,assign) int classId;
-@property (readonly,retain) NSString *name;
+@property (nonatomic,retain) NSString *name;
 @property (nonatomic,strong) NSString *time;
 @property (nonatomic,strong) NSString *day;
 @property (nonatomic,strong) NSString *location;
