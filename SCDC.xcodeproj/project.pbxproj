@@ -30,6 +30,7 @@
 		1D446EF618E4F275001778E5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D446EF518E4F275001778E5 /* libsqlite3.0.dylib */; };
 		1D446EF818E4F284001778E5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D446EF718E4F284001778E5 /* CFNetwork.framework */; };
 		1D446EFA18E4F3D2001778E5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EF918E4F3D2001778E5 /* FMDatabase.m */; };
+		1D446EFC18E504AD001778E5 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D446EFB18E4F968001778E5 /* scdc.db */; };
 		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
@@ -400,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D446EFC18E504AD001778E5 /* scdc.db in Resources */,
 				1D4D268218B83D3D0019392A /* scdc.jpg in Resources */,
 				1D4D268418B84CCF0019392A /* logo2.png in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,

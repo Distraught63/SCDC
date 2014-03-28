@@ -22,6 +22,8 @@
     return path;
 }
 
+
+
 +(void) showAlert:(NSString *)title message:(NSString *)msg
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
@@ -37,9 +39,9 @@
 //    NSURL  *url = [NSURL URLWithString:stringURL];
 ////    NSData *urlData = [NSData dataWithContentsOfURL:url];
 //    NSData *urlData = [[NSData alloc] initWithContentsOfURL: url];
-//    
+//
 //    return urlData;
-//    
+//
 //}
 
 //Not needed anymore

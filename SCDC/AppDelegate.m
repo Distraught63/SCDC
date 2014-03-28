@@ -19,8 +19,8 @@
     self.databasePath = [documentDir stringByAppendingPathComponent:self.databaseName];
     
     
-    [self createAndCheckDatabase];
     [self createAndCheckWithRemote:nil];
+    [self createAndCheckDatabase];
     
     return YES;
     
@@ -39,6 +39,7 @@
 //Creates the database from the database stored in supporting files in case there was no internet connection.
 -(void) createAndCheckDatabase
 {
+    NSLog(@"Copying Database.....");
     BOOL success;
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -49,6 +50,8 @@
     NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseName];
     
     [fileManager copyItemAtPath:databasePathFromApp toPath: self.databasePath error:nil];
+    
+    NSLog(@"Database coppied over.");
 }
 
 							
