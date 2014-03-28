@@ -12,7 +12,7 @@
 #import "FMDatabase.h"
 #import "Utility.h"
 
-@class  CustomersViewController;
+@class  ClassesViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -24,7 +24,7 @@
 
 -(void) createAndCheckDatabase;
 
--(void) createAndCheckWithRemote: (CustomersViewController *)delegate;
+-(void) createAndCheckWithRemote: (ClassesViewController *)delegate;
 
 
 @end

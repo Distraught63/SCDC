@@ -8,7 +8,7 @@
 
 #import "FTPHelper.h"
 #import "Utility.h"
-#import "CustomersViewController.h"
+#import "ClassesViewController.h"
 
 @implementation FTPHelper
 
@@ -21,7 +21,7 @@
     downloadFile = [[BRRequestDownload alloc] initWithDelegate: self];
     
     //
-    CustomersViewController * vc = sender;
+    ClassesViewController * vc = sender;
     //
     
     self.delegate = vc;

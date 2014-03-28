@@ -14,7 +14,7 @@
 +(NSString *) getDatabasePath;
 +(void) showAlert:(NSString *) title message:(NSString *) msg;
 
-+(NSData *) getRemoteDatabase;
+//+(NSData *) getRemoteDatabase;
 
 //+(NSString *) getUrl;//Not needed anymore.
 

@@ -20,12 +20,12 @@
 #import "BRRequest+_UserData.h"
 
 //
-@class CustomersViewController;
+@class ClassesViewController;
 //
 
 
 #define path1 @"/Dropbox/scdc.db"
-#define hostname1 @"155.41.119.21"
+#define hostname1 @"155.41.119.7"
 #define username1 @"leen"
 #define password1 @"S"
 
@@ -44,7 +44,7 @@
 }
 
 //
-@property (nonatomic,weak) CustomersViewController * delegate;
+@property (nonatomic,weak) ClassesViewController* delegate;
 //
 - (IBAction)downloadFile: (id) sender;
 

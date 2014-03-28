@@ -65,7 +65,7 @@
     FMResultSet *results = [db executeQuery:@"select * from class"];
     
     //Number of columns
-//    NSLog(@"Number of columns in customers is : %d",results.columnCount);
+    NSLog(@"Number of columns in classes is : %d",results.columnCount);
     
     //Iterate through rows in table
     while([results next])

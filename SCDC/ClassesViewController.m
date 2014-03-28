@@ -8,7 +8,7 @@
 
 #import "ClassesViewController.h"
 #import "Classes.h"
-#import "AddCustomerViewController.h"
+//#import "AddCustomerViewController.h"
 #import "AppDelegate.h"
 
 @interface ClassesViewController ()
@@ -51,7 +51,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)unwindToClassess:(UIStoryboardSegue *)segue:(UIStoryboardSegue *)segue
+- (IBAction)unwindToClassess:(UIStoryboardSegue *)segue;
 {
     //To Show changes (The added customer)
     
@@ -74,11 +74,20 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:nameIdentifier];
     
+    ClassInfo *class = [self.classes objectAtIndex:[indexPath row]];
+    
     UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
     
-    classNameLabel.text = classes[indexPath.row];
+    NSLog(@"Class is %@", class.name);
+    classNameLabel.text = class.name;
     
     return cell;
+}
+
+-(void)ftpDidFinishRefreshing
+{
+    [self populateClasses];
+    [self.tableView reloadData];
 }
 
 

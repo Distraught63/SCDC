@@ -12,7 +12,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Database Creation
-    self.databaseName = @"Customers.db";
+    self.databaseName = @"scdc.db";
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [documentPaths objectAtIndex:0];
@@ -25,7 +25,7 @@
     return YES;
     
 }
--(void) createAndCheckWithRemote:(CustomersViewController *)delegate
+-(void) createAndCheckWithRemote:(ClassesViewController *)delegate
 {
     
     NSLog(@"Downloading remote database...");
