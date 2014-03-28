@@ -63,6 +63,7 @@
 //    }
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [classes count];
@@ -84,11 +85,14 @@
     return cell;
 }
 
+//Refreshes table view when download is done.
+//
 -(void)ftpDidFinishRefreshing
 {
     [self populateClasses];
     [self.tableView reloadData];
 }
+//
 
 
 

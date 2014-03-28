@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define pass @"1234"
+
 @interface PassCodeViewController : UIViewController {
 
-   // IBOutlet UITextField *passwordField;
+   IBOutlet UITextField *passwordField;
 }
 
-//- (IBAction)enterPassword;
+-(void) alertUserOfIncorrectPasscode;
+-(IBAction)isPasscodeCorrect:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "PassCodeViewController.h"
+#import "ClassesViewController.h"
 
 @interface PassCodeViewController ()
 
@@ -28,9 +29,37 @@
     
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scdc.jpg"]];
     self.view.backgroundColor = background;
-
+    
 	// Do any additional setup after loading the view.
     
+}
+
+-(IBAction)isPasscodeCorrect:(id)sender
+{
+    
+    
+    if (passwordField.text.length == pass.length && [passwordField.text  isEqual: pass])
+    {
+        [self performSegueWithIdentifier: @"PassToClasses" sender: self];
+    }
+    else
+    {
+        [self alertUserOfIncorrectPasscode];
+    }
+    
+    
+    
+    
+    
+}
+
+
+
+-(void) alertUserOfIncorrectPasscode
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Incorrect Password" message:@"The passcode inserted is incorrect! Please try again" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    
+    [alert show];
 }
 
 

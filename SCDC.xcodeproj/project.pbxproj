@@ -228,6 +228,19 @@
 			name = BlackRaccoon;
 			sourceTree = "<group>";
 		};
+		1D446EFD18E5074F001778E5 /* Database Access and Sync */ = {
+			isa = PBXGroup;
+			children = (
+				1D446EB118E4DF76001778E5 /* FTPHelper.h */,
+				1D446EB218E4DF76001778E5 /* FTPHelper.m */,
+				1D446EEA18E4E550001778E5 /* Utility.h */,
+				1D446EEB18E4E550001778E5 /* Utility.m */,
+				1D446EED18E4E612001778E5 /* DatabaseAccess.h */,
+				1D446EEE18E4E612001778E5 /* DatabaseAccess.m */,
+			);
+			name = "Database Access and Sync";
+			sourceTree = "<group>";
+		};
 		1D89940018A6CB4400F88DBA = {
 			isa = PBXGroup;
 			children = (
@@ -266,19 +279,14 @@
 				1D446EB418E4DFF1001778E5 /* FMDB */,
 				1D446EC418E4E029001778E5 /* BlackRaccoon */,
 				1D446EAA18E4DF57001778E5 /* Database Items */,
-				1DF3987518A86E1900BD0354 /* Classes.m */,
+				1D446EFD18E5074F001778E5 /* Database Access and Sync */,
 				1DF3987418A86E1900BD0354 /* Classes.h */,
 				1D89941B18A6CB4400F88DBA /* AppDelegate.h */,
 				1D89941C18A6CB4400F88DBA /* AppDelegate.m */,
+				1DF3987518A86E1900BD0354 /* Classes.m */,
 				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
 				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
-				1D446EB118E4DF76001778E5 /* FTPHelper.h */,
-				1D446EB218E4DF76001778E5 /* FTPHelper.m */,
-				1D446EEA18E4E550001778E5 /* Utility.h */,
-				1D446EEB18E4E550001778E5 /* Utility.m */,
-				1D446EED18E4E612001778E5 /* DatabaseAccess.h */,
-				1D446EEE18E4E612001778E5 /* DatabaseAccess.m */,
 				55C1925C18B82A520093B1E7 /* ClassesViewController.h */,
 				55C1925D18B82A520093B1E7 /* ClassesViewController.m */,
 				1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */,
