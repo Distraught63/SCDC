@@ -65,12 +65,12 @@
 //    }
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    
-    // Return the number of sections.
-    return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    
+//    // Return the number of sections.
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -87,11 +87,14 @@
     
     ClassInfo *class = [self.classes objectAtIndex:[indexPath row]];
     
-    UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
+//    UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
+    
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ ",class.name]];
+    return cell;
     
     
-    NSLog(@"Class is %@", class.name);
-    classNameLabel.text = class.name;
+//    NSLog(@"Class is %@", class.name);
+//    classNameLabel.text = class.name;
     
     return cell;
 }
