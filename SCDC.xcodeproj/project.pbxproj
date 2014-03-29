@@ -31,6 +31,7 @@
 		1D446EF818E4F284001778E5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D446EF718E4F284001778E5 /* CFNetwork.framework */; };
 		1D446EFA18E4F3D2001778E5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EF918E4F3D2001778E5 /* FMDatabase.m */; };
 		1D446EFC18E504AD001778E5 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D446EFB18E4F968001778E5 /* scdc.db */; };
+		1D446F0018E657E6001778E5 /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EFF18E657E6001778E5 /* AttendanceViewController.m */; };
 		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
@@ -111,6 +112,8 @@
 		1D446EF718E4F284001778E5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1D446EF918E4F3D2001778E5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		1D446EFB18E4F968001778E5 /* scdc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scdc.db; sourceTree = "<group>"; };
+		1D446EFE18E657E6001778E5 /* AttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceViewController.h; sourceTree = "<group>"; };
+		1D446EFF18E657E6001778E5 /* AttendanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceViewController.m; sourceTree = "<group>"; };
 		1D4D268118B83D3D0019392A /* scdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scdc.jpg; sourceTree = "<group>"; };
 		1D4D268318B84CCF0019392A /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = SCDC/logo2.png; sourceTree = SOURCE_ROOT; };
 		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 				1D446EAA18E4DF57001778E5 /* Database Items */,
 				1D446EFD18E5074F001778E5 /* Database Access and Sync */,
 				1DF3987418A86E1900BD0354 /* Classes.h */,
+				1D446EFE18E657E6001778E5 /* AttendanceViewController.h */,
+				1D446EFF18E657E6001778E5 /* AttendanceViewController.m */,
 				1D89941B18A6CB4400F88DBA /* AppDelegate.h */,
 				1D89941C18A6CB4400F88DBA /* AppDelegate.m */,
 				1DF3987518A86E1900BD0354 /* Classes.m */,
@@ -444,6 +449,7 @@
 				1D446EFA18E4F3D2001778E5 /* FMDatabase.m in Sources */,
 				1D446EE218E4E08E001778E5 /* BRRequestUpload.m in Sources */,
 				1D446EC318E4E004001778E5 /* FMResultSet.m in Sources */,
+				1D446F0018E657E6001778E5 /* AttendanceViewController.m in Sources */,
 				1D446EDA18E4E08E001778E5 /* BRRequest.m in Sources */,
 				1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */,
 				1DF3987618A86E1900BD0354 /* Classes.m in Sources */,

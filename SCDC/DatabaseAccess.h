@@ -21,6 +21,8 @@
 
 -(NSMutableArray *) getClasses;
 
+-(NSMutableArray *) getStudentsInClass: (ClassInfo *) theClass;
+
 //Will be implement later
 //-(BOOL) insertStudent:(Student *) student;
 //-(BOOL) updateStudent:(Student *) student;

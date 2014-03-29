@@ -48,6 +48,20 @@
 //
 
 
+-(NSMutableArray *) getStudentsInClass: (ClassInfo *) theClass
+{
+    
+    NSMutableArray *students = [[NSMutableArray alloc] init];
+    
+    //Open Database
+    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
+    [db open];
+    
+    
+    return NULL;
+}
+
+
 -(NSMutableArray *) getClasses
 {
     NSMutableArray *classes = [[NSMutableArray alloc] init];
