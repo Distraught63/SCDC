@@ -99,16 +99,10 @@
     return cell;
 }
 
-// Selects a specific class and displays data on next ViewController for that class
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//    ClassInfo *class = [self.classes objectAtIndex:[indexPath row]];
-//    
-//    [self performSegueWithIdentifier:@"temp" sender:class];
-//    
-//}
 
+
+
+//Solution with a good explanation is in this link : https://developer.apple.com/library/ios/documentation/userexperience/conceptual/tableview_iphone/TableViewAndDataModel/TableViewAndDataModel.html
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString: @"temp"])  {
         
