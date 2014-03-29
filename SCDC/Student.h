@@ -16,8 +16,8 @@
 
 //Name can't be modified, limited to 20 characters
 //How to limit the string to follow schema?
-@property (readonly,retain) NSString *firstName;
-@property (readonly,retain) NSString *lasttName;
+@property (nonatomic,retain) NSString *firstName;
+@property (nonatomic,retain) NSString *lastName;
 
 //Contact Info
 @property (nonatomic,strong) NSString *email;
