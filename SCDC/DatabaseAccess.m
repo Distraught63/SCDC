@@ -51,14 +51,40 @@
 -(NSMutableArray *) getStudentsInClass: (ClassInfo *) theClass
 {
     
-    NSMutableArray *students = [[NSMutableArray alloc] init];
+    NSMutableArray *students =  [self getStudents];
+    NSMutableArray *result = [[NSMutableArray alloc] init];
     
     //Open Database
     FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
     [db open];
     
     
-    return NULL;
+    NSInteger classID = theClass.classId;
+    
+    //Get data
+    FMResultSet *results = [db executeQuery:@"select * from registration where classID = $d",classID];
+    
+    
+    while([results next])
+    {
+        
+        //get student id number
+        NSInteger temp = [results intForColumn:@"student_ID"];
+        NSNumber *studentId = [NSNumber numberWithInteger:temp];
+        
+        if ([students containsObject:studentId])
+        {
+            NSUInteger index = [students indexOfObject:studentId];
+            
+            
+            [result addObject:[students objectAtIndex:index]];
+
+        }
+
+    }
+
+    
+    return result;
 }
 
 
@@ -119,6 +145,58 @@
     [db close];
     
     return classes;
+    
+}
+
+-(NSMutableArray *) getStudents
+{
+    NSMutableArray *students = [[NSMutableArray alloc] init];
+    
+    
+    //Open Database
+    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
+    [db open];
+    
+    
+    //Get students from database
+    FMResultSet *results = [db executeQuery:@"select * from student"];
+    
+    //Number of columns
+    NSLog(@"Number of columns in classes is : %d",results.columnCount);
+    
+    //Iterate through rows in table
+    while([results next])
+    {
+        //Create new student (object)
+        Student *student = [[Student alloc] init];
+        
+        //Add student information
+        
+        //Note: could use stringForColumnIndex instead of stringForColumn. Example commented out in instructor
+        //Class id
+        student.studentId = [results intForColumn:@"studentid"];
+        
+        //first name
+        student.firstName = [results stringForColumn:@"firstname"];
+        
+        //last name
+        student.lastName = [results stringForColumn:@"lastname"];
+        
+        //Email address
+        student.email = [results stringForColumn:@"email"];
+        
+        //Phone number
+        student.phone= [results stringForColumn:@"phone"];
+        
+        
+        //Add class to the list of classes
+        [students addObject:student];
+        
+    }
+    
+    [db close];
+    
+    return students;
     
 }
 

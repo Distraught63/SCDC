@@ -12,6 +12,6 @@
 
 
 //Creates the get and set methods for these instances.
-@synthesize studentId,firstName,lasttName, phone, email;
+@synthesize studentId,firstName,lastName, phone, email;
 
 @end
