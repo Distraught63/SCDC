@@ -85,6 +85,26 @@
     return cell;
 }
 
+// Selects a specific class and displays data on next ViewController for that class
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    ClassInfo *class = [self.classes objectAtIndex:[indexPath row]];
+    
+    [self performSegueWithIdentifier:@"temp" sender:class];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+//    if ([segue.identifier isEqualToString:@"temp";]) {
+//    ClassesViewController *controller = (ClassesViewController *)segue.AttendanceViewController;
+//    controller.classPassed = ;
+    
+ //   }
+         
+}
+
 //Refreshes table view when download is done.
 //
 -(void)ftpDidFinishRefreshing

@@ -14,6 +14,7 @@
 
 @implementation AttendanceViewController
 
+@synthesize classPassed;
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -60,6 +61,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"studentList" forIndexPath:indexPath];
+    
+    Student *student = [self.students objectAtIndex:[indexPath row]];
+    
+    UILabel *studentNameLabel = (UILabel *)[cell viewWithTag:1];
+    
+    studentNameLabel.text = @" %s %s ", student.firstName, student.lastName;
 
     return cell;
 }
@@ -70,9 +77,10 @@
         
     DatabaseAccess *db = [[DatabaseAccess alloc] init];
         
-    self.students = [db getStudentsInClass];
+    self.students = [db getStudentsInClass:classPassed];
     
 }
+
 
 /*
 // Override to support conditional editing of the table view.

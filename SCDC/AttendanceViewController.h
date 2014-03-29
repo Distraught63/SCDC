@@ -14,6 +14,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @property (nonatomic,strong) NSMutableArray *students;
+@property (nonatomic, strong) ClassInfo *classPassed;
 
 -(void) populateStudents;
 
