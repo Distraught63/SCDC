@@ -79,6 +79,7 @@
     
     UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
     
+    
     NSLog(@"Class is %@", class.name);
     classNameLabel.text = class.name;
     
