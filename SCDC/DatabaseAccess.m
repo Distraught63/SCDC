@@ -58,31 +58,37 @@
     FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
     [db open];
     
+    NSNumber *classID = [NSNumber numberWithInt:theClass.classId ];
+    NSLog(@"class ID is %@", classID);
     
-    NSInteger classID = theClass.classId;
+    NSString *query = [@"select * from registration where class_ID = " stringByAppendingString: [classID stringValue]];
+    
+    NSLog(@"Query is %@", query);
     
     //Get data
-    FMResultSet *results = [db executeQuery:@"select * from registration where classID = $d",classID];
+//    FMResultSet *results = [db executeQuery:@"select * from registration where classID = %d",classID];
+    FMResultSet *results = [db executeQuery:query];
     
     
     while([results next])
     {
         
-        //get student id number
-        NSInteger temp = [results intForColumn:@"student_ID"];
-        NSNumber *studentId = [NSNumber numberWithInteger:temp];
-        
-        if ([students containsObject:studentId])
-        {
-            NSUInteger index = [students indexOfObject:studentId];
+        for (Student *s in students) {
             
+            int studentId = [results intForColumn:@"student_ID"];
+//            NSNumber *studentId = [NSNumber numberWithInt:temp];
             
-            [result addObject:[students objectAtIndex:index]];
+//            Student *tempStudent =[students objectAtIndex:temp ];
+            if (s.studentId == studentId) {
+                
+                [result addObject: s];
 
+            }
         }
 
     }
 
+    NSLog(@"Number of students in class is %lu", result.count);
     
     return result;
 }
@@ -144,6 +150,7 @@
     
     [db close];
     
+
     return classes;
     
 }

@@ -30,8 +30,8 @@
 		1D446EF618E4F275001778E5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D446EF518E4F275001778E5 /* libsqlite3.0.dylib */; };
 		1D446EF818E4F284001778E5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D446EF718E4F284001778E5 /* CFNetwork.framework */; };
 		1D446EFA18E4F3D2001778E5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EF918E4F3D2001778E5 /* FMDatabase.m */; };
-		1D446EFC18E504AD001778E5 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D446EFB18E4F968001778E5 /* scdc.db */; };
 		1D446F0018E657E6001778E5 /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EFF18E657E6001778E5 /* AttendanceViewController.m */; };
+		1D446F0218E68F3E001778E5 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D446F0118E68F32001778E5 /* scdc.db */; };
 		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
@@ -111,9 +111,9 @@
 		1D446EF518E4F275001778E5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		1D446EF718E4F284001778E5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1D446EF918E4F3D2001778E5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		1D446EFB18E4F968001778E5 /* scdc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scdc.db; sourceTree = "<group>"; };
 		1D446EFE18E657E6001778E5 /* AttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceViewController.h; sourceTree = "<group>"; };
 		1D446EFF18E657E6001778E5 /* AttendanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendanceViewController.m; sourceTree = "<group>"; };
+		1D446F0118E68F32001778E5 /* scdc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scdc.db; sourceTree = "<group>"; };
 		1D4D268118B83D3D0019392A /* scdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scdc.jpg; sourceTree = "<group>"; };
 		1D4D268318B84CCF0019392A /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = SCDC/logo2.png; sourceTree = SOURCE_ROOT; };
 		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
@@ -310,8 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				1D4D268318B84CCF0019392A /* logo2.png */,
-				1D446EFB18E4F968001778E5 /* scdc.db */,
 				1D89941418A6CB4400F88DBA /* SCDC-Info.plist */,
+				1D446F0118E68F32001778E5 /* scdc.db */,
 				1D89941518A6CB4400F88DBA /* InfoPlist.strings */,
 				1D4D268118B83D3D0019392A /* scdc.jpg */,
 				1D89941818A6CB4400F88DBA /* main.m */,
@@ -414,7 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D446EFC18E504AD001778E5 /* scdc.db in Resources */,
+				1D446F0218E68F3E001778E5 /* scdc.db in Resources */,
 				1D4D268218B83D3D0019392A /* scdc.jpg in Resources */,
 				1D4D268418B84CCF0019392A /* logo2.png in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,

@@ -8,7 +8,7 @@
 
 #import "ClassesViewController.h"
 #import "Classes.h"
-//#import "AddCustomerViewController.h"
+#import "AttendanceViewController.h"
 #import "AppDelegate.h"
 
 @interface ClassesViewController ()
@@ -24,6 +24,8 @@
 {
     [super viewDidLoad];
     [self populateClasses];
+    
+     NSLog(@"Number of classess =  %lu", (unsigned long)self.classes.count);
     
     //
     AppDelegate * appDelegate = [[UIApplication sharedApplication]delegate];
@@ -63,11 +65,19 @@
 //    }
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    // Return the number of sections.
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"Number of classes is %lu", classes.count);
     return [classes count];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -87,23 +97,23 @@
 }
 
 // Selects a specific class and displays data on next ViewController for that class
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    ClassInfo *class = [self.classes objectAtIndex:[indexPath row]];
-    
-    [self performSegueWithIdentifier:@"temp" sender:class];
-    
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//    ClassInfo *class = [self.classes objectAtIndex:[indexPath row]];
+//    
+//    [self performSegueWithIdentifier:@"temp" sender:class];
+//    
+//}
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-//    if ([segue.identifier isEqualToString:@"temp";]) {
-//    ClassesViewController *controller = (ClassesViewController *)segue.AttendanceViewController;
-//    controller.classPassed = ;
-    
- //   }
-         
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString: @"temp"])  {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        AttendanceViewController *destViewController = segue.destinationViewController;
+        destViewController.classPassed = [classes objectAtIndex:indexPath.row];
+        
+    }
 }
 
 //Refreshes table view when download is done.
