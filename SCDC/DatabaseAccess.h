@@ -28,6 +28,6 @@
 //-(BOOL) updateStudent:(Student *) student;
 //-(BOOL) updateAttendance :(Date *) date (Student *) student;
 
--(BOOL) updateAttendance :(Dates*) date : (Student*) student;
+-(BOOL) updateAttendance : (NSMutableArray *) date : (NSMutableArray *) student;
 
 @end

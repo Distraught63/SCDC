@@ -70,7 +70,7 @@
         
     DatabaseAccess *db = [[DatabaseAccess alloc] init];
         
-    self.students = [db getStudentsInClass];
+//    self.students = [db getStudentsInClass];
     
 }
 
