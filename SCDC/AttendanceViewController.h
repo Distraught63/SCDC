@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DatabaseAccess.h"
 
 @interface AttendanceViewController : UITableViewController
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@property (nonatomic,strong) NSMutableArray *students;
+
+-(void) populateStudents;
 
 @end
