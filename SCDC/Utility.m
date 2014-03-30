@@ -13,6 +13,10 @@
 
 @implementation Utility : NSObject
 
+
+/*
+ Returns the local database path (local)
+ */
 +(NSString *) getDatabasePath
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -22,17 +26,17 @@
     return path;
 }
 
-
-
-+(void) showAlert:(NSString *)title message:(NSString *)msg
-{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-    
-    [alert show];
-}
-
 //Not needed anymore
-
+//
+//+(void) showAlert:(NSString *)title message:(NSString *)msg
+//{
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+//    
+//    [alert show];
+//}
+//
+//
+//
 //+(NSData *) getRemoteDatabase
 //{
 //    NSString *stringURL = [Utility getUrl];
@@ -53,9 +57,9 @@
 //}
 
 
-+(void) writeRemote{
-    
-}
+//+(void) writeRemote{
+//    
+//}
 
 
 @end

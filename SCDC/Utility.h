@@ -18,7 +18,7 @@
 
 //+(NSString *) getUrl;//Not needed anymore.
 
-+(void) writeRemote;
+//+(void) writeRemote;
 
 
 @end
