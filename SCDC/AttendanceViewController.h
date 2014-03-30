@@ -18,4 +18,6 @@
 
 -(void) populateStudents;
 
+-(IBAction) saveAttendance:(id)sender;
+
 @end

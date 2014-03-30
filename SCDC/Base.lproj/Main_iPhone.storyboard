@@ -134,15 +134,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="classList" rowHeight="114" id="LqD-SM-AT4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="classList" rowHeight="114" id="LqD-SM-AT4">
                                 <rect key="frame" x="0.0" y="86" width="320" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LqD-SM-AT4" id="B53-Kg-dDw">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="113"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="aRO-3g-SMd" kind="push" identifier="temp" id="oIK-cC-zde"/>
+                                    <segue destination="aRO-3g-SMd" kind="push" identifier="temp" id="vDC-Sc-GZf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -259,6 +259,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5uA-Zi-eIL" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PAu-dt-fUN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LQh-cX-HAU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -304,11 +305,26 @@
                             <outlet property="delegate" destination="aRO-3g-SMd" id="Ahu-gJ-MY9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mkX-jU-5if"/>
+                    <navigationItem key="navigationItem" id="mkX-jU-5if">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FeX-zJ-qKF">
+                            <connections>
+                                <segue destination="bK8-RY-Hje" kind="unwind" unwindAction="unwindToClassess:" id="daS-JY-BqH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="k0u-Ty-bYJ">
+                            <connections>
+                                <action selector="saveAttendance:" destination="aRO-3g-SMd" id="S78-Ir-0bd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="5uA-Zi-eIL" kind="modal" identifier="unwindToClassList" id="ccc-bl-Xg0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoY-fX-Qe2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bK8-RY-Hje" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="826" y="-7"/>
+            <point key="canvasLocation" x="1026" y="91"/>
         </scene>
     </scenes>
     <resources>
@@ -319,4 +335,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ccc-bl-Xg0"/>
+    </inferredMetricsTieBreakers>
 </document>

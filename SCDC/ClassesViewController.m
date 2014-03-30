@@ -55,14 +55,7 @@
 
 - (IBAction)unwindToClassess:(UIStoryboardSegue *)segue;
 {
-    //To Show changes (The added customer)
-    
-//    AddCustomerViewController *source = [segue sourceViewController];
-//    Customer *newCustomer = source.customer;
-//    if (newCustomer != nil) {
-//        [self.class addObject:newClass];
-//        [self.tableView reloadData];
-//    }
+   
 }
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

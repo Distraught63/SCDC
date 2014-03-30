@@ -12,6 +12,7 @@
 @implementation DatabaseAccess
 
 
+
 //
 //-(BOOL) updateCustomer:(Customer *)customer
 //{
@@ -46,6 +47,7 @@
 //    return YES;
 //}
 //
+
 
 
 -(NSMutableArray *) getStudentsInClass: (ClassInfo *) theClass
@@ -89,6 +91,8 @@
     }
 
     NSLog(@"Number of students in class is %lu", result.count);
+    
+    [db close];
     
     return result;
 }
@@ -164,7 +168,6 @@
     FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
     [db open];
     
-    
     //Get students from database
     FMResultSet *results = [db executeQuery:@"select * from student"];
     
@@ -208,8 +211,29 @@
 }
 
 
--(BOOL) updateAttendance :(Dates*) date : (Student *) student
+-(BOOL) updateAttendance : (NSMutableArray *) students;
 {
+    
+    NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
+    
+    [dateformate setDateFormat:@"MM/dd/YYYY"];
+    
+    NSString *date_String=[dateformate stringFromDate:[NSDate date]];
+    
+    NSLog(@"Today's date is: %@", date_String);
+    
+    //Open Database
+    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
+    [db open];
+    
+    for (Student *s in students)
+    {
+        [db executeUpdate:@"INSERT INTO dates (date,student_ID) VALUES (?,?);", [ NSNumber numberWithInt:s.studentId], date_String];
+
+    }
+    
+    [db close];
+
     return YES;
 }
 @end

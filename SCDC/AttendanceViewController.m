@@ -29,7 +29,7 @@
     [super viewDidLoad];
     
     self.classPassed = self.classPassed;
-    [self populatesStudents];
+    [self populateStudents];
     
 }
 
@@ -40,14 +40,17 @@
 }
 
 #pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Student *student = [self.students objectAtIndex:[indexPath row]];
+    student.attendedClass = YES;
+    
+    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
@@ -68,7 +71,7 @@
     return cell;
 }
 
--(void) populatesStudents
+-(void) populateStudents
 {
     self.students = [[NSMutableArray alloc] init];
         
@@ -78,6 +81,20 @@
     
     NSLog(@"Number of students in class is: %lud", (unsigned long)self.students.count);
     
+}
+
+-(IBAction) saveAttendance:(id)sender
+{
+    DatabaseAccess *db = [[DatabaseAccess alloc] init];
+    
+    [db updateAttendance:self.students];
+    
+    FTPHelper *ftp = [[FTPHelper alloc] init];
+    
+    [ftp uploadFile];
+    
+    [self performSegueWithIdentifier: @"unwindToClassList" sender: self];
+
 }
 
 
