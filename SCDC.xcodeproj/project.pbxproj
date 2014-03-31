@@ -32,7 +32,7 @@
 		1D446F1518E79B77001778E5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F0E18E79B77001778E5 /* FMDatabaseQueue.m */; };
 		1D446F1618E79B77001778E5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F1118E79B77001778E5 /* FMResultSet.m */; };
 		1D446F1818E7A522001778E5 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D446F1718E7A509001778E5 /* scdc.db */; };
-		1D446F1B18E7AE9A001778E5 /* Export.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F1A18E7AE9A001778E5 /* Export.m */; };
+		1D446F1B18E7AE9A001778E5 /* ExportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F1A18E7AE9A001778E5 /* ExportHelper.m */; };
 		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
@@ -116,8 +116,8 @@
 		1D446F1018E79B77001778E5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		1D446F1118E79B77001778E5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		1D446F1718E7A509001778E5 /* scdc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scdc.db; sourceTree = "<group>"; };
-		1D446F1918E7AE9A001778E5 /* Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Export.h; sourceTree = "<group>"; };
-		1D446F1A18E7AE9A001778E5 /* Export.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Export.m; sourceTree = "<group>"; };
+		1D446F1918E7AE9A001778E5 /* ExportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportHelper.h; sourceTree = "<group>"; };
+		1D446F1A18E7AE9A001778E5 /* ExportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportHelper.m; sourceTree = "<group>"; };
 		1D4D268118B83D3D0019392A /* scdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scdc.jpg; sourceTree = "<group>"; };
 		1D4D268318B84CCF0019392A /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = SCDC/logo2.png; sourceTree = SOURCE_ROOT; };
 		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
@@ -242,9 +242,9 @@
 				1D446EB118E4DF76001778E5 /* FTPHelper.h */,
 				1D446EB218E4DF76001778E5 /* FTPHelper.m */,
 				1D446EEA18E4E550001778E5 /* Utility.h */,
-				1D446F1918E7AE9A001778E5 /* Export.h */,
-				1D446F1A18E7AE9A001778E5 /* Export.m */,
 				1D446EEB18E4E550001778E5 /* Utility.m */,
+				1D446F1918E7AE9A001778E5 /* ExportHelper.h */,
+				1D446F1A18E7AE9A001778E5 /* ExportHelper.m */,
 				1D446EED18E4E612001778E5 /* DatabaseAccess.h */,
 				1D446EEE18E4E612001778E5 /* DatabaseAccess.m */,
 			);
@@ -291,11 +291,11 @@
 				1D446EAA18E4DF57001778E5 /* Database Items */,
 				1D446EFD18E5074F001778E5 /* Database Access and Sync */,
 				1DF3987418A86E1900BD0354 /* Classes.h */,
+				1DF3987518A86E1900BD0354 /* Classes.m */,
 				1D446EFE18E657E6001778E5 /* AttendanceViewController.h */,
 				1D446EFF18E657E6001778E5 /* AttendanceViewController.m */,
 				1D89941B18A6CB4400F88DBA /* AppDelegate.h */,
 				1D89941C18A6CB4400F88DBA /* AppDelegate.m */,
-				1DF3987518A86E1900BD0354 /* Classes.m */,
 				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
 				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
@@ -460,7 +460,7 @@
 				1D70C7C318A81054006BAD81 /* aClass.m in Sources */,
 				1D446EDC18E4E08E001778E5 /* BRRequestCreateDirectory.m in Sources */,
 				1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */,
-				1D446F1B18E7AE9A001778E5 /* Export.m in Sources */,
+				1D446F1B18E7AE9A001778E5 /* ExportHelper.m in Sources */,
 				1D446F1218E79B77001778E5 /* FMDatabase.m in Sources */,
 				1D89941918A6CB4400F88DBA /* main.m in Sources */,
 				1D446EB018E4DF67001778E5 /* Student.m in Sources */,

@@ -11,6 +11,6 @@
 @implementation Dates
 
 //Creates the get and set methods for these instances.
-@synthesize date, student_id;
+@synthesize date, student_id,class_id;
 
 @end

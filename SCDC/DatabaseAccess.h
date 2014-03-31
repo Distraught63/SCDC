@@ -28,5 +28,6 @@
 //-(BOOL) updateAttendance :(Date *) date (Student *) student;
 
 -(BOOL) updateAttendance : (NSMutableArray *) student;
+-(NSMutableArray *) getAttendance:(ClassInfo *) theClass;
 
 @end

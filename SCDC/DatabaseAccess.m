@@ -236,4 +236,46 @@
 
     return YES;
 }
+
+
+-(NSMutableArray *) getAttendance:(ClassInfo *) theClass
+{
+    //Open Database
+    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
+    [db open];
+    
+    
+    NSNumber *classID = [NSNumber numberWithInt:theClass.classId ];
+    
+    NSString *query = [@"select * from dates where class_id = " stringByAppendingString: [classID stringValue]];
+    
+    
+    FMResultSet *results = [db executeQuery:query];
+    
+    NSMutableArray *dates = [[NSMutableArray alloc] init];
+    
+    //Iterate through rows in table
+    while([results next])
+    {
+        //Create new Date
+        Dates *date = [[Dates alloc] init];
+        
+        
+        //Class name
+        date.date = [results stringForColumn:@"date"];
+        
+        //student_ID
+        date.student_id = [results intForColumn:@"student_ID"];
+        
+        
+        
+        //Add class to the list of classes
+        [dates addObject:date];
+        
+    }
+    
+    [db close];
+    
+    return dates;
+}
 @end

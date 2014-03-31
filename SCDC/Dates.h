@@ -11,10 +11,13 @@
 @interface Dates : NSObject
 
 //From schema
-@property (nonatomic) int date;//Primary key
+@property (nonatomic) NSString *date;
 
 //References the studentId from Student, i.e id has to
 //exist in student.
 @property (nonatomic) int student_id;
+
+//classid
+@property (nonatomic) int class_id;
 
 @end
