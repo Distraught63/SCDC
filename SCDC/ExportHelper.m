@@ -52,7 +52,17 @@
     
     
     NSMutableArray *studentNames = [[NSMutableArray alloc] init];
-    [yourArrayName sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    for(Student *s in students)
+    {
+        [studentNames addObject: [s.firstName stringByAppendingString: s.lastName ]];
+    }
+    
+    [studentNames sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    NSLog(@"Array is %@", studentNames);
+    
+    return studentNames;
     
 }
 
