@@ -17,5 +17,6 @@
 
 -(void) exportAttendance:(ClassInfo *) theClass;
 
+-(NSMutableArray *) getSortedDates: (NSMutableArray *) dates;
 
 @end

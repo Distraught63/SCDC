@@ -14,6 +14,66 @@
 -(void) exportAttendance:(ClassInfo *) theClass
 {
     
+    
+}
+
+
+-(NSMutableArray *) createDataArray:(ClassInfo *) theClass
+{
+    DatabaseAccess *db = [[DatabaseAccess alloc] init];
+    
+    NSMutableArray *dates = [db getAttendance:theClass];
+    NSMutableArray *students = [db getStudentsInClass: theClass];
+    
+    NSMutableArray *sortedDates = [self getSortedDates:dates];
+    
+    NSMutableArray *result =[[NSMutableArray alloc] init];
+    
+    NSNumber *one = [NSNumber numberWithInt: 1];
+    NSNumber *zero = [NSNumber numberWithInt: 0 ];
+    
+//    for(Student *s in students)
+//    {
+//        
+//        NSMutableArray *temp =[[NSMutableArray alloc] init];
+//        
+//        for (int i = 0; i < dates.count; i++) {
+//            
+//            Dates * date =[dates objectAtIndex:i];
+//            if ( date.student_id == s.studentId) {
+//                [temp addObject:one];
+//            } else {
+//                [temp addObject:zero];
+//            }
+//        }
+//        
+//        [result addObject:temp];
+//        
+//    }
+    
+    
+    for(Student *s in students)
+    {
+        
+        NSMutableArray *temp =[[NSMutableArray alloc] init];
+        
+        for (NSString *date in sortedDates)
+        {
+            if ( date.student_id == s.studentId) {
+                [temp addObject:one];
+            } else {
+                [temp addObject:zero];
+            }
+        }
+        
+        [result addObject:temp];
+        
+    }
+    
+    
+    
+    return result;
+    
 }
 
 -(NSMutableArray *) getSortedDates: (NSMutableArray *) dates
@@ -23,7 +83,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"MM/dd/yyyy"];
     
-    NSMutableArray *tempArray = [NSMutableArray array];
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];;
     
     // fast enumeration of the array
     for (Dates *d in dates) {
