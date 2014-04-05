@@ -19,7 +19,4 @@
 
 -(void) exportAttendance:(ClassInfo *) theClass;
 
-//-(NSMutableArray *) getSortedDates: (NSMutableArray *) dates;
-
-//-(NSString *) createCSV:(ClassInfo *) theClass;
 @end

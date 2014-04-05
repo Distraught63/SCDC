@@ -312,12 +312,15 @@
     
     NSMutableArray *temp =[[NSMutableArray alloc] init];
     
-    for (NSString *date in dates)
+    // create the date formatter with the correct format
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    
+    for (NSDate *date in dates)
     {
         
         //We assume the result of the set is going to be either 1 or empty
         FMResultSet *results = [dbase executeQuery:@"select * from dates where student_ID=? AND date=?", [studid stringValue], date];
-        
         
         if ([results next]) {
             [temp addObject:one];//Found a match, add one to the list
