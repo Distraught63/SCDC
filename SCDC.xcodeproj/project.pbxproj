@@ -31,8 +31,8 @@
 		1D446F1418E79B77001778E5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F0C18E79B77001778E5 /* FMDatabasePool.m */; };
 		1D446F1518E79B77001778E5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F0E18E79B77001778E5 /* FMDatabaseQueue.m */; };
 		1D446F1618E79B77001778E5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F1118E79B77001778E5 /* FMResultSet.m */; };
-		1D446F1818E7A522001778E5 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D446F1718E7A509001778E5 /* scdc.db */; };
 		1D446F1B18E7AE9A001778E5 /* ExportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F1A18E7AE9A001778E5 /* ExportHelper.m */; };
+		1D4C07BD18F0965400B0E204 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D4C07BC18F0964200B0E204 /* scdc.db */; };
 		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
@@ -115,9 +115,9 @@
 		1D446F0F18E79B77001778E5 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		1D446F1018E79B77001778E5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		1D446F1118E79B77001778E5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		1D446F1718E7A509001778E5 /* scdc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scdc.db; sourceTree = "<group>"; };
 		1D446F1918E7AE9A001778E5 /* ExportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportHelper.h; sourceTree = "<group>"; };
 		1D446F1A18E7AE9A001778E5 /* ExportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportHelper.m; sourceTree = "<group>"; };
+		1D4C07BC18F0964200B0E204 /* scdc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scdc.db; sourceTree = "<group>"; };
 		1D4D268118B83D3D0019392A /* scdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scdc.jpg; sourceTree = "<group>"; };
 		1D4D268318B84CCF0019392A /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = SCDC/logo2.png; sourceTree = SOURCE_ROOT; };
 		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
@@ -318,7 +318,7 @@
 			children = (
 				1D4D268318B84CCF0019392A /* logo2.png */,
 				1D89941418A6CB4400F88DBA /* SCDC-Info.plist */,
-				1D446F1718E7A509001778E5 /* scdc.db */,
+				1D4C07BC18F0964200B0E204 /* scdc.db */,
 				1D89941518A6CB4400F88DBA /* InfoPlist.strings */,
 				1D4D268118B83D3D0019392A /* scdc.jpg */,
 				1D89941818A6CB4400F88DBA /* main.m */,
@@ -421,7 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D446F1818E7A522001778E5 /* scdc.db in Resources */,
+				1D4C07BD18F0965400B0E204 /* scdc.db in Resources */,
 				1D4D268218B83D3D0019392A /* scdc.jpg in Resources */,
 				1D4D268418B84CCF0019392A /* logo2.png in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,

@@ -25,9 +25,10 @@
 //Will be implement later
 //-(BOOL) insertStudent:(Student *) student;
 //-(BOOL) updateStudent:(Student *) student;
-//-(BOOL) updateAttendance :(Date *) date (Student *) student;
+-(BOOL) updateAttendance : (NSMutableArray *) students   theClass:(ClassInfo *) theClass;
 
--(BOOL) updateAttendance : (NSMutableArray *) student;
 -(NSMutableArray *) getAttendance:(ClassInfo *) theClass;
+
+-(NSMutableArray *)getAttendanceForStudentWithDates:(NSMutableArray *)dates student: (NSNumber *) studid;
 
 @end

@@ -13,43 +13,6 @@
 
 
 
-//
-//-(BOOL) updateCustomer:(Customer *)customer
-//{
-//    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
-//
-//    [db open];
-//
-//    BOOL success = [db executeUpdate:[NSString stringWithFormat:@"UPDATE customers SET firstname = '%@', lastname = '%@' where id = %d",customer.firstName,customer.lastName,customer.customerId]];
-//
-//    [db close];
-//
-//    return success;
-//}
-//
-//-(BOOL) insertCustomer:(Customer *) customer
-//{
-//    // insert customer into database
-//
-//    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
-//
-//    [db open];
-//
-//    BOOL success =  [db executeUpdate:@"INSERT INTO customers (firstname,lastname) VALUES (?,?);",
-//                     customer.firstName,customer.lastName, nil];
-//    
-//    NSLog(@"Customer has been inserted into the database");
-//
-//    [db close];
-//
-//    return success;
-//
-//    return YES;
-//}
-//
-
-
-
 -(NSMutableArray *) getStudentsInClass: (ClassInfo *) theClass
 {
     
@@ -63,13 +26,12 @@
     NSNumber *classID = [NSNumber numberWithInt:theClass.classId ];
     NSLog(@"class ID is %@", classID);
     
-    NSString *query = [@"select * from registration where class_ID = " stringByAppendingString: [classID stringValue]];
-    
-    NSLog(@"Query is %@", query);
+    //    NSString *query = [@"select * from registration where class_ID = " stringByAppendingString: [classID stringValue]];
+    //
+    //    NSLog(@"Query is %@", query);
     
     //Get data
-//    FMResultSet *results = [db executeQuery:@"select * from registration where classID = %d",classID];
-    FMResultSet *results = [db executeQuery:query];
+    FMResultSet *results = [db executeQuery:@"select * from registration where class_ID =?", [classID stringValue]];
     
     
     while([results next])
@@ -78,20 +40,21 @@
         for (Student *s in students) {
             
             int studentId = [results intForColumn:@"student_ID"];
-//            NSNumber *studentId = [NSNumber numberWithInt:temp];
+            //            NSNumber *studentId = [NSNumber numberWithInt:temp];
             
-//            Student *tempStudent =[students objectAtIndex:temp ];
+            //            Student *tempStudent =[students objectAtIndex:temp ];
             if (s.studentId == studentId) {
                 
                 [result addObject: s];
-
+                
             }
         }
-
+        
     }
-
+    
     NSLog(@"Number of students in class is %lu", result.count);
     
+    [results close];
     [db close];
     
     return result;
@@ -142,7 +105,7 @@
         class.location = [results stringForColumn:@"location"];
         
         //Instructor
-//        class.instructor = [results stringForColumn:@"instructor"];
+        //        class.instructor = [results stringForColumn:@"instructor"];
         class.instructor = [results stringForColumnIndex:5];
         
         
@@ -152,9 +115,10 @@
         
     }
     
+    [results close];
     [db close];
     
-
+    
     return classes;
     
 }
@@ -204,6 +168,7 @@
         
     }
     
+    [results close];
     [db close];
     
     return students;
@@ -211,29 +176,40 @@
 }
 
 
--(BOOL) updateAttendance : (NSMutableArray *) students;
+-(BOOL) updateAttendance : (NSMutableArray *) students   theClass:(ClassInfo *) theClass
 {
     
     NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
     
     [dateformate setDateFormat:@"MM/dd/YYYY"];
     
+    NSNumber *classID = [NSNumber numberWithInt:theClass.classId ];
+    
     NSString *date_String=[dateformate stringFromDate:[NSDate date]];
     
-    NSLog(@"Today's date is: %@", date_String);
+    NSLog(@"Today's date is: %@ and class id is %@", date_String, classID);
+    
+    
     
     //Open Database
     FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
     [db open];
+    [db beginTransaction];
     
     for (Student *s in students)
     {
-        [db executeUpdate:@"INSERT INTO dates (date,student_ID) VALUES (?,?);", [ NSNumber numberWithInt:s.studentId], date_String];
-
+        
+        if (s.attendedClass) {
+            [db executeUpdate:@"INSERT INTO dates (class_id,student_ID, date) VALUES (?,?,?);", classID,[ NSNumber numberWithInt:s.studentId], date_String];
+            
+            
+            NSLog(@"Attendance updated for student %d", s.studentId);
+        }
     }
     
+    [db commit];
     [db close];
-
+    
     return YES;
 }
 
@@ -247,16 +223,17 @@
     
     NSNumber *classID = [NSNumber numberWithInt:theClass.classId ];
     
-    NSString *query = [@"select * from dates where class_id = " stringByAppendingString: [classID stringValue]];
+    NSLog(@"Class id is %@", classID);
     
-    
-    FMResultSet *results = [db executeQuery:query];
+    FMResultSet *results = [db executeQuery:@"select * from dates where class_id =?", [classID stringValue]];
+    //    FMResultSet *results = [db executeQuery:@"select * from dates"];
     
     NSMutableArray *dates = [[NSMutableArray alloc] init];
     
     //Iterate through rows in table
     while([results next])
     {
+        NSLog(@"Found date with class id %d", [results intForColumn:@"class_id"]);
         //Create new Date
         Dates *date = [[Dates alloc] init];
         
@@ -268,14 +245,75 @@
         date.student_id = [results intForColumn:@"student_ID"];
         
         
+        NSLog(@"Added date to dates: student_id is %d", date.student_id);
         
         //Add class to the list of classes
         [dates addObject:date];
         
     }
     
+    [results close];
     [db close];
+    
+    NSLog(@"Get attendance returns %@", dates);
     
     return dates;
 }
+
+-(NSMutableArray *)getAttendanceForStudentWithDates:(NSMutableArray *)dates student: (NSNumber *) studid
+{
+    
+    //Open Database
+    FMDatabase *dbase = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
+    [dbase open];
+    [dbase closeOpenResultSets];
+    //Numbers that symbloize whether student attended class in a certian date.
+    NSNumber *one = [NSNumber numberWithInt: 1];//indicates that the student attended class that date
+    NSNumber *zero = [NSNumber numberWithInt: 0 ];//indicates that the students didn't attned
+    
+    NSMutableArray *temp =[[NSMutableArray alloc] init];
+    
+    for (NSString *date in dates)
+    {
+        
+        NSLog(@"Enterd date for loop");
+        
+        NSLog(@"Studid is %@", studid);
+        NSLog(@"Date is %@", date);
+        
+        
+        //We assume the result of the set is going to be either 1 or empty
+        FMResultSet *results = [dbase executeQuery:@"select * from dates where student_ID=? AND date=?", [studid stringValue], date];
+        
+        
+        if ([results next]) {
+            [temp addObject:one];
+        }
+        
+        else
+        {
+            [temp addObject:zero];
+        }
+        
+//        while ([results next]) {
+//            
+//            NSLog(@"Entered results2");
+//            NSLog(@"Date is %@", [results stringForColumn:@"date"]);
+//            
+//            if ( [[results stringForColumn:@"date"] isEqualToString:date]) {
+//                [temp addObject:one];
+//            } else {
+//                [temp addObject:zero];
+//            }
+//            
+//        }
+    }
+    
+    
+    [dbase closeOpenResultSets];
+    [dbase close];
+    
+    return temp;
+}
+
 @end

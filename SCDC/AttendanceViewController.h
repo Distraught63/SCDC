@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "DatabaseAccess.h"
+#import "ExportHelper.h"
+
 
 @interface AttendanceViewController : UITableViewController
 

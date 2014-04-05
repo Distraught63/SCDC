@@ -87,7 +87,11 @@
 {
     DatabaseAccess *db = [[DatabaseAccess alloc] init];
     
-    [db updateAttendance:self.students];
+    [db updateAttendance:self.students theClass:self.classPassed];
+//    [db updateAttendance:self.students];
+    
+    ExportHelper *eh = [[ExportHelper alloc] init];
+    [eh exportAttendance: self.classPassed];
     
     FTPHelper *ftp = [[FTPHelper alloc] init];
     
@@ -96,6 +100,9 @@
     [self performSegueWithIdentifier: @"unwindToClassList" sender: self];
 
 }
+
+
+
 
 
 @end

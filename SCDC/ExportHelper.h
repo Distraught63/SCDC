@@ -12,11 +12,14 @@
 #import "Dates.h"
 #import "ClassInfo.h"
 #import "DatabaseAccess.h"
+#import "FMDatabase.h"
+#import "FTPHelper.h"
 
 @interface ExportHelper : NSObject
 
 -(void) exportAttendance:(ClassInfo *) theClass;
 
--(NSMutableArray *) getSortedDates: (NSMutableArray *) dates;
+//-(NSMutableArray *) getSortedDates: (NSMutableArray *) dates;
 
+//-(NSString *) createCSV:(ClassInfo *) theClass;
 @end

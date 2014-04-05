@@ -55,6 +55,24 @@
     [uploadFile start];
 }
 
+- (void) uploadCSV: (NSString *) path fileName: (NSString * ) filename
+{
+    //----- get the file to upload as an NSData object
+    uploadData = [NSData dataWithContentsOfFile: path];
+    
+    uploadFile = [[BRRequestUpload alloc] initWithDelegate: self];
+    
+    //----- for anonymous login just leave the username and password nil
+    uploadFile.path = [NSString stringWithFormat:@"%@%@",pathCSV, filename];
+    uploadFile.hostname = hostname1;
+    uploadFile.username = username1;
+    uploadFile.password = password1;
+    
+    //we start the request
+    NSLog(@"Upload CSV Starting.....");
+    [uploadFile start];
+}
+
 - (IBAction) createDirectory:(id)sender
 {
     createDir = [[BRRequestCreateDirectory alloc] initWithDelegate: self];

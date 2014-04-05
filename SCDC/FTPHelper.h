@@ -25,7 +25,8 @@
 
 
 #define path1 @"/Dropbox/scdc.db"
-#define hostname1 @"155.41.119.7"
+#define pathCSV @"/Dropbox/"
+#define hostname1 @"155.41.88.224"
 #define username1 @"leen"
 #define password1 @"S"
 
@@ -47,6 +48,8 @@
 @property (nonatomic,weak) ClassesViewController* delegate;
 //
 - (IBAction)downloadFile: (id) sender;
+
+- (void) uploadCSV: (NSString *) path fileName: (NSString * ) filename;
 
 - (void) uploadFile ;
 
