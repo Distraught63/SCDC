@@ -45,4 +45,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction) openWebsite:(id)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://www.scdcorp.org/"];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+
+
 @end
