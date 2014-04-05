@@ -13,6 +13,7 @@
 #import "ClassInfo.h"
 #import "Student.h"
 #import "Dates.h"
+#import "Utility.h"
 
 
 @interface DatabaseAccess : NSObject
