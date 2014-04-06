@@ -10,12 +10,16 @@
 
 #define pass @"1234"
 
-@interface PassCodeViewController : UIViewController {
+@interface PassCodeViewController : UIViewController <UITextFieldDelegate> {
 
-   IBOutlet UITextField *passwordField;
 }
+
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+
 
 -(void) alertUserOfIncorrectPasscode;
 -(IBAction)isPasscodeCorrect:(id)sender;
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
 
 @end
