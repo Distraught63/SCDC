@@ -151,7 +151,7 @@
 {
     [downloadData appendData: request.receivedData];
        NSLog(@"Received: %lu", (unsigned long)[request.receivedData length]);
-    NSLog(@"Size of RecievedData is %lu", downloadFile.receivedData.length);
+    NSLog(@"Size of Recieved Data is %lu", downloadFile.receivedData.length);
 
     }
 
@@ -188,8 +188,7 @@
 
 - (void)requestCompleted:(BRRequest *)request
 {
-    NSLog(@"Transger Succesful!!");
-    NSLog(@"REQUEST COMPLETED");
+    NSLog(@"Transfer Succesful!!");
     //----- handle Create Directory
     if (request == createDir)
     {
@@ -228,24 +227,20 @@
     {
         //called after 'request' is completed successfully
 
-        NSLog(@"%@ completed!", request);
-
         NSData *data = downloadData;
-        NSLog(@"Size of downloaded file is %lu", (unsigned long)data.length);
+//        NSLog(@"Size of downloaded file is %lu", (unsigned long)data.length);
 
         //----- save the NSData as a file object
 //        NSError *error;
-        NSLog(@"Database path is %@", [Utility getDatabasePath]);
-        NSLog(@"Size of downloaded database is %lu", (unsigned long)data.length);
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
         [fileManager removeItemAtPath:[Utility getDatabasePath] error:nil];
         
         [data writeToFile: [Utility getDatabasePath] atomically:YES];
-        NSLog(@"Data written to path");
-        NSData *temp = [fileManager contentsAtPath: [Utility getDatabasePath]];
-        NSLog(@"size of written data is %lu", temp.length);
+//        NSLog(@"Data written to path");
+//        NSData *temp = [fileManager contentsAtPath: [Utility getDatabasePath]];
+//        NSLog(@"size of written data is %lu", temp.length);
 //        [data writeToFile: [Utility getDatabasePath] options: NSDataWritingFileProtectionNone error: &error];
         
         [self.delegate ftpDidFinishRefreshing];

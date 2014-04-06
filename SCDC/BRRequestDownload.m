@@ -153,9 +153,6 @@
 - (void)stream:(NSStream *)theStream handleEvent:(NSStreamEvent)streamEvent
 {
    
-    NSLog(@"The stream method is invoked.");
-    NSLog(@"Stream delgate is %@", theStream.delegate);
-    NSLog(@"Delgate is: %@\n",self.delegate);
     //----- see if we have cancelled the runloop
     if ([self.streamInfo checkCancelRequest: self])
         return;
@@ -164,8 +161,6 @@
     {
         case NSStreamEventOpenCompleted: 
         {
-            NSLog(@"the stream case: NSStreamEventOpenCompleted");
-            NSLog(@"Delgate is: %@\n",self.delegate);
             self.maximumSize = [[theStream propertyForKey:(id)kCFStreamPropertyFTPResourceSize] integerValue];
             
             self.didOpenStream = YES;
@@ -177,8 +172,6 @@
         case NSStreamEventHasBytesAvailable: 
         {
             
-            NSLog(@"the stream case: NSStreamEventHasBytesAvailable");
-            NSLog(@"Delgate is: %@\n",self.delegate);
             self.receivedData = [self.streamInfo read: self];
             
             if (self.receivedData)
@@ -197,15 +190,11 @@
             
         case NSStreamEventHasSpaceAvailable: 
         {
-            NSLog(@"the stream case: NSStreamEventHasSpaceAvailable");
-            NSLog(@"Delgate is: %@\n",self.delegate);
         } 
         break;
             
         case NSStreamEventErrorOccurred: 
         {
-            NSLog(@"the stream case: NSStreamEventErrorOccurred");
-            NSLog(@"Delgate is: %@\n",self.delegate);
             [self.streamInfo streamError: self errorCode: [BRRequestError errorCodeWithError: [theStream streamError]]];
             InfoLog(@"%@", self.error.message);
         }
@@ -213,8 +202,6 @@
             
         case NSStreamEventEndEncountered: 
         {
-             NSLog(@"the stream case: NSStreamEventEndEncountered");
-            NSLog(@"Delgate is: %@\n",self.delegate);
             [self.streamInfo streamComplete: self];
         }
         break;
@@ -244,7 +231,6 @@
 
 - (NSString *)fullRemotePath
 {
-    NSLog(@"Full remote path is invoked!");
     return [self.hostname stringByAppendingPathComponent:self.path];
 }
 

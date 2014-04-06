@@ -28,38 +28,14 @@
 
 //Not needed anymore
 //
-//+(void) showAlert:(NSString *)title message:(NSString *)msg
-//{
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-//    
-//    [alert show];
-//}
-//
-//
-//
-//+(NSData *) getRemoteDatabase
-//{
-//    NSString *stringURL = [Utility getUrl];
-//    NSURL  *url = [NSURL URLWithString:stringURL];
-////    NSData *urlData = [NSData dataWithContentsOfURL:url];
-//    NSData *urlData = [[NSData alloc] initWithContentsOfURL: url];
-//
-//    return urlData;
-//
-//}
-
-//Not needed anymore
-
-//+(NSString *) getUrl
-//{
-//    NSString *stringURL = @"https://www.dropbox.com/s/llxy6b6unoemkah/Customers.db?dl=1";
-//    return stringURL;
-//}
++(void) showAlert:(NSString *)title message:(NSString *)msg
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+    
+    [alert show];
+}
 
 
-//+(void) writeRemote{
-//    
-//}
 
 
 @end

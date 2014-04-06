@@ -150,12 +150,8 @@ dispatch_queue_t dispatch_get_local_queue()
 - (void)openRead:(BRRequest *)request
 {
     
-    NSLog(@"openRead was opened");
-     NSLog(@"Delagate is %@",request.delegate);
-    
     if (request.hostname==nil)
     {
-        NSLog(@"This host name is nil!");
         InfoLog(@"The host name is nil!");
         request.error = [[BRRequestError alloc] init];
         request.error.errorCode = kBRFTPClientHostnameIsNil;
@@ -176,7 +172,6 @@ dispatch_queue_t dispatch_get_local_queue()
     
     if (readStream==nil)
     {
-        NSLog(@"Can't open the read stream! Possibly wrong URL");
         InfoLog(@"Can't open the read stream! Possibly wrong URL");
         request.error = [[BRRequestError alloc] init];
         request.error.errorCode = kBRFTPClientCantOpenStream;
@@ -186,7 +181,7 @@ dispatch_queue_t dispatch_get_local_queue()
     }
     
     readStream.delegate = request;
-    NSLog(@"readStream delgate is : %@", readStream.delegate);
+    
 	[readStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 	[readStream open];
     
@@ -194,7 +189,6 @@ dispatch_queue_t dispatch_get_local_queue()
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, timeout * NSEC_PER_SEC), dispatch_get_local_queue(), ^{
         if (!request.didOpenStream && request.error == nil)
         {
-            NSLog(@"No response from the server. Timeout.");
             InfoLog(@"No response from the server. Timeout.");
             request.error = [[BRRequestError alloc] init];
             request.error.errorCode = kBRFTPClientStreamTimedOut;
@@ -203,7 +197,6 @@ dispatch_queue_t dispatch_get_local_queue()
         }
     });
     
-    NSLog(@"Reached end of open read and the delegate is %@", request.delegate);
 }
 
 
@@ -224,7 +217,6 @@ dispatch_queue_t dispatch_get_local_queue()
 
 - (void)openWrite:(BRRequest *)request
 {
-    NSLog(@"openWrite was opened");
     if (request.hostname==nil)
     {
         InfoLog(@"The host name is nil!");
@@ -328,10 +320,6 @@ dispatch_queue_t dispatch_get_local_queue()
 
 - (NSData *)read:(BRRequest *)request
 {
-    NSLog(@"Reading Stream");
-     NSLog(@"Delagate is %@",request.delegate);
-    
-    
     NSData *data;
     NSMutableData *bufferObject = [NSMutableData dataWithLength: kBRDefaultBufferSize];
 
@@ -349,8 +337,7 @@ dispatch_queue_t dispatch_get_local_queue()
         {
             [request.delegate percentCompleted: request];
         }
-        
-        NSLog(@"Data was returned");
+ 
         return data;
     }
     
@@ -385,7 +372,6 @@ dispatch_queue_t dispatch_get_local_queue()
 
 - (BOOL)write:(BRRequest *)request data:(NSData *)data
 {
-    NSLog(@"Writing Stream");
     bytesThisIteration = [writeStream write: [data bytes] maxLength: [data length]];
     bytesTotal += bytesThisIteration;
             
@@ -428,7 +414,7 @@ dispatch_queue_t dispatch_get_local_queue()
 
 - (void)streamError:(BRRequest *)request errorCode:(enum BRErrorCodes)errorCode
 {
-    NSLog(@"An error happened");
+    NSLog(@"An error happened when streaming");
     request.error = [[BRRequestError alloc] init];
     request.error.errorCode = errorCode;
     [request.delegate requestFailed: request];
@@ -453,11 +439,7 @@ dispatch_queue_t dispatch_get_local_queue()
 
 - (void)streamComplete:(BRRequest *)request
 {
-    NSLog(@"Stream Complete");
-    NSLog(@"Percent Completed = %f", request.percentCompleted);
     [request.delegate requestCompleted: request];
-    NSLog(@"Delgate is %@",request.delegate);
-    NSLog(@"Data tranferred back to FTP helper requestCompleted");
     [request.streamInfo close: request];
 }
 
@@ -479,7 +461,6 @@ dispatch_queue_t dispatch_get_local_queue()
 
 - (void)close:(BRRequest *)request
 {
-    NSLog(@"Stream closed");
     if (readStream)
     {
         [readStream close];

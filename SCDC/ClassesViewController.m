@@ -7,7 +7,6 @@
 //
 
 #import "ClassesViewController.h"
-#import "Classes.h"
 #import "AttendanceViewController.h"
 #import "AppDelegate.h"
 
@@ -58,12 +57,6 @@
    
 }
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    
-//    // Return the number of sections.
-//    return 0;
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

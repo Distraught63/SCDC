@@ -52,7 +52,6 @@
 		1D89943B18A6CB4400F88DBA /* SCDCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89943A18A6CB4400F88DBA /* SCDCTests.m */; };
 		1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */; };
 		1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */; };
-		1DF3987618A86E1900BD0354 /* Classes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF3987518A86E1900BD0354 /* Classes.m */; };
 		55C1925E18B82A520093B1E7 /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1925D18B82A520093B1E7 /* ClassesViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -145,8 +144,6 @@
 		1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassCodeViewController.m; sourceTree = "<group>"; };
 		1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
-		1DF3987418A86E1900BD0354 /* Classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classes.h; sourceTree = "<group>"; };
-		1DF3987518A86E1900BD0354 /* Classes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classes.m; sourceTree = "<group>"; };
 		55C1925C18B82A520093B1E7 /* ClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
 		55C1925D18B82A520093B1E7 /* ClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,8 +287,6 @@
 				1D446EC418E4E029001778E5 /* BlackRaccoon */,
 				1D446EAA18E4DF57001778E5 /* Database Items */,
 				1D446EFD18E5074F001778E5 /* Database Access and Sync */,
-				1DF3987418A86E1900BD0354 /* Classes.h */,
-				1DF3987518A86E1900BD0354 /* Classes.m */,
 				1D446EFE18E657E6001778E5 /* AttendanceViewController.h */,
 				1D446EFF18E657E6001778E5 /* AttendanceViewController.m */,
 				1D89941B18A6CB4400F88DBA /* AppDelegate.h */,
@@ -456,7 +451,6 @@
 				1D446F0018E657E6001778E5 /* AttendanceViewController.m in Sources */,
 				1D446EDA18E4E08E001778E5 /* BRRequest.m in Sources */,
 				1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */,
-				1DF3987618A86E1900BD0354 /* Classes.m in Sources */,
 				1D70C7C318A81054006BAD81 /* aClass.m in Sources */,
 				1D446EDC18E4E08E001778E5 /* BRRequestCreateDirectory.m in Sources */,
 				1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */,

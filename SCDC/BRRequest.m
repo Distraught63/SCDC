@@ -143,8 +143,7 @@
         self.streamInfo.bytesThisIteration = 0;
         self.streamInfo.bytesTotal = 0;
         self.streamInfo.timeout = 30;
-                
-        NSLog(@"aDelagate is %@", aDelegate);
+
         self.delegate = aDelegate;
     }
     
