@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #define pass @"1234"
+#define usernamescdc @"SCDCadmin"
 
 @interface PassCodeViewController : UIViewController <UITextFieldDelegate> {
 

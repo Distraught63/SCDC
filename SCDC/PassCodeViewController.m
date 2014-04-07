@@ -43,7 +43,7 @@
 {
     
     //Checks if the password entered by the user equals passcode, otherwise notify of incorrect attempt
-    if (passwordField.text.length == pass.length && [passwordField.text  isEqual: pass])
+    if ([usernameField.text  isEqual: usernamescdc] && [passwordField.text  isEqual: pass])
     {
         [self performSegueWithIdentifier: @"PassToClasses" sender: self];
     }

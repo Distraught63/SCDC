@@ -24,6 +24,14 @@
     [super viewDidLoad];
     [self populateClasses];
     
+    //
+//    UIImage *navBackgroundImage = [UIImage imageNamed:@"UpperBar.ai"];
+//    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+    //
+    
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"iPhoneUpperBar.jpg"] forBarMetrics:UIBarMetricsDefault];
+
+    
      NSLog(@"Number of classess =  %lu", (unsigned long)self.classes.count);
     
     //

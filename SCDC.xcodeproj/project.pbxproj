@@ -50,6 +50,19 @@
 		1D89943118A6CB4400F88DBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89941018A6CB4400F88DBA /* UIKit.framework */; };
 		1D89943918A6CB4400F88DBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D89943718A6CB4400F88DBA /* InfoPlist.strings */; };
 		1D89943B18A6CB4400F88DBA /* SCDCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89943A18A6CB4400F88DBA /* SCDCTests.m */; };
+		1DD2B67E18F363B60052D2AE /* CalendarButton.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67118F363B60052D2AE /* CalendarButton.ai */; };
+		1DD2B67F18F363B60052D2AE /* CheckBox.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67218F363B60052D2AE /* CheckBox.ai */; };
+		1DD2B68018F363B60052D2AE /* iPadCalendarButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67318F363B60052D2AE /* iPadCalendarButton.jpg */; };
+		1DD2B68118F363B60052D2AE /* iPadPencilButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67418F363B60052D2AE /* iPadPencilButton.jpg */; };
+		1DD2B68218F363B60052D2AE /* iPadRectangle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67518F363B60052D2AE /* iPadRectangle.jpg */; };
+		1DD2B68318F363B60052D2AE /* iPadRegisterButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67618F363B60052D2AE /* iPadRegisterButton.jpg */; };
+		1DD2B68418F363B60052D2AE /* iPadUpperBar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67718F363B60052D2AE /* iPadUpperBar.jpg */; };
+		1DD2B68518F363B60052D2AE /* iPhoneUpperBar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67818F363B60052D2AE /* iPhoneUpperBar.jpg */; };
+		1DD2B68618F363B60052D2AE /* PencilButton.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67918F363B60052D2AE /* PencilButton.ai */; };
+		1DD2B68718F363B60052D2AE /* Rectangle.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67A18F363B60052D2AE /* Rectangle.ai */; };
+		1DD2B68818F363B60052D2AE /* RegisterButton.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67B18F363B60052D2AE /* RegisterButton.ai */; };
+		1DD2B68918F363B60052D2AE /* SCDC logo design.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67C18F363B60052D2AE /* SCDC logo design.jpg */; };
+		1DD2B68A18F363B60052D2AE /* UpperBar.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67D18F363B60052D2AE /* UpperBar.ai */; };
 		1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */; };
 		1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */; };
 		55C1925E18B82A520093B1E7 /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1925D18B82A520093B1E7 /* ClassesViewController.m */; };
@@ -140,6 +153,19 @@
 		1D89943618A6CB4400F88DBA /* SCDCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SCDCTests-Info.plist"; sourceTree = "<group>"; };
 		1D89943818A6CB4400F88DBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D89943A18A6CB4400F88DBA /* SCDCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCDCTests.m; sourceTree = "<group>"; };
+		1DD2B67118F363B60052D2AE /* CalendarButton.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CalendarButton.ai; sourceTree = "<group>"; };
+		1DD2B67218F363B60052D2AE /* CheckBox.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CheckBox.ai; sourceTree = "<group>"; };
+		1DD2B67318F363B60052D2AE /* iPadCalendarButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPadCalendarButton.jpg; sourceTree = "<group>"; };
+		1DD2B67418F363B60052D2AE /* iPadPencilButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPadPencilButton.jpg; sourceTree = "<group>"; };
+		1DD2B67518F363B60052D2AE /* iPadRectangle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPadRectangle.jpg; sourceTree = "<group>"; };
+		1DD2B67618F363B60052D2AE /* iPadRegisterButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPadRegisterButton.jpg; sourceTree = "<group>"; };
+		1DD2B67718F363B60052D2AE /* iPadUpperBar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPadUpperBar.jpg; sourceTree = "<group>"; };
+		1DD2B67818F363B60052D2AE /* iPhoneUpperBar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPhoneUpperBar.jpg; sourceTree = "<group>"; };
+		1DD2B67918F363B60052D2AE /* PencilButton.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PencilButton.ai; sourceTree = "<group>"; };
+		1DD2B67A18F363B60052D2AE /* Rectangle.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rectangle.ai; sourceTree = "<group>"; };
+		1DD2B67B18F363B60052D2AE /* RegisterButton.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RegisterButton.ai; sourceTree = "<group>"; };
+		1DD2B67C18F363B60052D2AE /* SCDC logo design.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SCDC logo design.jpg"; sourceTree = "<group>"; };
+		1DD2B67D18F363B60052D2AE /* UpperBar.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UpperBar.ai; sourceTree = "<group>"; };
 		1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassCodeViewController.h; sourceTree = "<group>"; };
 		1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassCodeViewController.m; sourceTree = "<group>"; };
 		1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
@@ -312,6 +338,19 @@
 			isa = PBXGroup;
 			children = (
 				1D4D268318B84CCF0019392A /* logo2.png */,
+				1DD2B67118F363B60052D2AE /* CalendarButton.ai */,
+				1DD2B67218F363B60052D2AE /* CheckBox.ai */,
+				1DD2B67318F363B60052D2AE /* iPadCalendarButton.jpg */,
+				1DD2B67418F363B60052D2AE /* iPadPencilButton.jpg */,
+				1DD2B67518F363B60052D2AE /* iPadRectangle.jpg */,
+				1DD2B67618F363B60052D2AE /* iPadRegisterButton.jpg */,
+				1DD2B67718F363B60052D2AE /* iPadUpperBar.jpg */,
+				1DD2B67818F363B60052D2AE /* iPhoneUpperBar.jpg */,
+				1DD2B67918F363B60052D2AE /* PencilButton.ai */,
+				1DD2B67A18F363B60052D2AE /* Rectangle.ai */,
+				1DD2B67B18F363B60052D2AE /* RegisterButton.ai */,
+				1DD2B67C18F363B60052D2AE /* SCDC logo design.jpg */,
+				1DD2B67D18F363B60052D2AE /* UpperBar.ai */,
 				1D89941418A6CB4400F88DBA /* SCDC-Info.plist */,
 				1D4C07BC18F0964200B0E204 /* scdc.db */,
 				1D89941518A6CB4400F88DBA /* InfoPlist.strings */,
@@ -416,11 +455,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD2B68818F363B60052D2AE /* RegisterButton.ai in Resources */,
+				1DD2B68318F363B60052D2AE /* iPadRegisterButton.jpg in Resources */,
+				1DD2B68118F363B60052D2AE /* iPadPencilButton.jpg in Resources */,
 				1D4C07BD18F0965400B0E204 /* scdc.db in Resources */,
 				1D4D268218B83D3D0019392A /* scdc.jpg in Resources */,
+				1DD2B67F18F363B60052D2AE /* CheckBox.ai in Resources */,
+				1DD2B68A18F363B60052D2AE /* UpperBar.ai in Resources */,
+				1DD2B68518F363B60052D2AE /* iPhoneUpperBar.jpg in Resources */,
 				1D4D268418B84CCF0019392A /* logo2.png in Resources */,
+				1DD2B68218F363B60052D2AE /* iPadRectangle.jpg in Resources */,
+				1DD2B68018F363B60052D2AE /* iPadCalendarButton.jpg in Resources */,
+				1DD2B68718F363B60052D2AE /* Rectangle.ai in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,
 				1D89942018A6CB4400F88DBA /* Main_iPhone.storyboard in Resources */,
+				1DD2B68918F363B60052D2AE /* SCDC logo design.jpg in Resources */,
+				1DD2B67E18F363B60052D2AE /* CalendarButton.ai in Resources */,
+				1DD2B68618F363B60052D2AE /* PencilButton.ai in Resources */,
+				1DD2B68418F363B60052D2AE /* iPadUpperBar.jpg in Resources */,
 				1D89941718A6CB4400F88DBA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
