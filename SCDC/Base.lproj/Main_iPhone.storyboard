@@ -59,6 +59,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="QHr-z9-kpR" kind="modal" id="htL-bk-2CV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -66,7 +69,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwX-Bz-lgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-556" y="1067"/>
+            <point key="canvasLocation" x="-415" y="713"/>
         </scene>
         <!--Pass Code View Controller - Faculty Login-->
         <scene sceneID="b7o-9B-bAG">
@@ -206,7 +209,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwh-Im-qYr">
-                                <rect key="frame" x="100" y="354" width="120" height="30"/>
+                                <rect key="frame" x="100" y="351" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.58156040450000002" blue="1" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Faculty">
@@ -242,6 +245,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCg-3F-jkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1087" y="713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K2a-Sj-Cr5">
+            <objects>
+                <viewController id="QHr-z9-kpR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5tZ-8T-H7y"/>
+                        <viewControllerLayoutGuide type="bottom" id="91n-SQ-geC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fxv-Zd-0ux" customClass="Calendar">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJQ-7l-a97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-549" y="1455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3kM-rF-N9T">

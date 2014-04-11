@@ -18,6 +18,9 @@
 @property (nonatomic,strong) NSString *day;
 @property (nonatomic,strong) NSString *location;
 @property (nonatomic,strong) NSString *instructor;
+@property (nonatomic,strong) NSString *startDate;
+@property (nonatomic,strong) NSString *endDate;
+@property (nonatomic,strong) NSString *type;
 
 
 @end

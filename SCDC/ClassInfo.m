@@ -11,6 +11,6 @@
 @implementation ClassInfo 
 
 //Creates the get and set methods for these instances.
-@synthesize classId, name, time, day, location, instructor;
+@synthesize classId, name, time, day, location, instructor, startDate, endDate, type;
 
 @end

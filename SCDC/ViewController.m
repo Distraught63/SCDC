@@ -7,12 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "TSQCalendarView.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad
 {
@@ -27,6 +29,7 @@
     
     
     days = [NSMutableArray arrayWithObjects:@"Tuesdays & Thursdays", @"Mondays and Wednesday",@"Tuesdays & Thursdays", @"Tuesdays & Thursdays",@"Wednesdays", nil];
+    
     
 }
 
