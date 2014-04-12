@@ -120,7 +120,7 @@
                         <color key="tintColor" red="0.0" green="0.58156040450000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Faculty Login" id="wct-Rw-tAz">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="mZN-cG-5Ct">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mZN-cG-5Ct">
                             <connections>
                                 <segue destination="kfr-bF-9Dq" kind="unwind" unwindAction="unwindMainMenu:" id="Ihl-xZ-iWm"/>
                             </connections>
