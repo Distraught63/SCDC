@@ -37,23 +37,27 @@
 
 -(NSMutableArray *) createStudentObjects:(NSMutableArray * ) csvData
 {
+    //Array that will hold student objects
     NSMutableArray *result = [[NSMutableArray alloc]init];
     
+    //For line
     for (int i=0; i < csvData.count; i++) {
         
-        for (NSArray *studentInfo in csvData[i]) {
-            //Init student
-            Student *temp = [[Student alloc]init];
-            
-            temp.studentId = i;
-            temp.firstName = studentInfo[0];
-            temp.lastName = studentInfo[1];
-            temp.email = studentInfo[2];
-            temp.phone = studentInfo[3];
-            
-            
-            [result addObject:temp];
-        }
+        //Get contents of line
+        NSArray *studentInfo = csvData[i];
+        
+        //Init student
+        Student *temp = [[Student alloc]init];
+        
+        temp.studentId = i;
+        temp.firstName = studentInfo[0];
+        temp.lastName = studentInfo[1];
+        temp.email = studentInfo[2];
+        temp.phone = studentInfo[3];
+        
+        
+        [result addObject:temp];
+        
         
         
     }
@@ -63,27 +67,30 @@
 
 -(NSMutableArray *) createClassObjects: (NSMutableArray * ) cvsData
 {
+    //Array that will class objects
     NSMutableArray *result = [[NSMutableArray alloc]init];
     
     for (int i = 0; i < cvsData.count; i++) {
         
-        for (NSArray *classInfo in cvsData[i]) {
-            //Init class
-            ClassInfo *temp = [[ClassInfo alloc]init];
-            
-            temp.classId = i;
-            temp.name = classInfo[0];
-            temp.time = classInfo[1];
-            temp.day = classInfo[2];
-            temp.location = classInfo[3];
-            temp.instructor = classInfo[4];
-            temp.startDate = classInfo[5];
-            temp.endDate = classInfo[6];
-            temp.type = classInfo[7];
-            
-            
-            [result addObject:temp];
-        }
+        NSArray *classInfo = cvsData[i];
+        
+        //Init class
+        ClassInfo *temp = [[ClassInfo alloc]init];
+        
+        //Add attributes to class
+        temp.classId = i;
+        temp.name = classInfo[0];
+        temp.time = classInfo[1];
+        temp.day = classInfo[2];
+        temp.location = classInfo[3];
+        temp.instructor = classInfo[4];
+        temp.startDate = classInfo[5];
+        temp.endDate = classInfo[6];
+        temp.type = classInfo[7];
+        
+        //add class to the results array
+        [result addObject:temp];
+        
         
         
     }
@@ -101,15 +108,15 @@
     for (ClassInfo *s in classes)
     {
         
-            //Add the attendance to dates
-            [db executeUpdate:@"INSERT INTO class (classid, name_of_class, time, day, location, instructor,startDate, endDate, type) VALUES (?,?,?,?,?,?,?,?,?);", s.classId, s.name, s.time, s.day, s.location, s.instructor, s.startDate, s.endDate, s.type];
+        //Add the attendance to dates
+        [db executeUpdate:@"INSERT INTO class (classid, name_of_class, time, day, location, instructor,startDate, endDate, type) VALUES (?,?,?,?,?,?,?,?,?);", s.classId, s.name, s.time, s.day, s.location, s.instructor, s.startDate, s.endDate, s.type];
         
     }
     
     //Make the changes to the database and then close it.
     [db commit];
     [db close];
-
+    
     
 }
 
@@ -123,8 +130,8 @@
     //Go through the list of students and record their attendance information to the db
     for (Student *s in students)
     {
-            //Add the attendance to dates
-            [db executeUpdate:@"INSERT INTO student (studentid, firstname, lastname, email, phone) VALUES (?,?,?,?,?);", s.studentId, s.firstName, s.lastName, s.email, s.phone];
+        //Add the attendance to dates
+        [db executeUpdate:@"INSERT INTO student (studentid, firstname, lastname, email, phone) VALUES (?,?,?,?,?);", s.studentId, s.firstName, s.lastName, s.email, s.phone];
         
     }
     

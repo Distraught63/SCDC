@@ -29,8 +29,10 @@
 //    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     //
     
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"iPhoneUpperBar.jpg"] forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"iPhoneUpperBar.jpg"] forBarMetrics:UIBarMetricsDefault];
 
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scdc.jpg"]];
+    self.tableView.backgroundColor = background;
     
      NSLog(@"Number of classess =  %lu", (unsigned long)self.classes.count);
     
@@ -84,7 +86,11 @@
 //    UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
     
     [[cell textLabel] setText:[NSString stringWithFormat:@"%@ ",class.name]];
-    return cell;
+    
+    cell.textLabel.textColor = [UIColor whiteColor];
+    
+     cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor colorWithWhite:1.5 alpha:.5];
     
     
 //    NSLog(@"Class is %@", class.name);
