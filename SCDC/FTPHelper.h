@@ -53,4 +53,8 @@
 
 - (void) uploadFile ;
 
+- (IBAction) downloadStudents: (id) sender;
+- (IBAction) downloadClasses: (id) sender;
+- (IBAction) downloadRegistration: (id) sender;
+
 @end

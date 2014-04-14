@@ -94,9 +94,9 @@
     }
 }
 
-- (void)setBackgroundColor:(UIColor *)backgroundColor;
+- (void)setBackgroundColor:(UIColor *)backgroundColor
 {
-    [super setBackgroundColor:backgroundColor];
+    [super setBackgroundColor:[UIColor blackColor]];
     [self.tableView setBackgroundColor:backgroundColor];
 }
 

@@ -61,7 +61,7 @@
  */
 -(void) alertUserOfIncorrectPasscode
 {
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Incorrect Password" message:@"Please try again" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Incorrect Password or Username!" message:@"Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [alert show];
 }

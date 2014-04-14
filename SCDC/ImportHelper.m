@@ -10,9 +10,12 @@
 #import "DatabaseAccess.h"
 #import "Student.h"
 #import "ClassInfo.h"
+#import "FTPHelper.h"
 
 @implementation ImportHelper
 
+
+//Code that turns the CSV contents into a 2d array
 -(NSMutableArray *) getCSVContents: (NSString *) csvFile
 {
     NSMutableArray *result = [[NSMutableArray alloc]init];
@@ -29,9 +32,54 @@
     return result;
 }
 
--(void) addCSVContents: (NSMutableArray *) csvData
+-(void) importStudent: (NSMutableArray *) csvData
 {
+    FTPHelper *ftp = [[FTPHelper alloc]init];
+    [ftp downloadStudents:self];
     
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"students.csv"];
+    
+    NSString *csv = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:nil];
+    
+    NSMutableArray *csvArray = [self getCSVContents:csv];
+    NSMutableArray *result = [self createStudentObjects:csvArray];
+    [self addStudents:result];
+}
+
+-(void) importRegistration: (NSMutableArray *) csvData
+{
+    FTPHelper *ftp = [[FTPHelper alloc]init];
+    [ftp downloadRegistration:self];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"registration.csv"];
+    
+    NSString *csv = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:nil];
+    
+    NSMutableArray *csvArray = [self getCSVContents:csv];
+    
+    [self addRegistration:csvArray];
+}
+
+-(void) importClasses: (NSMutableArray *) csvData
+{
+    FTPHelper *ftp = [[FTPHelper alloc]init];
+    [ftp downloadClasses:self];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"classes.csv"];
+    
+    NSString *csv = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:nil];
+    
+    NSMutableArray *csvArray = [self getCSVContents:csv];
+    
+    NSMutableArray *result = [self createClassObjects:csvArray];
+    
+    [self addClasses:result];
 }
 
 
@@ -104,17 +152,22 @@
     [db open];
     [db beginTransaction];
     
-    //Go through the list of students and record their attendance information to the db
-    for (ClassInfo *s in classes)
-    {
-        
-        //Add the attendance to dates
-        [db executeUpdate:@"INSERT INTO class (classid, name_of_class, time, day, location, instructor,startDate, endDate, type) VALUES (?,?,?,?,?,?,?,?,?);", s.classId, s.name, s.time, s.day, s.location, s.instructor, s.startDate, s.endDate, s.type];
-        
-    }
-    
-    //Make the changes to the database and then close it.
+    BOOL success =  [db executeUpdate:@"DELETE *  FROM class"];
     [db commit];
+    
+    if (success){
+        //Go through the list of students and record their attendance information to the db
+        for (ClassInfo *s in classes)
+        {
+            
+            //Add the attendance to dates
+            [db executeUpdate:@"INSERT INTO class (classid, name_of_class, time, day, location, instructor,startDate, endDate, type) VALUES (?,?,?,?,?,?,?,?,?);", s.classId, s.name, s.time, s.day, s.location, s.instructor, s.startDate, s.endDate, s.type];
+            
+        }
+        
+        //Make the changes to the database and then close it.
+        [db commit];
+    }
     [db close];
     
     
@@ -127,16 +180,22 @@
     [db open];
     [db beginTransaction];
     
-    //Go through the list of students and record their attendance information to the db
-    for (Student *s in students)
-    {
-        //Add the attendance to dates
-        [db executeUpdate:@"INSERT INTO student (studentid, firstname, lastname, email, phone) VALUES (?,?,?,?,?);", s.studentId, s.firstName, s.lastName, s.email, s.phone];
-        
-    }
-    
-    //Make the changes to the database and then close it.
+    BOOL success =  [db executeUpdate:@"DELETE *  FROM student"];
     [db commit];
+    
+    if (success) {
+        
+        //Go through the list of students and record their attendance information to the db
+        for (Student *s in students)
+        {
+            //Add the attendance to dates
+            [db executeUpdate:@"INSERT INTO student (studentid, firstname, lastname, email, phone) VALUES (?,?,?,?,?);", s.studentId, s.firstName, s.lastName, s.email, s.phone];
+            
+        }
+        
+        //Make the changes to the database and then close it.
+        [db commit];
+    }
     [db close];
     
     
@@ -149,16 +208,23 @@
     [db open];
     [db beginTransaction];
     
-    //Go through the list of students and record their attendance information to the db
-    for (NSArray *s in regData)
-    {
-        //Add the attendance to dates
-        [db executeUpdate:@"INSERT INTO registration (regId,student_id, class_ID) VALUES (?,?,?);", s[0], s[1], s[3]];
+    BOOL success =  [db executeUpdate:@"DELETE *  FROM registration"];
+    [db commit];
+    
+    if (success) {
+        
+        //Go through the list of students and record their attendance information to the db
+        for (NSArray *s in regData)
+        {
+            //Add the attendance to dates
+            [db executeUpdate:@"INSERT INTO registration (regId,student_id, class_ID) VALUES (?,?,?);", s[0], s[1], s[3]];
+            
+        }
+        
+        //Make the changes to the database and then close it.
+        [db commit];
         
     }
-    
-    //Make the changes to the database and then close it.
-    [db commit];
     [db close];
     
 }

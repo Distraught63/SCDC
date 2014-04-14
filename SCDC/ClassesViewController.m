@@ -31,8 +31,8 @@
     
 //    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"iPhoneUpperBar.jpg"] forBarMetrics:UIBarMetricsDefault];
 
-    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scdc.jpg"]];
-    self.tableView.backgroundColor = background;
+//    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scdc.jpg"]];
+//    self.tableView.backgroundColor = background;
     
      NSLog(@"Number of classess =  %lu", (unsigned long)self.classes.count);
     
@@ -87,10 +87,10 @@
     
     [[cell textLabel] setText:[NSString stringWithFormat:@"%@ ",class.name]];
     
-    cell.textLabel.textColor = [UIColor whiteColor];
+//    cell.textLabel.textColor = [UIColor whiteColor];
     
-     cell.backgroundColor = [UIColor clearColor];
-    cell.backgroundColor = [UIColor colorWithWhite:1.5 alpha:.5];
+//     cell.backgroundColor = [UIColor clearColor];
+//    cell.backgroundColor = [UIColor colorWithWhite:1.5 alpha:.5];
     
     
 //    NSLog(@"Class is %@", class.name);
@@ -106,11 +106,19 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString: @"temp"])  {
         
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        UIButton * button = sender;
+        UITableViewCell * cell = (id)button.superview.superview.superview;
+        NSLog(@"%@", cell);
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         AttendanceViewController *destViewController = segue.destinationViewController;
         destViewController.classPassed = [classes objectAtIndex:indexPath.row];
         
     }
+}
+
+-(IBAction) TakeAttendance:(id)sender
+{
+    [self performSegueWithIdentifier:@"temp" sender:sender];
 }
 
 //Refreshes table view when download is done.
