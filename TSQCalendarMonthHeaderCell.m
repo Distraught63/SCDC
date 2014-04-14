@@ -119,6 +119,7 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
 - (void)setBackgroundColor:(UIColor *)backgroundColor;
 {
     [super setBackgroundColor:backgroundColor];
+
     for (UILabel *label in self.headerLabels) {
         label.backgroundColor = backgroundColor;
     }

@@ -7,7 +7,7 @@
 //
 
 #import "CalendarViewController.h"
-#import "TSQCalendarView.h"
+
 
 @interface CalendarViewController ()
 
@@ -24,18 +24,13 @@
     return self;
 }
 
--(void)loadView
-{
-    CGRect frame = self.parentViewController.view.bounds;
-    TSQCalendarView *cal = [[TSQCalendarView alloc] initWithFrame:frame];
-    cal.firstDate = [NSDate date];
-    cal.lastDate = [[NSDate date] dateByAddingTimeInterval:60 * 60 * 24 * 279.5]; // approximately 279.5 days in the future
-    cal.delegate = self;
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+  
+    self.calendarView.firstDate = [NSDate date];
+    self.calendarView.lastDate = [[NSDate date] dateByAddingTimeInterval:60 * 60 * 24 * 279.5]; // approximately 279.5 days in the future
+    //    cal.delegate = self;
     
     // Do any additional setup after loading the view.
 }

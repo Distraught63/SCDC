@@ -146,22 +146,31 @@
         <scene sceneID="5Ya-DC-9aj">
             <objects>
                 <tableViewController id="FTt-Rc-K8F" customClass="ClassesViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AvP-Pa-t4S">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="22" sectionFooterHeight="22" id="AvP-Pa-t4S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="classList" rowHeight="114" id="LqD-SM-AT4">
-                                <rect key="frame" x="0.0" y="86" width="320" height="114"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="classList" rowHeight="160" id="LqD-SM-AT4">
+                                <rect key="frame" x="0.0" y="86" width="320" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LqD-SM-AT4" id="B53-Kg-dDw">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="113"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sy3-Gw-6kA">
+                                            <rect key="frame" x="172" y="124" width="142" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Take Attendance">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="TakeAttendance:" destination="FTt-Rc-K8F" eventType="touchUpInside" id="0Y5-ih-vub"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                     <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="aRO-3g-SMd" kind="push" identifier="temp" id="vDC-Sc-GZf"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -178,6 +187,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="AvP-Pa-t4S" id="dBv-Sy-fF7"/>
+                        <segue destination="aRO-3g-SMd" kind="push" identifier="temp" id="hVN-OZ-wdo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYj-y5-zxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="-1098" y="612"/>
         </scene>
-        <!--View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="K2a-Sj-Cr5">
             <objects>
-                <viewController id="QHr-z9-kpR" sceneMemberID="viewController">
+                <viewController id="QHr-z9-kpR" customClass="CalendarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5tZ-8T-H7y"/>
                         <viewControllerLayoutGuide type="bottom" id="91n-SQ-geC"/>
@@ -261,12 +271,22 @@
                     <view key="view" contentMode="scaleToFill" id="Fxv-Zd-0ux" customClass="Calendar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7s-NA-E7k" customClass="TSQCalendarView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="R7s-NA-E7k" id="rxZ-YN-Xn2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJQ-7l-a97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-549" y="1455"/>
+            <point key="canvasLocation" x="49" y="1291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3kM-rF-N9T">
@@ -368,6 +388,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YtD-bQ-wOE"/>
+        <segue reference="ccc-bl-Xg0"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TSQCalendarView.h"
 
-@interface CalendarViewController : UIViewController
+@interface CalendarViewController : UIViewController <TSQCalendarViewDelegate>
+@property (weak, nonatomic) IBOutlet TSQCalendarView *calendarView;
 
 @end
