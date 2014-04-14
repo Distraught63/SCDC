@@ -9,6 +9,7 @@
 #import "FTPHelper.h"
 #import "Utility.h"
 #import "ClassesViewController.h"
+#import "ImportHelper.h"
 
 @implementation FTPHelper
 
@@ -22,11 +23,84 @@
     
     //
     ClassesViewController * vc = sender;
+    
     //
     
     self.delegate = vc;
     //----- for anonymous login just leave the username and password nil
     downloadFile.path = path1;
+    downloadFile.hostname = hostname1;
+    downloadFile.username = username1;
+    downloadFile.password = password1;
+    
+    NSLog(@"Download Started!!");
+    //we start the request
+    [downloadFile start];
+    
+}
+
+- (IBAction) downloadStudents: (id) sender
+{
+    
+    downloadData = [NSMutableData dataWithCapacity: 1];
+    
+    downloadFile = [[BRRequestDownload alloc] initWithDelegate: self];
+    
+    //
+    ClassesViewController * vc = sender;
+    //
+    
+    self.delegate = vc;
+    //----- for anonymous login just leave the username and password nil
+    downloadFile.path = [NSString stringWithFormat:@"%@%@", pathCSV, @"students.csv"];
+    downloadFile.hostname = hostname1;
+    downloadFile.username = username1;
+    downloadFile.password = password1;
+    
+    NSLog(@"Download Started!!");
+    //we start the request
+    [downloadFile start];
+    
+}
+
+- (IBAction) downloadClasses: (id) sender
+{
+    
+    downloadData = [NSMutableData dataWithCapacity: 1];
+    
+    downloadFile = [[BRRequestDownload alloc] initWithDelegate: self];
+    
+    //
+    ClassesViewController * vc = sender;
+    //
+    
+    self.delegate = vc;
+    //----- for anonymous login just leave the username and password nil
+    downloadFile.path = [NSString stringWithFormat:@"%@%@", pathCSV, @"classes.csv"];
+    downloadFile.hostname = hostname1;
+    downloadFile.username = username1;
+    downloadFile.password = password1;
+    
+    NSLog(@"Download Started!!");
+    //we start the request
+    [downloadFile start];
+    
+}
+
+- (IBAction) downloadRegistration: (id) sender
+{
+    
+    downloadData = [NSMutableData dataWithCapacity: 1];
+    
+    downloadFile = [[BRRequestDownload alloc] initWithDelegate: self];
+    
+    //
+    ClassesViewController * vc = sender;
+    //
+    
+    self.delegate = vc;
+    //----- for anonymous login just leave the username and password nil
+    downloadFile.path = [NSString stringWithFormat:@"%@%@", pathCSV, @"students.csv"];
     downloadFile.hostname = hostname1;
     downloadFile.username = username1;
     downloadFile.password = password1;
