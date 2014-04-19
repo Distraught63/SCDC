@@ -71,6 +71,11 @@
 		1DE867DE18F8960600D68BF5 /* ImportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE867DD18F8960600D68BF5 /* ImportHelper.m */; };
 		1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */; };
 		1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */; };
+		5574110F1903103200D991DC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574110E1903103200D991DC /* Main_iPad.storyboard */; };
+		557411111903111A00D991DC /* LogoNewColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411101903111A00D991DC /* LogoNewColor.png */; };
+		557411131903112F00D991DC /* UpperBarNewColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411121903112F00D991DC /* UpperBarNewColor.png */; };
+		557411161903133500D991DC /* MainMenuiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557411151903133500D991DC /* MainMenuiPadViewController.m */; };
+		557411181903141200D991DC /* BusImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411171903141200D991DC /* BusImage.png */; };
 		559B3C6018FCA31D0060B7A9 /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B3C5F18FCA31D0060B7A9 /* Rectangle.png */; };
 		559B3C6618FCA98D0060B7A9 /* SCDC Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */; };
 		55C1925E18B82A520093B1E7 /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1925D18B82A520093B1E7 /* ClassesViewController.m */; };
@@ -192,6 +197,12 @@
 		1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassCodeViewController.m; sourceTree = "<group>"; };
 		1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		5574110E1903103200D991DC /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		557411101903111A00D991DC /* LogoNewColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoNewColor.png; sourceTree = "<group>"; };
+		557411121903112F00D991DC /* UpperBarNewColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpperBarNewColor.png; sourceTree = "<group>"; };
+		557411141903133500D991DC /* MainMenuiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuiPadViewController.h; sourceTree = "<group>"; };
+		557411151903133500D991DC /* MainMenuiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuiPadViewController.m; sourceTree = "<group>"; };
+		557411171903141200D991DC /* BusImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BusImage.png; sourceTree = "<group>"; };
 		559B3C5F18FCA31D0060B7A9 /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rectangle.png; sourceTree = "<group>"; };
 		559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SCDC Logo.jpg"; sourceTree = "<group>"; };
 		55C1925C18B82A520093B1E7 /* ClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
@@ -347,7 +358,10 @@
 				1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */,
 				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
 				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
+				557411141903133500D991DC /* MainMenuiPadViewController.h */,
+				557411151903133500D991DC /* MainMenuiPadViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
+				5574110E1903103200D991DC /* Main_iPad.storyboard */,
 				55C1925C18B82A520093B1E7 /* ClassesViewController.h */,
 				55C1925D18B82A520093B1E7 /* ClassesViewController.m */,
 				1DE867D918F88E7200D68BF5 /* CalendarViewController.h */,
@@ -369,10 +383,13 @@
 				559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */,
 				1D4D268318B84CCF0019392A /* logo2.png */,
 				1DD2B67118F363B60052D2AE /* CalendarButton.ai */,
+				557411171903141200D991DC /* BusImage.png */,
 				1DD2B67218F363B60052D2AE /* CheckBox.ai */,
 				559B3C5F18FCA31D0060B7A9 /* Rectangle.png */,
 				1DD2B67318F363B60052D2AE /* iPadCalendarButton.jpg */,
 				1DD2B67418F363B60052D2AE /* iPadPencilButton.jpg */,
+				557411101903111A00D991DC /* LogoNewColor.png */,
+				557411121903112F00D991DC /* UpperBarNewColor.png */,
 				1DD2B67518F363B60052D2AE /* iPadRectangle.jpg */,
 				1DD2B67618F363B60052D2AE /* iPadRegisterButton.jpg */,
 				1DD2B67718F363B60052D2AE /* iPadUpperBar.jpg */,
@@ -504,12 +521,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DD2B68818F363B60052D2AE /* RegisterButton.ai in Resources */,
+				5574110F1903103200D991DC /* Main_iPad.storyboard in Resources */,
 				1DD2B68318F363B60052D2AE /* iPadRegisterButton.jpg in Resources */,
 				1DD2B68118F363B60052D2AE /* iPadPencilButton.jpg in Resources */,
 				1D4C07BD18F0965400B0E204 /* scdc.db in Resources */,
 				1D4D268218B83D3D0019392A /* scdc.jpg in Resources */,
 				559B3C6018FCA31D0060B7A9 /* Rectangle.png in Resources */,
 				1DD2B67F18F363B60052D2AE /* CheckBox.ai in Resources */,
+				557411181903141200D991DC /* BusImage.png in Resources */,
+				557411111903111A00D991DC /* LogoNewColor.png in Resources */,
 				1DD2B68A18F363B60052D2AE /* UpperBar.ai in Resources */,
 				559B3C6618FCA98D0060B7A9 /* SCDC Logo.jpg in Resources */,
 				1DD2B68518F363B60052D2AE /* iPhoneUpperBar.jpg in Resources */,
@@ -518,6 +538,7 @@
 				1DD2B68018F363B60052D2AE /* iPadCalendarButton.jpg in Resources */,
 				1DD2B68718F363B60052D2AE /* Rectangle.ai in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,
+				557411131903112F00D991DC /* UpperBarNewColor.png in Resources */,
 				1D89942018A6CB4400F88DBA /* Main_iPhone.storyboard in Resources */,
 				1DD2B68918F363B60052D2AE /* SCDC logo design.jpg in Resources */,
 				1DD2B67E18F363B60052D2AE /* CalendarButton.ai in Resources */,
@@ -556,6 +577,7 @@
 				1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */,
 				1DE867DE18F8960600D68BF5 /* ImportHelper.m in Sources */,
 				1D70C7C318A81054006BAD81 /* aClass.m in Sources */,
+				557411161903133500D991DC /* MainMenuiPadViewController.m in Sources */,
 				1DE867DB18F88E7200D68BF5 /* CalendarViewController.m in Sources */,
 				1D446EDC18E4E08E001778E5 /* BRRequestCreateDirectory.m in Sources */,
 				1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */,
