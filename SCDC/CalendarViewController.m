@@ -83,7 +83,7 @@
     NSDate *todayDate = [[NSUserDefaults standardUserDefaults] objectForKey:@"date"];
     todayDate = clickedDate;
     [[NSUserDefaults standardUserDefaults] setObject:clickedDate forKey:@"date"];
-    NSDate *today = [NSDate date];
+//    NSDate *today = [NSDate date];
 //    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
 //    [dateFormat setDateFormat:@"yyyy-MM-dd"];
 //    NSString *theDate = [dateFormat stringFromDate:todayDate];

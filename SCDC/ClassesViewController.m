@@ -27,7 +27,7 @@
     UIImage *image = [UIImage imageNamed: @"UpperBarNewColor.png"];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
-     NSLog(@"Number of classess =  %lu", (unsigned long)self.classes.count);
+    NSLog(@"Number of classess =  %lu", (unsigned long)self.classes.count);
     
     //
     AppDelegate * appDelegate = [[UIApplication sharedApplication]delegate];
@@ -35,6 +35,8 @@
     //
     
     [appDelegate createAndCheckWithRemote:self];
+    
+    self.useBlurForPopup = YES;
     
 }
 
@@ -58,13 +60,12 @@
 
 - (IBAction)unwindToClassess:(UIStoryboardSegue *)segue;
 {
-   
+    
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Number of classes is %lu", classes.count);
     return [classes count];
 }
 
@@ -77,18 +78,18 @@
     
     ClassInfo *class = [self.classes objectAtIndex:[indexPath row]];
     
-//    UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
+    //    UILabel *classNameLabel = (UILabel *)[cell viewWithTag:1];
     
     [[cell textLabel] setText:[NSString stringWithFormat:@"%@ ",class.name]];
     
-//    cell.textLabel.textColor = [UIColor whiteColor];
+    //    cell.textLabel.textColor = [UIColor whiteColor];
     
-//     cell.backgroundColor = [UIColor clearColor];
-//    cell.backgroundColor = [UIColor colorWithWhite:1.5 alpha:.5];
+    //     cell.backgroundColor = [UIColor clearColor];
+    //    cell.backgroundColor = [UIColor colorWithWhite:1.5 alpha:.5];
     
     
-//    NSLog(@"Class is %@", class.name);
-//    classNameLabel.text = class.name;
+    //    NSLog(@"Class is %@", class.name);
+    //    classNameLabel.text = class.name;
     
     return cell;
 }
@@ -98,21 +99,42 @@
 
 //Solution with a good explanation is in this link : https://developer.apple.com/library/ios/documentation/userexperience/conceptual/tableview_iphone/TableViewAndDataModel/TableViewAndDataModel.html
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString: @"temp"])  {
-        
-        UIButton * button = sender;
-        UITableViewCell * cell = (id)button.superview.superview.superview;
-        NSLog(@"%@", cell);
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        AttendanceViewController *destViewController = segue.destinationViewController;
-        destViewController.classPassed = [classes objectAtIndex:indexPath.row];
-        
-    }
+//    if ([[segue identifier] isEqualToString: @"temp"])  {
+//        
+//        UIButton * button = sender;
+//        UITableViewCell * cell = (id)button.superview.superview.superview;
+//        NSLog(@"%@", cell);
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//        AttendanceViewController *destViewController = segue.destinationViewController;
+//        destViewController.classPassed = [classes objectAtIndex:indexPath.row];
+//        
+//    }
 }
 
 -(IBAction) TakeAttendance:(id)sender
 {
-    [self performSegueWithIdentifier:@"temp" sender:sender];
+    AttendanceViewController *AttendanceVC = [[AttendanceViewController alloc]initWithNibName:@"AttendanceViewController" bundle:nil];
+    
+    UIButton * button = sender;
+    UITableViewCell * cell = (id)button.superview.superview.superview;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    AttendanceVC.classPassed = [classes objectAtIndex:indexPath.row];
+    
+    [self presentPopupViewController:AttendanceVC animated:YES completion:^(void) {
+        NSLog(@"popup view presented");
+    }];
+    
+    
+    //Original
+//    [self performSegueWithIdentifier:@"temp" sender:sender];
+}
+
+- (void)dismissPopup {
+    if (self.popupViewController != nil) {
+        [self dismissPopupViewControllerAnimated:YES completion:^{
+            NSLog(@"popup view dismissed");
+        }];
+    }
 }
 
 //Refreshes table view when download is done.

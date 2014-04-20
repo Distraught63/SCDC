@@ -13,6 +13,8 @@
 		1D2B927E190435E900C01C2A /* CalChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B927D190435E900C01C2A /* CalChildViewController.m */; };
 		1D2B92811904386700C01C2A /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B92801904386700C01C2A /* CalendarViewController.m */; };
 		1D2B92831904389200C01C2A /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B92821904389200C01C2A /* ClassesViewController.m */; };
+		1D2B9288190454C600C01C2A /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B9287190454C600C01C2A /* UIViewController+CWPopup.m */; };
+		1D2B928A1904617300C01C2A /* AttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B92891904617300C01C2A /* AttendanceViewController.xib */; };
 		1D446EAF18E4DF67001778E5 /* ClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAC18E4DF67001778E5 /* ClassInfo.m */; };
 		1D446EB018E4DF67001778E5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAE18E4DF67001778E5 /* Student.m */; };
 		1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EB218E4DF76001778E5 /* FTPHelper.m */; };
@@ -103,6 +105,9 @@
 		1D2B92801904386700C01C2A /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		1D2B92821904389200C01C2A /* ClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassesViewController.m; sourceTree = "<group>"; };
 		1D2B9284190438A200C01C2A /* ClassesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
+		1D2B9286190454C600C01C2A /* UIViewController+CWPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CWPopup.h"; sourceTree = "<group>"; };
+		1D2B9287190454C600C01C2A /* UIViewController+CWPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CWPopup.m"; sourceTree = "<group>"; };
+		1D2B92891904617300C01C2A /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
 		1D446EAB18E4DF67001778E5 /* ClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfo.h; sourceTree = "<group>"; };
 		1D446EAC18E4DF67001778E5 /* ClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassInfo.m; sourceTree = "<group>"; };
 		1D446EAD18E4DF67001778E5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -239,6 +244,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2B9285190454A300C01C2A /* CWPopup */ = {
+			isa = PBXGroup;
+			children = (
+				1D2B9286190454C600C01C2A /* UIViewController+CWPopup.h */,
+				1D2B9287190454C600C01C2A /* UIViewController+CWPopup.m */,
+			);
+			name = CWPopup;
+			sourceTree = "<group>";
+		};
 		1D446EAA18E4DF57001778E5 /* Database Items */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,15 +369,17 @@
 				1D446EC418E4E029001778E5 /* BlackRaccoon */,
 				1D446EAA18E4DF57001778E5 /* Database Items */,
 				1D446EFD18E5074F001778E5 /* Database Access and Sync */,
+				1D2B9285190454A300C01C2A /* CWPopup */,
 				1D446EFE18E657E6001778E5 /* AttendanceViewController.h */,
 				1D446EFF18E657E6001778E5 /* AttendanceViewController.m */,
+				1D2B92891904617300C01C2A /* AttendanceViewController.xib */,
 				1D89941B18A6CB4400F88DBA /* AppDelegate.h */,
 				1D89941C18A6CB4400F88DBA /* AppDelegate.m */,
 				1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */,
 				1D2B9284190438A200C01C2A /* ClassesViewController.h */,
+				1D2B92821904389200C01C2A /* ClassesViewController.m */,
 				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
 				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
-				1D2B92821904389200C01C2A /* ClassesViewController.m */,
 				557411141903133500D991DC /* MainMenuiPadViewController.h */,
 				1D2B927C190435E900C01C2A /* CalChildViewController.h */,
 				1D2B927D190435E900C01C2A /* CalChildViewController.m */,
@@ -541,6 +557,7 @@
 				559B3C6618FCA98D0060B7A9 /* SCDC Logo.jpg in Resources */,
 				1DD2B68518F363B60052D2AE /* iPhoneUpperBar.jpg in Resources */,
 				1D4D268418B84CCF0019392A /* logo2.png in Resources */,
+				1D2B928A1904617300C01C2A /* AttendanceViewController.xib in Resources */,
 				1DD2B68218F363B60052D2AE /* iPadRectangle.jpg in Resources */,
 				1DD2B68018F363B60052D2AE /* iPadCalendarButton.jpg in Resources */,
 				1DD2B68718F363B60052D2AE /* Rectangle.ai in Resources */,
@@ -606,6 +623,7 @@
 				5549BFCD19033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m in Sources */,
 				5549BFCE19033286002B0D19 /* PDTSimpleCalendarViewHeader.m in Sources */,
 				1D446F1418E79B77001778E5 /* FMDatabasePool.m in Sources */,
+				1D2B9288190454C600C01C2A /* UIViewController+CWPopup.m in Sources */,
 				1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */,
 				1D446F1518E79B77001778E5 /* FMDatabaseQueue.m in Sources */,
 			);

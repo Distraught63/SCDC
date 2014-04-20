@@ -28,10 +28,12 @@
 {
     [super viewDidLoad];
     
+    
     UIImage *image = [UIImage imageNamed: @"UpperBarNewColor.png"];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
     self.classPassed = self.classPassed;
+    self.view.frame = CGRectMake(20, 70, 280 , 450);
     [self populateStudents];
     
 }
@@ -52,6 +54,7 @@
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     
     selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -63,6 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"studentList" forIndexPath:indexPath];
     
     Student *student = [self.students objectAtIndex:[indexPath row]];
@@ -82,7 +86,7 @@
         
     self.students = [db getStudentsInClass:classPassed];
     
-    NSLog(@"Number of students in class is: %lud", (unsigned long)self.students.count);
+    NSLog(@"Number of students in class is: %lu", (unsigned long)self.students.count);
     
 }
 
@@ -100,7 +104,12 @@
     
     [ftp uploadFile];
     
+    
+    //Ways to go back to the previous view controller
+    
     [self performSegueWithIdentifier: @"unwindToClassList" sender: self];
+    
+//    [self.navigationController popViewControllerAnimated:YES];
 
 }
 

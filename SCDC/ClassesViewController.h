@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DatabaseAccess.h"
+#import "UIViewController+CWPopup.h"
 #import "FTPHelper.h"
 #import "FMDatabase.h"
 #import "Utility.h"

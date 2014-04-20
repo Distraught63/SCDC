@@ -249,7 +249,7 @@
             NSUInteger  offset = 0;
             CFIndex     parsedBytes;
             uint8_t *bytes = (uint8_t *)[self.receivedData bytes];
-            int totalbytes = [self.receivedData length];
+            unsigned long totalbytes = [self.receivedData length];
            
             //----- we have all the data for the directory listing. Now parse it.
             do
