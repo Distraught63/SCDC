@@ -26,21 +26,37 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [[UINavigationBar appearance] setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
     }
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[UINavigationBar appearance] setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
+
     
+//    [[UINavigationBar appearance] setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scdc.jpg"]];
     self.view.backgroundColor = background;
+    
+//    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scdc.jpg"]];
+//    self.view.backgroundColor = background;
 	// Do any additional setup after loading the view.
     
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController set];
+//    [[UINavigationBar appearance] setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
+//    [UINavigationBar appearanceWhenContainedIn:[MainMenuViewController class], nil];
+    
+//    [[UINavigationBar appearance] setBackgroundImage: Nil] forBarMetrics:UIBarMetricsDefault];
 }
-
+-(void)viewDidAppear:(BOOL)animated
+{
+     [[UINavigationBar appearance] setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -52,6 +68,12 @@
     NSURL *url = [NSURL URLWithString:@"http://www.scdcorp.org/"];
     [[UIApplication sharedApplication] openURL:url];
 }
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"UpperBarNewColor.png"] forBarMetrics:UIBarMetricsDefault];
+}
+
 
 
 

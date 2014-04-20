@@ -17,7 +17,8 @@
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [documentPaths objectAtIndex:0];
     self.databasePath = [documentDir stringByAppendingPathComponent:self.databaseName];
-
+    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"UpperBarNewColor.png"] forBarMetrics:UIBarMetricsDefault];
     
     [self createAndCheckWithRemote:nil];
     [self createAndCheckDatabase];
