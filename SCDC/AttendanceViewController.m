@@ -67,7 +67,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"studentList" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"studentList" forIndexPath:indexPath];
     
     Student *student = [self.students objectAtIndex:[indexPath row]];
     
