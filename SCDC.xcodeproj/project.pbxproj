@@ -63,14 +63,14 @@
 		1DD2B68818F363B60052D2AE /* RegisterButton.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67B18F363B60052D2AE /* RegisterButton.ai */; };
 		1DD2B68918F363B60052D2AE /* SCDC logo design.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67C18F363B60052D2AE /* SCDC logo design.jpg */; };
 		1DD2B68A18F363B60052D2AE /* UpperBar.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67D18F363B60052D2AE /* UpperBar.ai */; };
-		1DE867D118F87C3400D68BF5 /* TSQCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE867CA18F87C3400D68BF5 /* TSQCalendarCell.m */; };
-		1DE867D218F87C3400D68BF5 /* TSQCalendarMonthHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE867CC18F87C3400D68BF5 /* TSQCalendarMonthHeaderCell.m */; };
-		1DE867D318F87C3400D68BF5 /* TSQCalendarRowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE867CE18F87C3400D68BF5 /* TSQCalendarRowCell.m */; };
-		1DE867D418F87C3400D68BF5 /* TSQCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE867D018F87C3400D68BF5 /* TSQCalendarView.m */; };
 		1DE867DB18F88E7200D68BF5 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE867DA18F88E7200D68BF5 /* CalendarViewController.m */; };
 		1DE867DE18F8960600D68BF5 /* ImportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE867DD18F8960600D68BF5 /* ImportHelper.m */; };
 		1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */; };
 		1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */; };
+		5549BFCB19033286002B0D19 /* PDTSimpleCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549BFC419033286002B0D19 /* PDTSimpleCalendarViewCell.m */; };
+		5549BFCC19033286002B0D19 /* PDTSimpleCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549BFC619033286002B0D19 /* PDTSimpleCalendarViewController.m */; };
+		5549BFCD19033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549BFC819033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m */; };
+		5549BFCE19033286002B0D19 /* PDTSimpleCalendarViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549BFCA19033286002B0D19 /* PDTSimpleCalendarViewHeader.m */; };
 		5574110F1903103200D991DC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574110E1903103200D991DC /* Main_iPad.storyboard */; };
 		557411111903111A00D991DC /* LogoNewColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411101903111A00D991DC /* LogoNewColor.png */; };
 		557411131903112F00D991DC /* UpperBarNewColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411121903112F00D991DC /* UpperBarNewColor.png */; };
@@ -179,16 +179,6 @@
 		1DD2B67B18F363B60052D2AE /* RegisterButton.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RegisterButton.ai; sourceTree = "<group>"; };
 		1DD2B67C18F363B60052D2AE /* SCDC logo design.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SCDC logo design.jpg"; sourceTree = "<group>"; };
 		1DD2B67D18F363B60052D2AE /* UpperBar.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UpperBar.ai; sourceTree = "<group>"; };
-		1DE867C718F87C3400D68BF5 /* TimesSquare-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TimesSquare-Prefix.pch"; path = "../TimesSquare-Prefix.pch"; sourceTree = "<group>"; };
-		1DE867C818F87C3400D68BF5 /* TimesSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimesSquare.h; path = ../TimesSquare.h; sourceTree = "<group>"; };
-		1DE867C918F87C3400D68BF5 /* TSQCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSQCalendarCell.h; path = ../TSQCalendarCell.h; sourceTree = "<group>"; };
-		1DE867CA18F87C3400D68BF5 /* TSQCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSQCalendarCell.m; path = ../TSQCalendarCell.m; sourceTree = "<group>"; };
-		1DE867CB18F87C3400D68BF5 /* TSQCalendarMonthHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSQCalendarMonthHeaderCell.h; path = ../TSQCalendarMonthHeaderCell.h; sourceTree = "<group>"; };
-		1DE867CC18F87C3400D68BF5 /* TSQCalendarMonthHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSQCalendarMonthHeaderCell.m; path = ../TSQCalendarMonthHeaderCell.m; sourceTree = "<group>"; };
-		1DE867CD18F87C3400D68BF5 /* TSQCalendarRowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSQCalendarRowCell.h; path = ../TSQCalendarRowCell.h; sourceTree = "<group>"; };
-		1DE867CE18F87C3400D68BF5 /* TSQCalendarRowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSQCalendarRowCell.m; path = ../TSQCalendarRowCell.m; sourceTree = "<group>"; };
-		1DE867CF18F87C3400D68BF5 /* TSQCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSQCalendarView.h; path = ../TSQCalendarView.h; sourceTree = "<group>"; };
-		1DE867D018F87C3400D68BF5 /* TSQCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSQCalendarView.m; path = ../TSQCalendarView.m; sourceTree = "<group>"; };
 		1DE867D918F88E7200D68BF5 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		1DE867DA18F88E7200D68BF5 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		1DE867DC18F8960600D68BF5 /* ImportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportHelper.h; sourceTree = "<group>"; };
@@ -197,6 +187,15 @@
 		1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassCodeViewController.m; sourceTree = "<group>"; };
 		1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		5549BFC219033286002B0D19 /* PDTSimpleCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendar.h; sourceTree = "<group>"; };
+		5549BFC319033286002B0D19 /* PDTSimpleCalendarViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewCell.h; sourceTree = "<group>"; };
+		5549BFC419033286002B0D19 /* PDTSimpleCalendarViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewCell.m; sourceTree = "<group>"; };
+		5549BFC519033286002B0D19 /* PDTSimpleCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewController.h; sourceTree = "<group>"; };
+		5549BFC619033286002B0D19 /* PDTSimpleCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewController.m; sourceTree = "<group>"; };
+		5549BFC719033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewFlowLayout.h; sourceTree = "<group>"; };
+		5549BFC819033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewFlowLayout.m; sourceTree = "<group>"; };
+		5549BFC919033286002B0D19 /* PDTSimpleCalendarViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewHeader.h; sourceTree = "<group>"; };
+		5549BFCA19033286002B0D19 /* PDTSimpleCalendarViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewHeader.m; sourceTree = "<group>"; };
 		5574110E1903103200D991DC /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		557411101903111A00D991DC /* LogoNewColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoNewColor.png; sourceTree = "<group>"; };
 		557411121903112F00D991DC /* UpperBarNewColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpperBarNewColor.png; sourceTree = "<group>"; };
@@ -346,7 +345,7 @@
 		1D89941218A6CB4400F88DBA /* SCDC */ = {
 			isa = PBXGroup;
 			children = (
-				1DE867D518F87C7900D68BF5 /* TimesSquareCalendar */,
+				5549BFC119033286002B0D19 /* PDTSimpleCalendar */,
 				1D446EB418E4DFF1001778E5 /* FMDB */,
 				1D446EC418E4E029001778E5 /* BlackRaccoon */,
 				1D446EAA18E4DF57001778E5 /* Database Items */,
@@ -427,21 +426,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1DE867D518F87C7900D68BF5 /* TimesSquareCalendar */ = {
+		5549BFC119033286002B0D19 /* PDTSimpleCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				1DE867C718F87C3400D68BF5 /* TimesSquare-Prefix.pch */,
-				1DE867C818F87C3400D68BF5 /* TimesSquare.h */,
-				1DE867C918F87C3400D68BF5 /* TSQCalendarCell.h */,
-				1DE867CA18F87C3400D68BF5 /* TSQCalendarCell.m */,
-				1DE867CB18F87C3400D68BF5 /* TSQCalendarMonthHeaderCell.h */,
-				1DE867CC18F87C3400D68BF5 /* TSQCalendarMonthHeaderCell.m */,
-				1DE867CF18F87C3400D68BF5 /* TSQCalendarView.h */,
-				1DE867CD18F87C3400D68BF5 /* TSQCalendarRowCell.h */,
-				1DE867CE18F87C3400D68BF5 /* TSQCalendarRowCell.m */,
-				1DE867D018F87C3400D68BF5 /* TSQCalendarView.m */,
+				5549BFC219033286002B0D19 /* PDTSimpleCalendar.h */,
+				5549BFC319033286002B0D19 /* PDTSimpleCalendarViewCell.h */,
+				5549BFC419033286002B0D19 /* PDTSimpleCalendarViewCell.m */,
+				5549BFC519033286002B0D19 /* PDTSimpleCalendarViewController.h */,
+				5549BFC619033286002B0D19 /* PDTSimpleCalendarViewController.m */,
+				5549BFC719033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.h */,
+				5549BFC819033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m */,
+				5549BFC919033286002B0D19 /* PDTSimpleCalendarViewHeader.h */,
+				5549BFCA19033286002B0D19 /* PDTSimpleCalendarViewHeader.m */,
 			);
-			name = TimesSquareCalendar;
+			path = PDTSimpleCalendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,11 +568,11 @@
 				1D446EDD18E4E08E001778E5 /* BRRequestDelete.m in Sources */,
 				1D89941D18A6CB4400F88DBA /* AppDelegate.m in Sources */,
 				1D446EEF18E4E612001778E5 /* DatabaseAccess.m in Sources */,
-				1DE867D418F87C3400D68BF5 /* TSQCalendarView.m in Sources */,
 				1D446EE218E4E08E001778E5 /* BRRequestUpload.m in Sources */,
 				1D446F0018E657E6001778E5 /* AttendanceViewController.m in Sources */,
 				1D446EDA18E4E08E001778E5 /* BRRequest.m in Sources */,
 				1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */,
+				5549BFCB19033286002B0D19 /* PDTSimpleCalendarViewCell.m in Sources */,
 				1DE867DE18F8960600D68BF5 /* ImportHelper.m in Sources */,
 				1D70C7C318A81054006BAD81 /* aClass.m in Sources */,
 				557411161903133500D991DC /* MainMenuiPadViewController.m in Sources */,
@@ -583,19 +581,19 @@
 				1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */,
 				1D446F1B18E7AE9A001778E5 /* ExportHelper.m in Sources */,
 				1D446F1218E79B77001778E5 /* FMDatabase.m in Sources */,
-				1DE867D118F87C3400D68BF5 /* TSQCalendarCell.m in Sources */,
 				1D89941918A6CB4400F88DBA /* main.m in Sources */,
 				1D446EB018E4DF67001778E5 /* Student.m in Sources */,
 				1D446EDF18E4E08E001778E5 /* BRRequestError.m in Sources */,
 				1D446EDB18E4E08E001778E5 /* BRRequest+_UserData.m in Sources */,
 				1D446EDE18E4E08E001778E5 /* BRRequestDownload.m in Sources */,
+				5549BFCC19033286002B0D19 /* PDTSimpleCalendarViewController.m in Sources */,
 				1D446EE118E4E08E001778E5 /* BRRequestQueue.m in Sources */,
 				1D446EF418E4F0A9001778E5 /* BRRequestListDirectory.m in Sources */,
-				1DE867D218F87C3400D68BF5 /* TSQCalendarMonthHeaderCell.m in Sources */,
 				1D446F1318E79B77001778E5 /* FMDatabaseAdditions.m in Sources */,
 				1D446F1618E79B77001778E5 /* FMResultSet.m in Sources */,
-				1DE867D318F87C3400D68BF5 /* TSQCalendarRowCell.m in Sources */,
 				1D446EE618E4E107001778E5 /* Dates.m in Sources */,
+				5549BFCD19033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m in Sources */,
+				5549BFCE19033286002B0D19 /* PDTSimpleCalendarViewHeader.m in Sources */,
 				1D446F1418E79B77001778E5 /* FMDatabasePool.m in Sources */,
 				1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */,
 				55C1925E18B82A520093B1E7 /* ClassesViewController.m in Sources */,

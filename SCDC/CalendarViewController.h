@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TSQCalendarView.h"
+#import "PDTSimpleCalendarViewController.h"
+#import "PDTSimpleCalendarViewCell.h"
+#import "PDTSimpleCalendarViewHeader.h"
 
-@interface CalendarViewController : UIViewController <TSQCalendarViewDelegate>
-@property (weak, nonatomic) IBOutlet TSQCalendarView *calendarView;
+@interface CalendarViewController : UIViewController 
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end

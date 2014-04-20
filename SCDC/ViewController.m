@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "TSQCalendarView.h"
+#import "PDTSimpleCalendar.h"
 
 @interface ViewController ()
 
