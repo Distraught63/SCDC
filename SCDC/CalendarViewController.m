@@ -27,10 +27,9 @@
     return self;
 }
 
-- (void)viewDidLoad
+-(void)loadView
 {
-//    [super viewDidLoad];
-  
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -94,6 +93,12 @@
     [self.window setRootViewController:tabBarController];
     [self.window makeKeyAndVisible];
     
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
     
 //    [self addEvent];
     // Do any additional setup after loading the view.

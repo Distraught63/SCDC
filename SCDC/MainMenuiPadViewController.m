@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     
-    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"BusImage.png"]];
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"BusiPad.png"]];
     self.view.backgroundColor = background;
 	// Do any additional setup after loading the view.
 }

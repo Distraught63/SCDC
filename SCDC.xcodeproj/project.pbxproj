@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2B9277190360FB00C01C2A /* Bus.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B9276190360FB00C01C2A /* Bus.png */; };
+		1D2B9279190361FD00C01C2A /* BusiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B9278190361FD00C01C2A /* BusiPad.png */; };
+		1D2B927B1903646800C01C2A /* scdclogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B927A1903646800C01C2A /* scdclogo.gif */; };
 		1D446EAF18E4DF67001778E5 /* ClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAC18E4DF67001778E5 /* ClassInfo.m */; };
 		1D446EB018E4DF67001778E5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAE18E4DF67001778E5 /* Student.m */; };
 		1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EB218E4DF76001778E5 /* FTPHelper.m */; };
@@ -33,7 +36,6 @@
 		1D446F1618E79B77001778E5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F1118E79B77001778E5 /* FMResultSet.m */; };
 		1D446F1B18E7AE9A001778E5 /* ExportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F1A18E7AE9A001778E5 /* ExportHelper.m */; };
 		1D4C07BD18F0965400B0E204 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D4C07BC18F0964200B0E204 /* scdc.db */; };
-		1D4D268218B83D3D0019392A /* scdc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268118B83D3D0019392A /* scdc.jpg */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
 		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
 		1D89940D18A6CB4400F88DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940C18A6CB4400F88DBA /* Foundation.framework */; };
@@ -75,7 +77,6 @@
 		557411111903111A00D991DC /* LogoNewColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411101903111A00D991DC /* LogoNewColor.png */; };
 		557411131903112F00D991DC /* UpperBarNewColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411121903112F00D991DC /* UpperBarNewColor.png */; };
 		557411161903133500D991DC /* MainMenuiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557411151903133500D991DC /* MainMenuiPadViewController.m */; };
-		557411181903141200D991DC /* BusImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411171903141200D991DC /* BusImage.png */; };
 		559B3C6018FCA31D0060B7A9 /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B3C5F18FCA31D0060B7A9 /* Rectangle.png */; };
 		559B3C6618FCA98D0060B7A9 /* SCDC Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */; };
 		55C1925E18B82A520093B1E7 /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1925D18B82A520093B1E7 /* ClassesViewController.m */; };
@@ -92,6 +93,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D2B9276190360FB00C01C2A /* Bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bus.png; sourceTree = "<group>"; };
+		1D2B9278190361FD00C01C2A /* BusiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BusiPad.png; sourceTree = "<group>"; };
+		1D2B927A1903646800C01C2A /* scdclogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = scdclogo.gif; sourceTree = "<group>"; };
 		1D446EAB18E4DF67001778E5 /* ClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfo.h; sourceTree = "<group>"; };
 		1D446EAC18E4DF67001778E5 /* ClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassInfo.m; sourceTree = "<group>"; };
 		1D446EAD18E4DF67001778E5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -143,7 +147,6 @@
 		1D446F1918E7AE9A001778E5 /* ExportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportHelper.h; sourceTree = "<group>"; };
 		1D446F1A18E7AE9A001778E5 /* ExportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportHelper.m; sourceTree = "<group>"; };
 		1D4C07BC18F0964200B0E204 /* scdc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scdc.db; sourceTree = "<group>"; };
-		1D4D268118B83D3D0019392A /* scdc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scdc.jpg; sourceTree = "<group>"; };
 		1D4D268318B84CCF0019392A /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = SCDC/logo2.png; sourceTree = SOURCE_ROOT; };
 		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
 		1D70C7C218A81054006BAD81 /* aClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aClass.m; sourceTree = "<group>"; };
@@ -201,7 +204,6 @@
 		557411121903112F00D991DC /* UpperBarNewColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpperBarNewColor.png; sourceTree = "<group>"; };
 		557411141903133500D991DC /* MainMenuiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuiPadViewController.h; sourceTree = "<group>"; };
 		557411151903133500D991DC /* MainMenuiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuiPadViewController.m; sourceTree = "<group>"; };
-		557411171903141200D991DC /* BusImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BusImage.png; sourceTree = "<group>"; };
 		559B3C5F18FCA31D0060B7A9 /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rectangle.png; sourceTree = "<group>"; };
 		559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SCDC Logo.jpg"; sourceTree = "<group>"; };
 		55C1925C18B82A520093B1E7 /* ClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
@@ -381,9 +383,11 @@
 			children = (
 				559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */,
 				1D4D268318B84CCF0019392A /* logo2.png */,
+				1D2B9276190360FB00C01C2A /* Bus.png */,
 				1DD2B67118F363B60052D2AE /* CalendarButton.ai */,
-				557411171903141200D991DC /* BusImage.png */,
 				1DD2B67218F363B60052D2AE /* CheckBox.ai */,
+				1D2B927A1903646800C01C2A /* scdclogo.gif */,
+				1D2B9278190361FD00C01C2A /* BusiPad.png */,
 				559B3C5F18FCA31D0060B7A9 /* Rectangle.png */,
 				1DD2B67318F363B60052D2AE /* iPadCalendarButton.jpg */,
 				1DD2B67418F363B60052D2AE /* iPadPencilButton.jpg */,
@@ -401,7 +405,6 @@
 				1D89941418A6CB4400F88DBA /* SCDC-Info.plist */,
 				1D4C07BC18F0964200B0E204 /* scdc.db */,
 				1D89941518A6CB4400F88DBA /* InfoPlist.strings */,
-				1D4D268118B83D3D0019392A /* scdc.jpg */,
 				1D89941818A6CB4400F88DBA /* main.m */,
 				1D89941A18A6CB4400F88DBA /* SCDC-Prefix.pch */,
 			);
@@ -520,13 +523,14 @@
 			files = (
 				1DD2B68818F363B60052D2AE /* RegisterButton.ai in Resources */,
 				5574110F1903103200D991DC /* Main_iPad.storyboard in Resources */,
+				1D2B9279190361FD00C01C2A /* BusiPad.png in Resources */,
 				1DD2B68318F363B60052D2AE /* iPadRegisterButton.jpg in Resources */,
 				1DD2B68118F363B60052D2AE /* iPadPencilButton.jpg in Resources */,
 				1D4C07BD18F0965400B0E204 /* scdc.db in Resources */,
-				1D4D268218B83D3D0019392A /* scdc.jpg in Resources */,
+				1D2B9277190360FB00C01C2A /* Bus.png in Resources */,
 				559B3C6018FCA31D0060B7A9 /* Rectangle.png in Resources */,
+				1D2B927B1903646800C01C2A /* scdclogo.gif in Resources */,
 				1DD2B67F18F363B60052D2AE /* CheckBox.ai in Resources */,
-				557411181903141200D991DC /* BusImage.png in Resources */,
 				557411111903111A00D991DC /* LogoNewColor.png in Resources */,
 				1DD2B68A18F363B60052D2AE /* UpperBar.ai in Resources */,
 				559B3C6618FCA98D0060B7A9 /* SCDC Logo.jpg in Resources */,
