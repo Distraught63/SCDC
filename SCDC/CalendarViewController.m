@@ -7,6 +7,7 @@
 //
 
 #import "CalendarViewController.h"
+#import "MainMenuViewController.h"
 #import <EventKit/EventKit.h>
 
 
@@ -30,7 +31,8 @@
 -(void)loadView
 {
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 64, 320, 367)];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
@@ -144,6 +146,11 @@
         // ***** do the important stuff here *****
     }
 }*/
+
+-(IBAction)backButton:(id)sender
+{
+   [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning
 {

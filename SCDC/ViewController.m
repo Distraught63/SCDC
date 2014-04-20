@@ -21,6 +21,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    UIImage *image = [UIImage imageNamed: @"UpperBarNewColor.png"];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
     name = [NSMutableArray arrayWithObjects:@"Introduction to MS Powerpoint",@"Introduction to Multimedia", @"Introduction to Basic Computer Skills",@"Introduction to MS Word ", @"Introduction to Basic Computers ",nil];
     
@@ -66,6 +68,11 @@
     classNameLabel.text = name[indexPath.row];
     
     return cell;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
 }
 
 

@@ -28,6 +28,9 @@
 {
     [super viewDidLoad];
     
+    UIImage *image = [UIImage imageNamed: @"UpperBarNewColor.png"];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    
     self.classPassed = self.classPassed;
     [self populateStudents];
     

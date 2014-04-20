@@ -24,15 +24,8 @@
     [super viewDidLoad];
     [self populateClasses];
     
-    //
-//    UIImage *navBackgroundImage = [UIImage imageNamed:@"UpperBar.ai"];
-//    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
-    //
-    
-//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"iPhoneUpperBar.jpg"] forBarMetrics:UIBarMetricsDefault];
-
-//    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scdc.jpg"]];
-//    self.tableView.backgroundColor = background;
+    UIImage *image = [UIImage imageNamed: @"UpperBarNewColor.png"];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
      NSLog(@"Number of classess =  %lu", (unsigned long)self.classes.count);
     
@@ -42,6 +35,7 @@
     //
     
     [appDelegate createAndCheckWithRemote:self];
+    
 }
 
 

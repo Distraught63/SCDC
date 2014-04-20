@@ -54,7 +54,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-     [[UINavigationBar appearance] setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
+//     [[UINavigationBar appearance] setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -70,7 +70,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"UpperBarNewColor.png"] forBarMetrics:UIBarMetricsDefault];
+//        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"UpperBarNewColor.png"] forBarMetrics:UIBarMetricsDefault];
 }
 
 

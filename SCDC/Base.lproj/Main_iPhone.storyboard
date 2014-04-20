@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RIU-xl-rhC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RIU-xl-rhC">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -170,6 +170,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Classes" id="ue5-6U-EO3">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="ABu-pY-fNa">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="Gqw-50-Mqw" kind="unwind" unwindAction="unwindMainMenu:" id="54U-wS-0Kj"/>
                             </connections>
@@ -270,7 +271,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vh4-oC-xZN"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" id="sqP-AG-52J">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t77-lD-0LQ">
+                                <rect key="frame" x="16" y="6" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="Vh4-oC-xZN">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="MWh-q5-bms">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButton:" destination="QHr-z9-kpR" id="6zR-PC-U4F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarView" destination="R7s-NA-E7k" id="rxZ-YN-Xn2"/>
                     </connections>
@@ -350,11 +372,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="mkX-jU-5if">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FeX-zJ-qKF">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="bK8-RY-Hje" kind="unwind" unwindAction="unwindToClassess:" id="daS-JY-BqH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="k0u-Ty-bYJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="saveAttendance:" destination="aRO-3g-SMd" id="S78-Ir-0bd"/>
                             </connections>
@@ -519,6 +543,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YtD-bQ-wOE"/>
+        <segue reference="ccc-bl-Xg0"/>
     </inferredMetricsTieBreakers>
 </document>
