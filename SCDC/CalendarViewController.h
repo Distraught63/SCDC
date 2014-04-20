@@ -1,5 +1,5 @@
 //
-//  CalendarViewController.h
+//  CalendarViewController.m
 //  SCDC
 //
 //  Created by Leen  on 4/11/14.
@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PDTSimpleCalendarViewController.h"
-#import "PDTSimpleCalendarViewCell.h"
-#import "PDTSimpleCalendarViewHeader.h"
+#import "PDTSimpleCalendar.h"
 
-@interface CalendarViewController : UIViewController 
-
-@property (strong, nonatomic) UIWindow *window;
+@interface CalendarViewController : UIViewController
 
 @end
