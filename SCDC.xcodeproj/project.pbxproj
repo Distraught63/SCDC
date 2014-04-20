@@ -16,6 +16,7 @@
 		1D2B9288190454C600C01C2A /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B9287190454C600C01C2A /* UIViewController+CWPopup.m */; };
 		1D2B928A1904617300C01C2A /* AttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B92891904617300C01C2A /* AttendanceViewController.xib */; };
 		1D2B92941904800200C01C2A /* BusMain.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B92931904800200C01C2A /* BusMain.png */; };
+		1D2B9296190481C200C01C2A /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B9295190481C200C01C2A /* AppIcon.png */; };
 		1D446EAF18E4DF67001778E5 /* ClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAC18E4DF67001778E5 /* ClassInfo.m */; };
 		1D446EB018E4DF67001778E5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAE18E4DF67001778E5 /* Student.m */; };
 		1D446EB318E4DF76001778E5 /* FTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EB218E4DF76001778E5 /* FTPHelper.m */; };
@@ -110,6 +111,7 @@
 		1D2B9287190454C600C01C2A /* UIViewController+CWPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CWPopup.m"; sourceTree = "<group>"; };
 		1D2B92891904617300C01C2A /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
 		1D2B92931904800200C01C2A /* BusMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BusMain.png; sourceTree = "<group>"; };
+		1D2B9295190481C200C01C2A /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		1D446EAB18E4DF67001778E5 /* ClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfo.h; sourceTree = "<group>"; };
 		1D446EAC18E4DF67001778E5 /* ClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassInfo.m; sourceTree = "<group>"; };
 		1D446EAD18E4DF67001778E5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */,
 				1D4D268318B84CCF0019392A /* logo2.png */,
 				1D2B9276190360FB00C01C2A /* Bus.png */,
+				1D2B9295190481C200C01C2A /* AppIcon.png */,
 				1DD2B67118F363B60052D2AE /* CalendarButton.ai */,
 				1DD2B67218F363B60052D2AE /* CheckBox.ai */,
 				1D2B927A1903646800C01C2A /* scdclogo.gif */,
@@ -564,6 +567,7 @@
 				1D2B928A1904617300C01C2A /* AttendanceViewController.xib in Resources */,
 				1DD2B68218F363B60052D2AE /* iPadRectangle.jpg in Resources */,
 				1DD2B68018F363B60052D2AE /* iPadCalendarButton.jpg in Resources */,
+				1D2B9296190481C200C01C2A /* AppIcon.png in Resources */,
 				1DD2B68718F363B60052D2AE /* Rectangle.ai in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,
 				557411131903112F00D991DC /* UpperBarNewColor.png in Resources */,
