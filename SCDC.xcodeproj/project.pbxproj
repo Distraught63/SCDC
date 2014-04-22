@@ -14,7 +14,6 @@
 		1D2B92811904386700C01C2A /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B92801904386700C01C2A /* CalendarViewController.m */; };
 		1D2B92831904389200C01C2A /* ClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B92821904389200C01C2A /* ClassesViewController.m */; };
 		1D2B9288190454C600C01C2A /* UIViewController+CWPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B9287190454C600C01C2A /* UIViewController+CWPopup.m */; };
-		1D2B928A1904617300C01C2A /* AttendanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B92891904617300C01C2A /* AttendanceViewController.xib */; };
 		1D2B92941904800200C01C2A /* BusMain.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B92931904800200C01C2A /* BusMain.png */; };
 		1D2B9296190481C200C01C2A /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2B9295190481C200C01C2A /* AppIcon.png */; };
 		1D446EAF18E4DF67001778E5 /* ClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446EAC18E4DF67001778E5 /* ClassInfo.m */; };
@@ -44,7 +43,8 @@
 		1D446F1B18E7AE9A001778E5 /* ExportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D446F1A18E7AE9A001778E5 /* ExportHelper.m */; };
 		1D4C07BD18F0965400B0E204 /* scdc.db in Resources */ = {isa = PBXBuildFile; fileRef = 1D4C07BC18F0964200B0E204 /* scdc.db */; };
 		1D4D268418B84CCF0019392A /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D268318B84CCF0019392A /* logo2.png */; };
-		1D70C7C318A81054006BAD81 /* aClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D70C7C218A81054006BAD81 /* aClass.m */; };
+		1D801D4A1905CE8E00E0696E /* AdminMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D491905CE8E00E0696E /* AdminMenuViewController.m */; };
+		1D801D4D1905CEA400E0696E /* EditMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D4C1905CEA400E0696E /* EditMenuViewController.m */; };
 		1D89940D18A6CB4400F88DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940C18A6CB4400F88DBA /* Foundation.framework */; };
 		1D89940F18A6CB4400F88DBA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940E18A6CB4400F88DBA /* CoreGraphics.framework */; };
 		1D89941118A6CB4400F88DBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89941018A6CB4400F88DBA /* UIKit.framework */; };
@@ -52,7 +52,6 @@
 		1D89941918A6CB4400F88DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89941818A6CB4400F88DBA /* main.m */; };
 		1D89941D18A6CB4400F88DBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89941C18A6CB4400F88DBA /* AppDelegate.m */; };
 		1D89942018A6CB4400F88DBA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */; };
-		1D89942618A6CB4400F88DBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D89942518A6CB4400F88DBA /* ViewController.m */; };
 		1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D89942718A6CB4400F88DBA /* Images.xcassets */; };
 		1D89942F18A6CB4400F88DBA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89942E18A6CB4400F88DBA /* XCTest.framework */; };
 		1D89943018A6CB4400F88DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940C18A6CB4400F88DBA /* Foundation.framework */; };
@@ -109,7 +108,6 @@
 		1D2B9284190438A200C01C2A /* ClassesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassesViewController.h; sourceTree = "<group>"; };
 		1D2B9286190454C600C01C2A /* UIViewController+CWPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CWPopup.h"; sourceTree = "<group>"; };
 		1D2B9287190454C600C01C2A /* UIViewController+CWPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CWPopup.m"; sourceTree = "<group>"; };
-		1D2B92891904617300C01C2A /* AttendanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttendanceViewController.xib; sourceTree = "<group>"; };
 		1D2B92931904800200C01C2A /* BusMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BusMain.png; sourceTree = "<group>"; };
 		1D2B9295190481C200C01C2A /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		1D446EAB18E4DF67001778E5 /* ClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfo.h; sourceTree = "<group>"; };
@@ -162,10 +160,13 @@
 		1D446F1118E79B77001778E5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		1D446F1918E7AE9A001778E5 /* ExportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportHelper.h; sourceTree = "<group>"; };
 		1D446F1A18E7AE9A001778E5 /* ExportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportHelper.m; sourceTree = "<group>"; };
+		1D4A018C190655F60045916C /* AttendanceViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttendanceViewControllerDelegate.h; sourceTree = "<group>"; };
 		1D4C07BC18F0964200B0E204 /* scdc.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scdc.db; sourceTree = "<group>"; };
 		1D4D268318B84CCF0019392A /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = SCDC/logo2.png; sourceTree = SOURCE_ROOT; };
-		1D70C7C118A81054006BAD81 /* aClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aClass.h; sourceTree = "<group>"; };
-		1D70C7C218A81054006BAD81 /* aClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aClass.m; sourceTree = "<group>"; };
+		1D801D481905CE8E00E0696E /* AdminMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminMenuViewController.h; sourceTree = "<group>"; };
+		1D801D491905CE8E00E0696E /* AdminMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminMenuViewController.m; sourceTree = "<group>"; };
+		1D801D4B1905CEA400E0696E /* EditMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMenuViewController.h; sourceTree = "<group>"; };
+		1D801D4C1905CEA400E0696E /* EditMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMenuViewController.m; sourceTree = "<group>"; };
 		1D89940918A6CB4400F88DBA /* SCDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D89940C18A6CB4400F88DBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D89940E18A6CB4400F88DBA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,8 +178,6 @@
 		1D89941B18A6CB4400F88DBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D89941C18A6CB4400F88DBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D89941F18A6CB4400F88DBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		1D89942418A6CB4400F88DBA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1D89942518A6CB4400F88DBA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1D89942718A6CB4400F88DBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D89942D18A6CB4400F88DBA /* SCDCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCDCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D89942E18A6CB4400F88DBA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -376,28 +375,28 @@
 				1D2B9285190454A300C01C2A /* CWPopup */,
 				1D446EFE18E657E6001778E5 /* AttendanceViewController.h */,
 				1D446EFF18E657E6001778E5 /* AttendanceViewController.m */,
-				1D2B92891904617300C01C2A /* AttendanceViewController.xib */,
 				1D89941B18A6CB4400F88DBA /* AppDelegate.h */,
 				1D89941C18A6CB4400F88DBA /* AppDelegate.m */,
 				1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */,
+				1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */,
 				1D2B9284190438A200C01C2A /* ClassesViewController.h */,
+				1D4A018C190655F60045916C /* AttendanceViewControllerDelegate.h */,
 				1D2B92821904389200C01C2A /* ClassesViewController.m */,
 				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
 				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
-				557411141903133500D991DC /* MainMenuiPadViewController.h */,
+				1D801D481905CE8E00E0696E /* AdminMenuViewController.h */,
+				1D801D491905CE8E00E0696E /* AdminMenuViewController.m */,
+				1D801D4B1905CEA400E0696E /* EditMenuViewController.h */,
+				1D801D4C1905CEA400E0696E /* EditMenuViewController.m */,
 				1D2B927C190435E900C01C2A /* CalChildViewController.h */,
 				1D2B927D190435E900C01C2A /* CalChildViewController.m */,
-				1D2B927F1904386700C01C2A /* CalendarViewController.h */,
 				1D2B92801904386700C01C2A /* CalendarViewController.m */,
+				1D2B927F1904386700C01C2A /* CalendarViewController.h */,
+				557411141903133500D991DC /* MainMenuiPadViewController.h */,
 				557411151903133500D991DC /* MainMenuiPadViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
 				5574110E1903103200D991DC /* Main_iPad.storyboard */,
-				1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */,
-				1D89942418A6CB4400F88DBA /* ViewController.h */,
-				1D89942518A6CB4400F88DBA /* ViewController.m */,
 				1D89942718A6CB4400F88DBA /* Images.xcassets */,
-				1D70C7C118A81054006BAD81 /* aClass.h */,
-				1D70C7C218A81054006BAD81 /* aClass.m */,
 				1D89941318A6CB4400F88DBA /* Supporting Files */,
 			);
 			path = SCDC;
@@ -564,7 +563,6 @@
 				559B3C6618FCA98D0060B7A9 /* SCDC Logo.jpg in Resources */,
 				1DD2B68518F363B60052D2AE /* iPhoneUpperBar.jpg in Resources */,
 				1D4D268418B84CCF0019392A /* logo2.png in Resources */,
-				1D2B928A1904617300C01C2A /* AttendanceViewController.xib in Resources */,
 				1DD2B68218F363B60052D2AE /* iPadRectangle.jpg in Resources */,
 				1DD2B68018F363B60052D2AE /* iPadCalendarButton.jpg in Resources */,
 				1D2B9296190481C200C01C2A /* AppIcon.png in Resources */,
@@ -597,7 +595,6 @@
 			files = (
 				1D446EAF18E4DF67001778E5 /* ClassInfo.m in Sources */,
 				1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */,
-				1D89942618A6CB4400F88DBA /* ViewController.m in Sources */,
 				1D446EEC18E4E550001778E5 /* Utility.m in Sources */,
 				1D446EDD18E4E08E001778E5 /* BRRequestDelete.m in Sources */,
 				1D89941D18A6CB4400F88DBA /* AppDelegate.m in Sources */,
@@ -609,7 +606,6 @@
 				1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */,
 				5549BFCB19033286002B0D19 /* PDTSimpleCalendarViewCell.m in Sources */,
 				1DE867DE18F8960600D68BF5 /* ImportHelper.m in Sources */,
-				1D70C7C318A81054006BAD81 /* aClass.m in Sources */,
 				1D2B927E190435E900C01C2A /* CalChildViewController.m in Sources */,
 				557411161903133500D991DC /* MainMenuiPadViewController.m in Sources */,
 				1D446EDC18E4E08E001778E5 /* BRRequestCreateDirectory.m in Sources */,
@@ -617,6 +613,7 @@
 				1D446F1B18E7AE9A001778E5 /* ExportHelper.m in Sources */,
 				1D446F1218E79B77001778E5 /* FMDatabase.m in Sources */,
 				1D2B92831904389200C01C2A /* ClassesViewController.m in Sources */,
+				1D801D4D1905CEA400E0696E /* EditMenuViewController.m in Sources */,
 				1D89941918A6CB4400F88DBA /* main.m in Sources */,
 				1D446EB018E4DF67001778E5 /* Student.m in Sources */,
 				1D446EDF18E4E08E001778E5 /* BRRequestError.m in Sources */,
@@ -630,6 +627,7 @@
 				1D446EE618E4E107001778E5 /* Dates.m in Sources */,
 				5549BFCD19033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m in Sources */,
 				5549BFCE19033286002B0D19 /* PDTSimpleCalendarViewHeader.m in Sources */,
+				1D801D4A1905CE8E00E0696E /* AdminMenuViewController.m in Sources */,
 				1D446F1418E79B77001778E5 /* FMDatabasePool.m in Sources */,
 				1D2B9288190454C600C01C2A /* UIViewController+CWPopup.m in Sources */,
 				1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */,

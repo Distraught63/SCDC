@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DatabaseAccess.h"
-#import "UIViewController+CWPopup.h"
-#import "FTPHelper.h"
-#import "FMDatabase.h"
-#import "Utility.h"
+//#import "DatabaseAccess.h"
+//#import "UIViewController+CWPopup.h"
+//#import "FTPHelper.h"
+//#import "FMDatabase.h"
+//#import "Utility.h"
+//#import "AttendanceViewController.h"
+#import "AttendanceViewControllerDelegate.h"
 
-@interface ClassesViewController : UITableViewController
-{
+@interface ClassesViewController : UITableViewController <AttendanceViewControllerDelegate>{
 }
 
 
@@ -30,5 +31,7 @@
 
 //Refresh the view when the download is complete
 -(void) ftpDidFinishRefreshing;
+
+- (IBAction)dismissPopop:(id)sender;
 
 @end

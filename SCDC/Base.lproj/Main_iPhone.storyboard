@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RIU-xl-rhC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RIU-xl-rhC">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSe-3S-GJV">
-                                <rect key="frame" x="20" y="70" width="280" height="450"/>
+                                <rect key="frame" x="20" y="0.0" width="280" height="438"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -85,12 +85,13 @@
                         <outlet property="passwordField" destination="8yN-hS-ZDo" id="1hX-wg-cpy"/>
                         <outlet property="usernameField" destination="gOL-bK-2oF" id="pjc-Qk-cYn"/>
                         <segue destination="5uA-Zi-eIL" kind="modal" identifier="PassToClasses" id="YtD-bQ-wOE"/>
+                        <segue destination="b5i-6v-vRy" kind="modal" identifier="PassToAdmin" id="gws-zG-DJq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcG-6f-kZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kfr-bF-9Dq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-731" y="7"/>
+            <point key="canvasLocation" x="-539" y="612"/>
         </scene>
         <!--Classes View Controller - Classes-->
         <scene sceneID="5Ya-DC-9aj">
@@ -128,10 +129,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Classes" id="ue5-6U-EO3">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="ABu-pY-fNa">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ULx-dz-Jhr">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="Gqw-50-Mqw" kind="unwind" unwindAction="unwindMainMenu:" id="54U-wS-0Kj"/>
+                                <segue destination="RQF-jT-WBI" kind="unwind" unwindAction="unwindMainMenu:" id="S8F-HJ-6DG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -140,9 +141,9 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYj-y5-zxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Gqw-50-Mqw" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="RQF-jT-WBI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="267" y="-1"/>
+            <point key="canvasLocation" x="692" y="1255"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="YZK-on-5sg">
@@ -244,13 +245,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfJ-oO-6hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295" y="7"/>
+            <point key="canvasLocation" x="-16" y="1255"/>
         </scene>
         <!--Attendance View Controller-->
         <scene sceneID="3Bv-5b-8Ix">
             <objects>
                 <tableViewController id="aRO-3g-SMd" customClass="AttendanceViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rXa-10-JWn">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rXa-10-JWn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -278,30 +279,17 @@
                             <outlet property="delegate" destination="aRO-3g-SMd" id="Ahu-gJ-MY9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mkX-jU-5if">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FeX-zJ-qKF">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="bK8-RY-Hje" kind="unwind" unwindAction="unwindToClassess:" id="daS-JY-BqH"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="k0u-Ty-bYJ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="saveAttendance:" destination="aRO-3g-SMd" id="S78-Ir-0bd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="mkX-jU-5if"/>
+                    <size key="freeformSize" width="300" height="200"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoY-fX-Qe2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="bK8-RY-Hje" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="91"/>
+            <point key="canvasLocation" x="1836" y="1255"/>
         </scene>
-        <!--View Controller - Admin Menu-->
+        <!--Admin Menu View Controller - Admin Menu-->
         <scene sceneID="pdK-G6-BT0">
             <objects>
-                <viewController title="Admin Menu" id="ZAE-yo-bad" sceneMemberID="viewController">
+                <viewController title="Admin Menu" id="ZAE-yo-bad" customClass="AdminMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a0i-Am-XzS"/>
                         <viewControllerLayoutGuide type="bottom" id="iWk-QX-8sI"/>
@@ -350,29 +338,42 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oD1-pp-O1V" kind="modal" id="Bse-mB-i2t"/>
+                                    <segue destination="oD1-pp-O1V" kind="push" id="Bse-mB-i2t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admin Main Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGN-gj-aid">
                                 <rect key="frame" x="65" y="149" width="190" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5Qp-V3-ndO"/>
+                    <toolbarItems>
+                        <barButtonItem title="Back" id="r02-eS-fEp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="5Qp-V3-ndO">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="8Wd-xm-KNi">
+                            <connections>
+                                <segue destination="1as-6Z-Rsa" kind="unwind" unwindAction="unwindMainMenu:" id="XKd-LP-aBv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Vs-yF-wGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1as-6Z-Rsa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="354" y="-800"/>
+            <point key="canvasLocation" x="510" y="104"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Menu View Controller - Edit-->
         <scene sceneID="XLZ-4k-Ngz">
             <objects>
-                <viewController id="oD1-pp-O1V" sceneMemberID="viewController">
+                <viewController title="Edit" id="oD1-pp-O1V" customClass="EditMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ml0-4j-GsC"/>
                         <viewControllerLayoutGuide type="bottom" id="J0L-Zw-ifS"/>
@@ -417,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1a-8s-S2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="-800"/>
+            <point key="canvasLocation" x="976" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uAQ-qe-t1i">
@@ -435,7 +436,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6p-ML-3aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-172" y="-800"/>
+            <point key="canvasLocation" x="-16" y="104"/>
         </scene>
         <!--Calendar View Controller - Calendar-->
         <scene sceneID="1dx-6u-clh">
@@ -476,7 +477,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGB-yI-dEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ORu-rr-kvA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-507" y="799"/>
+            <point key="canvasLocation" x="-563" y="1951"/>
         </scene>
         <!--Cal Child View Controller-->
         <scene sceneID="pjo-aT-pJD">
@@ -495,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipu-Ex-1Kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82" y="876"/>
+            <point key="canvasLocation" x="-18" y="2028"/>
         </scene>
     </scenes>
     <resources>

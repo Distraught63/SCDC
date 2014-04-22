@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #define pass @"1234"
-#define usernamescdc @"SCDCadmin"
+#define faculty @"f" //@"SCDCfaculty"
+#define admin @"a" //@"SCDCadmin"
 
 @interface PassCodeViewController : UIViewController <UITextFieldDelegate> {
 

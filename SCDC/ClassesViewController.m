@@ -9,6 +9,12 @@
 #import "ClassesViewController.h"
 #import "AttendanceViewController.h"
 #import "AppDelegate.h"
+#import "DatabaseAccess.h"
+#import "UIViewController+CWPopup.h"
+#import "FTPHelper.h"
+#import "FMDatabase.h"
+#import "Utility.h"
+
 
 @interface ClassesViewController ()
 
@@ -35,6 +41,9 @@
     //
     
     [appDelegate createAndCheckWithRemote:self];
+    
+    //Set navBar title text color to white
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     self.useBlurForPopup = YES;
     
@@ -99,37 +108,71 @@
 
 //Solution with a good explanation is in this link : https://developer.apple.com/library/ios/documentation/userexperience/conceptual/tableview_iphone/TableViewAndDataModel/TableViewAndDataModel.html
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([[segue identifier] isEqualToString: @"temp"])  {
-//        
-//        UIButton * button = sender;
-//        UITableViewCell * cell = (id)button.superview.superview.superview;
-//        NSLog(@"%@", cell);
-//        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//        AttendanceViewController *destViewController = segue.destinationViewController;
-//        destViewController.classPassed = [classes objectAtIndex:indexPath.row];
-//        
-//    }
+    if ([[segue identifier] isEqualToString: @"temp"])  {
+        
+        UIButton * button = sender;
+        UITableViewCell * cell = (id)button.superview.superview.superview;
+        NSLog(@"%@", cell);
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        AttendanceViewController *destViewController = segue.destinationViewController;
+        destViewController.classPassed = [classes objectAtIndex:indexPath.row];
+        
+    }
 }
 
 -(IBAction) TakeAttendance:(id)sender
 {
-    AttendanceViewController *AttendanceVC = [[AttendanceViewController alloc]initWithNibName:@"AttendanceViewController" bundle:nil];
     
+    AttendanceViewController *AttendanceVC = [[AttendanceViewController alloc] init];
+    
+    //Get the class to take attendance for
     UIButton * button = sender;
     UITableViewCell * cell = (id)button.superview.superview.superview;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    
+    
     AttendanceVC.classPassed = [classes objectAtIndex:indexPath.row];
     
-    [self presentPopupViewController:AttendanceVC animated:YES completion:^(void) {
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:AttendanceVC];
+    
+    AttendanceVC.delegate = self;
+    
+    //Works -- but no nav bar
+//    [self presentPopupViewController:AttendanceVC animated:YES completion:^(void) {
+//        NSLog(@"popup view presented");
+//    }];
+    
+    
+    //Shrink frame width
+//    navController.view.frame = CGRectInset(self.view.bounds, 20, 40);
+    navController.view.frame = CGRectMake(0, 0, 250, 350);
+    
+    [self presentPopupViewController:navController animated:YES completion:^(void) {
         NSLog(@"popup view presented");
     }];
     
+//    self.popupViewController.cancel addTarget:self action:@selector(dismissPopop:) forControlEvents:UIControlEventTouchUpInside];
     
-    //Original
+//    [AttendanceVC.cancel addTarget:self action:@selector(dismissPopop:) forControlEvents:UIControlEventTouchUpInside];
+//    [AttendanceVC.cancel target:self action:@selector(cancel:)];
+    
+    
+    
+    
+    
+    //Original -- No popup
 //    [self performSegueWithIdentifier:@"temp" sender:sender];
+    
+   
 }
 
-- (void)dismissPopup {
+- (void)dismiss:(BOOL)finished
+{
+    NSLog(@"Communication succesful");
+    [self dismissPopop:self];
+}
+
+- (IBAction)dismissPopop:(id)sender {
     if (self.popupViewController != nil) {
         [self dismissPopupViewControllerAnimated:YES completion:^{
             NSLog(@"popup view dismissed");

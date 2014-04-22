@@ -60,10 +60,6 @@
 }
 */
 
--(void)viewWillDisappear:(BOOL)animated
-{
-    [self.navigationController.navigationBar setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
-}
 
 
 - (UIColor *)simpleCalendarViewController:(PDTSimpleCalendarViewController *)controller circleColorForDate:(NSDate *)date
@@ -90,6 +86,12 @@
 //    NSString *theToday = [dateFormat stringFromDate:today];
     
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setBackgroundImage:Nil forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];
 }
 
 @end

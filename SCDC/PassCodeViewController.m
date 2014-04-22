@@ -43,9 +43,13 @@
 {
     
     //Checks if the password entered by the user equals passcode, otherwise notify of incorrect attempt
-    if ([usernameField.text  isEqual: usernamescdc] && [passwordField.text  isEqual: pass])
+    if ([usernameField.text  isEqual: faculty] && [passwordField.text  isEqual: pass])
     {
         [self performSegueWithIdentifier: @"PassToClasses" sender: self];
+    }
+    else if ([usernameField.text  isEqual: admin] && [passwordField.text  isEqual: pass])
+    {
+         [self performSegueWithIdentifier: @"PassToAdmin" sender: self];
     }
     else
     {
