@@ -100,7 +100,7 @@
     
     self.delegate = vc;
     //----- for anonymous login just leave the username and password nil
-    downloadFile.path = [NSString stringWithFormat:@"%@%@", pathCSV, @"students.csv"];
+    downloadFile.path = [NSString stringWithFormat:@"%@%@", pathCSV, @"registration.csv"];
     downloadFile.hostname = hostname1;
     downloadFile.username = username1;
     downloadFile.password = password1;
@@ -224,10 +224,10 @@
 - (void) requestDataAvailable: (BRRequestDownload *) request;
 {
     [downloadData appendData: request.receivedData];
-       NSLog(@"Received: %lu", (unsigned long)[request.receivedData length]);
-    NSLog(@"Size of Recieved Data is %lu", downloadFile.receivedData.length);
-
-    }
+    NSLog(@"Received: %lu", (unsigned long)[request.receivedData length]);
+    NSLog(@"Size of Recieved Data is %lu", (unsigned long)downloadFile.receivedData.length);
+    
+}
 
 -(BOOL) shouldOverwriteFileWithRequest: (BRRequest *) request
 {
@@ -291,7 +291,7 @@
             NSLog(@"%@", [file objectForKey: (id) kCFFTPResourceName]);
         }
         
-
+        
         listDir = nil;
         
     }
@@ -300,25 +300,46 @@
     if (request == downloadFile)
     {
         //called after 'request' is completed successfully
-
+        
         NSData *data = downloadData;
-//        NSLog(@"Size of downloaded file is %lu", (unsigned long)data.length);
-
-        //----- save the NSData as a file object
-//        NSError *error;
+        
+        NSString *downloadedFilePath = pathCSV;
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
-        [fileManager removeItemAtPath:[Utility getDatabasePath] error:nil];
+        NSString *writePath;
         
-        [data writeToFile: [Utility getDatabasePath] atomically:YES];
-//        NSLog(@"Data written to path");
-//        NSData *temp = [fileManager contentsAtPath: [Utility getDatabasePath]];
-//        NSLog(@"size of written data is %lu", temp.length);
-//        [data writeToFile: [Utility getDatabasePath] options: NSDataWritingFileProtectionNone error: &error];
+        if ([downloadFile.path isEqualToString:[NSString stringWithFormat:@"%@%@", pathCSV, @"students.csv"]])
+        {
+            writePath = [Utility getStudentsPath];
+        }
         
-        [self.delegate ftpDidFinishRefreshing];
+        else     if ([downloadFile.path isEqualToString:[NSString stringWithFormat:@"%@%@", pathCSV, @"classes.csv"]])
+        {
+            writePath = [Utility getClassesPath];
+        }
+        else     if ([downloadFile.path isEqualToString:[NSString stringWithFormat:@"%@%@", pathCSV, @"registration.csv"]])
+        {
+            writePath = [Utility getRegistrationPath];
+        }
+        else
+        {
+            writePath = [Utility getDatabasePath];
+            
+            //Inform classesViewController that the databases was downloaded
+            [self.delegate ftpDidFinishRefreshing];
+            
+        }
+        
+        //Remove item at path
+        [fileManager removeItemAtPath:writePath error:nil];
+        
+        //Write downloaded file to path
+        [data writeToFile: writePath atomically:YES];
+        
+        //Delete the downloaded file
         downloadFile = nil;
+        
     }
     
     if (request == uploadFile)
@@ -331,7 +352,7 @@
     {
         NSLog(@"%@ completed!", request);
         deleteFile = nil;
-    }   
+    }
 }
 
 -(void) requestFailed:(BRRequest *) request

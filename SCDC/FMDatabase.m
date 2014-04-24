@@ -12,7 +12,6 @@
 @synthesize cachedStatements=_cachedStatements;
 @synthesize logsErrors=_logsErrors;
 @synthesize crashOnErrors=_crashOnErrors;
-@synthesize busyTimeout=_busyTimeout;
 @synthesize checkedOut=_checkedOut;
 @synthesize traceExecution=_traceExecution;
 
@@ -40,12 +39,12 @@
     self = [super init];
     
     if (self) {
-        _databasePath       = [aPath copy];
-        _openResultSets     = [[NSMutableSet alloc] init];
-        _db                 = nil;
-        _logsErrors         = YES;
-        _crashOnErrors      = NO;
-        _busyTimeout        = 0;
+        _databasePath               = [aPath copy];
+        _openResultSets             = [[NSMutableSet alloc] init];
+        _db                         = nil;
+        _logsErrors                 = YES;
+        _crashOnErrors              = NO;
+        _maxBusyRetryTimeInterval   = 2;
     }
     
     return self;
@@ -102,8 +101,9 @@
         return NO;
     }
     
-    if (_busyTimeout > 0.0) {
-        sqlite3_busy_timeout(_db, (int)(_busyTimeout * 1000));
+    if (_maxBusyRetryTimeInterval > 0.0) {
+        // set the handler
+        [self setMaxBusyRetryTimeInterval:_maxBusyRetryTimeInterval];
     }
     
     
@@ -115,15 +115,16 @@
     if (_db) {
         return YES;
     }
-
+    
     int err = sqlite3_open_v2([self sqlitePath], &_db, flags, NULL /* Name of VFS module to use */);
     if(err != SQLITE_OK) {
         NSLog(@"error opening!: %d", err);
         return NO;
     }
     
-    if (_busyTimeout > 0.0) {
-        sqlite3_busy_timeout(_db, (int)(_busyTimeout * 1000));
+    if (_maxBusyRetryTimeInterval > 0.0) {
+        // set the handler
+        [self setMaxBusyRetryTimeInterval:_maxBusyRetryTimeInterval];
     }
     
     return YES;
@@ -169,15 +170,44 @@
 }
 
 
-- (void)setRetryTimeout:(NSTimeInterval)timeout {
-    _busyTimeout = timeout;
-    if (_db) {
-        sqlite3_busy_timeout(_db, (int)(timeout * 1000));
+static int FMDatabaseBusyHandler(void *f, int count) {
+    
+    FMDatabase *self = (__bridge FMDatabase*)f;
+    
+    if (count == 0) {
+        self->_startBusyRetryTime = [NSDate timeIntervalSinceReferenceDate];
+        return 1;
+    }
+    
+    NSTimeInterval delta = [NSDate timeIntervalSinceReferenceDate] - (self->_startBusyRetryTime);
+    
+    if (delta < [self maxBusyRetryTimeInterval]) {
+        sqlite3_sleep(50); // milliseconds
+        return 1;
+    }
+    
+	return 0;
+}
+
+- (void)setMaxBusyRetryTimeInterval:(NSTimeInterval)timeout {
+    
+    _maxBusyRetryTimeInterval = timeout;
+    
+    if (!_db) {
+        return;
+    }
+    
+    if (timeout > 0) {
+        sqlite3_busy_handler(_db, &FMDatabaseBusyHandler, (__bridge void *)(self));
+    }
+    else {
+        // turn it off otherwise
+        sqlite3_busy_handler(_db, nil, nil);
     }
 }
 
-- (NSTimeInterval)retryTimeout {
-    return _busyTimeout;
+- (NSTimeInterval)maxBusyRetryTimeInterval {
+    return _maxBusyRetryTimeInterval;
 }
 
 
@@ -364,15 +394,15 @@
 - (BOOL)databaseExists {
     
     if (!_db) {
-            
+        
         NSLog(@"The FMDatabase %@ is not open.", self);
         
-    #ifndef NS_BLOCK_ASSERTIONS
+#ifndef NS_BLOCK_ASSERTIONS
         if (_crashOnErrors) {
             NSAssert(false, @"The FMDatabase %@ is not open.", self);
             abort();
         }
-    #endif
+#endif
         
         return NO;
     }
@@ -398,11 +428,11 @@
 - (NSError*)errorWithMessage:(NSString*)message {
     NSDictionary* errorMessage = [NSDictionary dictionaryWithObject:message forKey:NSLocalizedDescriptionKey];
     
-    return [NSError errorWithDomain:@"FMDatabase" code:sqlite3_errcode(_db) userInfo:errorMessage];    
+    return [NSError errorWithDomain:@"FMDatabase" code:sqlite3_errcode(_db) userInfo:errorMessage];
 }
 
 - (NSError*)lastError {
-   return [self errorWithMessage:[self lastErrorMessage]];
+    return [self errorWithMessage:[self lastErrorMessage]];
 }
 
 - (sqlite_int64)lastInsertRowId {
@@ -661,7 +691,7 @@
     }
     
     if (!pStmt) {
-    
+        
         rc      = sqlite3_prepare_v2(_db, [sql UTF8String], -1, &pStmt, 0);
         
         if (SQLITE_OK != rc) {
@@ -711,7 +741,7 @@
         }
     }
     else {
-            
+        
         while (idx < queryCount) {
             
             if (arrayArgs && idx < (int)[arrayArgs count]) {
@@ -767,7 +797,7 @@
     
     [statement setUseCount:[statement useCount] + 1];
     
-    FMDBRelease(statement); 
+    FMDBRelease(statement);
     
     _isExecutingStatement = NO;
     
@@ -790,7 +820,7 @@
     
     NSMutableString *sql = [NSMutableString stringWithCapacity:[format length]];
     NSMutableArray *arguments = [NSMutableArray array];
-    [self extractSQL:format argumentsList:args intoString:sql arguments:arguments];    
+    [self extractSQL:format argumentsList:args intoString:sql arguments:arguments];
     
     va_end(args);
     
@@ -864,7 +894,6 @@
     
     // If dictionaryArgs is passed in, that means we are using sqlite's named parameter support
     if (dictionaryArgs) {
-        
         for (NSString *dictionaryKey in [dictionaryArgs allKeys]) {
             
             // Prefix the key with a colon.
@@ -886,6 +915,7 @@
                 NSLog(@"Could not find index for %@", dictionaryKey);
             }
         }
+        
     }
     else {
         
@@ -1023,7 +1053,7 @@
     NSMutableString *sql      = [NSMutableString stringWithCapacity:[format length]];
     NSMutableArray *arguments = [NSMutableArray array];
     
-    [self extractSQL:format argumentsList:args intoString:sql arguments:arguments];    
+    [self extractSQL:format argumentsList:args intoString:sql arguments:arguments];
     
     va_end(args);
     
@@ -1097,7 +1127,7 @@ static NSString *FMEscapeSavePointName(NSString *savepointName) {
     NSString *sql = [NSString stringWithFormat:@"savepoint '%@';", FMEscapeSavePointName(name)];
     
     if (![self executeUpdate:sql]) {
-
+        
         if (outErr) {
             *outErr = [self lastError];
         }

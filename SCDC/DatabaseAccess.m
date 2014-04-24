@@ -36,9 +36,11 @@
         FMResultSet *results = [db executeQuery:@"select * from registration where class_ID =?", [classID stringValue]];
         
         
+        
         //Iterate through each row
         while([results next])
         {
+            NSLog(@"Found students in class");
             
             //Iterate through each student
             for (Student *s in students) {
@@ -113,6 +115,15 @@
         //Instructor
         //        class.instructor = [results stringForColumn:@"instructor"];
         class.instructor = [results stringForColumnIndex:5];
+        
+        //startDate
+        class.startDate = [results stringForColumn:@"startDate"];
+        
+        //endDate
+        class.endDate = [results stringForColumn:@"endDate"];
+        
+        //Class type
+        class.type = [results stringForColumn:@"type"];
         
         
         
