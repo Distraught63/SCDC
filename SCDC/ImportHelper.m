@@ -245,11 +245,12 @@
     
     BOOL success =  [db executeUpdate:@"DELETE  FROM registration"];
     
+    NSLog(@"Size of reg is %lu", [regData count]);
     
     [db commit];
     
     //Remove the first line
-   [regData removeObjectAtIndex:0];
+//   [regData removeObjectAtIndex:0];
     
     if (success) {
         
@@ -258,6 +259,8 @@
         {
             
             if (s != nil) {
+                
+                  NSLog(@"Size of reg is %lu", [regData count]);
                 
                 NSLog(@"Student id is %@", s[0]);
                 //Add the attendance to dates

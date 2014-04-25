@@ -30,6 +30,8 @@
     [super viewDidLoad];
     [self populateClasses];
     
+    //    self.clearsSelectionOnViewWillAppear = NO;
+    
     UIImage *image = [UIImage imageNamed: @"UpperBarNewColor.png"];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
@@ -123,6 +125,10 @@
 -(IBAction) TakeAttendance:(id)sender
 {
     
+    //Disable scrolling when displaying popup
+    self.tableView.scrollEnabled = NO;
+    
+    
     AttendanceViewController *AttendanceVC = [[AttendanceViewController alloc] init];
     
     //Get the class to take attendance for
@@ -133,37 +139,42 @@
     
     AttendanceVC.classPassed = [classes objectAtIndex:indexPath.row];
     
+    //Create the Attendance table view with a nav bar
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:AttendanceVC];
     
+    //Create a delgate to communicate that the user is done
     AttendanceVC.delegate = self;
     
+    
+    
     //Works -- but no nav bar
-//    [self presentPopupViewController:AttendanceVC animated:YES completion:^(void) {
-//        NSLog(@"popup view presented");
-//    }];
+    //    [self presentPopupViewController:AttendanceVC animated:YES completion:^(void) {
+    //        NSLog(@"popup view presented");
+    //    }];
     
     
-    //Shrink frame width
-//    navController.view.frame = CGRectInset(self.view.bounds, 20, 40);
+    
+    //Set the frame for our popup view
     navController.view.frame = CGRectMake(0, 0, 250, 350);
     
+    
+    
+    //A compromise since I haven't found a way to get the pop up to show up other than the top
+    self.tableView.contentOffset = CGPointMake(0, 0 - self.tableView.contentInset.top);
+    
+    
+    //Show the pop up
     [self presentPopupViewController:navController animated:YES completion:^(void) {
         NSLog(@"popup view presented");
     }];
-    
-//    self.popupViewController.cancel addTarget:self action:@selector(dismissPopop:) forControlEvents:UIControlEventTouchUpInside];
-    
-//    [AttendanceVC.cancel addTarget:self action:@selector(dismissPopop:) forControlEvents:UIControlEventTouchUpInside];
-//    [AttendanceVC.cancel target:self action:@selector(cancel:)];
-    
     
     
     
     
     //Original -- No popup
-//    [self performSegueWithIdentifier:@"temp" sender:sender];
+    //    [self performSegueWithIdentifier:@"temp" sender:sender];
     
-   
+    
 }
 
 - (void)dismiss:(BOOL)finished
@@ -173,11 +184,16 @@
 }
 
 - (IBAction)dismissPopop:(id)sender {
+    
+    //Dismiss popup
     if (self.popupViewController != nil) {
         [self dismissPopupViewControllerAnimated:YES completion:^{
             NSLog(@"popup view dismissed");
         }];
     }
+    
+    //Enable scrolling when popup is dismissed
+    self.tableView.scrollEnabled = NO;
 }
 
 //Refreshes table view when download is done.

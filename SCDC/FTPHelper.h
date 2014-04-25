@@ -26,7 +26,7 @@
 
 #define path1 @"/Dropbox/scdc.db"
 #define pathCSV @"/Dropbox/"
-#define hostname1 @"155.41.1.192"
+#define hostname1 @"155.41.80.84"
 #define username1 @"leen"
 #define password1 @"S"
 

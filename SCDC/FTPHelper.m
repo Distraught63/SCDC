@@ -303,7 +303,7 @@
         
         NSData *data = downloadData;
         
-        NSString *downloadedFilePath = pathCSV;
+//        NSString *downloadedFilePath = pathCSV;
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
