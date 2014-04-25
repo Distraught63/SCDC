@@ -12,6 +12,13 @@
 
 
 +(NSString *) getDatabasePath;
+
++(NSString *) getClassesPath;
+
++(NSString *) getStudentsPath;
+
++(NSString *) getRegistrationPath;
+
 +(void) showAlert:(NSString *) title message:(NSString *) msg;
 
 //+(NSData *) getRemoteDatabase;

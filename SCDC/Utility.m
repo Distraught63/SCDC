@@ -26,6 +26,34 @@
     return path;
 }
 
++(NSString *) getClassesPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"classes.csv"];
+    
+    return path;
+}
+
+
++(NSString *) getStudentsPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"students.csv"];
+    
+    return path;
+}
+
++(NSString *) getRegistrationPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"registration.csv"];
+    
+    return path;
+}
+
 //Not needed anymore
 //
 +(void) showAlert:(NSString *)title message:(NSString *)msg

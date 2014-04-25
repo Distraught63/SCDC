@@ -7,6 +7,7 @@
 //
 
 #import "AdminMenuViewController.h"
+#import "ImportHelper.h"
 
 @interface AdminMenuViewController ()
 
@@ -32,6 +33,13 @@
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Bus.png"]];
     self.view.backgroundColor = background;
     
+}
+
+-(IBAction)import:(id)sender
+{
+    ImportHelper *import = [[ImportHelper alloc] init];
+    
+    [import importAll];
 }
 
 - (void)didReceiveMemoryWarning
