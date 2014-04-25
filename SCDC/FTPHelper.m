@@ -14,6 +14,7 @@
 @implementation FTPHelper
 
 
+//For syncing
 - (IBAction) downloadFile: (id) sender
 {
     
@@ -38,6 +39,8 @@
     [downloadFile start];
     
 }
+
+//Import 
 
 - (IBAction) downloadStudents: (id) sender
 {

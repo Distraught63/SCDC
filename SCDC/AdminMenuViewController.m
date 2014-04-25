@@ -8,6 +8,7 @@
 
 #import "AdminMenuViewController.h"
 #import "ImportHelper.h"
+#import "ExportHelper.h"
 
 @interface AdminMenuViewController ()
 
@@ -46,6 +47,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction) exportAttendance:(id)sender
+{
+    ExportHelper *export = [[ExportHelper alloc] init];
+    
 }
 
 /*
