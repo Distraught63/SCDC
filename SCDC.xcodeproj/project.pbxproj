@@ -77,12 +77,13 @@
 		5549BFCC19033286002B0D19 /* PDTSimpleCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549BFC619033286002B0D19 /* PDTSimpleCalendarViewController.m */; };
 		5549BFCD19033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549BFC819033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m */; };
 		5549BFCE19033286002B0D19 /* PDTSimpleCalendarViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5549BFCA19033286002B0D19 /* PDTSimpleCalendarViewHeader.m */; };
+		554E8EE5190B157B00D606A6 /* LogoOriginal.png in Resources */ = {isa = PBXBuildFile; fileRef = 554E8EE4190B157B00D606A6 /* LogoOriginal.png */; };
 		5574110F1903103200D991DC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574110E1903103200D991DC /* Main_iPad.storyboard */; };
-		557411111903111A00D991DC /* LogoNewColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411101903111A00D991DC /* LogoNewColor.png */; };
 		557411131903112F00D991DC /* UpperBarNewColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 557411121903112F00D991DC /* UpperBarNewColor.png */; };
 		557411161903133500D991DC /* MainMenuiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 557411151903133500D991DC /* MainMenuiPadViewController.m */; };
 		559B3C6018FCA31D0060B7A9 /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B3C5F18FCA31D0060B7A9 /* Rectangle.png */; };
-		559B3C6618FCA98D0060B7A9 /* SCDC Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */; };
+		55D60D731908DE11004F44A4 /* KellyColorLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D60D721908DE11004F44A4 /* KellyColorLogo.png */; };
+		55D60D751908DE1C004F44A4 /* LimeGreenColorLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D60D741908DE1C004F44A4 /* LimeGreenColorLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,13 +212,14 @@
 		5549BFC819033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewFlowLayout.m; sourceTree = "<group>"; };
 		5549BFC919033286002B0D19 /* PDTSimpleCalendarViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDTSimpleCalendarViewHeader.h; sourceTree = "<group>"; };
 		5549BFCA19033286002B0D19 /* PDTSimpleCalendarViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDTSimpleCalendarViewHeader.m; sourceTree = "<group>"; };
+		554E8EE4190B157B00D606A6 /* LogoOriginal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoOriginal.png; sourceTree = "<group>"; };
 		5574110E1903103200D991DC /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		557411101903111A00D991DC /* LogoNewColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoNewColor.png; sourceTree = "<group>"; };
 		557411121903112F00D991DC /* UpperBarNewColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpperBarNewColor.png; sourceTree = "<group>"; };
 		557411141903133500D991DC /* MainMenuiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuiPadViewController.h; sourceTree = "<group>"; };
 		557411151903133500D991DC /* MainMenuiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuiPadViewController.m; sourceTree = "<group>"; };
 		559B3C5F18FCA31D0060B7A9 /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rectangle.png; sourceTree = "<group>"; };
-		559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SCDC Logo.jpg"; sourceTree = "<group>"; };
+		55D60D721908DE11004F44A4 /* KellyColorLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KellyColorLogo.png; sourceTree = "<group>"; };
+		55D60D741908DE1C004F44A4 /* LimeGreenColorLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LimeGreenColorLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,19 +406,20 @@
 		1D89941318A6CB4400F88DBA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				559B3C6518FCA98D0060B7A9 /* SCDC Logo.jpg */,
 				1D4D268318B84CCF0019392A /* logo2.png */,
 				1D2B9276190360FB00C01C2A /* Bus.png */,
+				55D60D721908DE11004F44A4 /* KellyColorLogo.png */,
 				1D2B9295190481C200C01C2A /* AppIcon.png */,
+				55D60D741908DE1C004F44A4 /* LimeGreenColorLogo.png */,
 				1DD2B67118F363B60052D2AE /* CalendarButton.ai */,
 				1DD2B67218F363B60052D2AE /* CheckBox.ai */,
 				1D2B927A1903646800C01C2A /* scdclogo.gif */,
+				554E8EE4190B157B00D606A6 /* LogoOriginal.png */,
 				1D2B9278190361FD00C01C2A /* BusiPad.png */,
 				559B3C5F18FCA31D0060B7A9 /* Rectangle.png */,
 				1D2B92931904800200C01C2A /* BusMain.png */,
 				1DD2B67318F363B60052D2AE /* iPadCalendarButton.jpg */,
 				1DD2B67418F363B60052D2AE /* iPadPencilButton.jpg */,
-				557411101903111A00D991DC /* LogoNewColor.png */,
 				557411121903112F00D991DC /* UpperBarNewColor.png */,
 				1D5A26EE1906F087001A4B7A /* scdc.db */,
 				1DD2B67518F363B60052D2AE /* iPadRectangle.jpg */,
@@ -556,17 +559,18 @@
 				559B3C6018FCA31D0060B7A9 /* Rectangle.png in Resources */,
 				1D2B927B1903646800C01C2A /* scdclogo.gif in Resources */,
 				1DD2B67F18F363B60052D2AE /* CheckBox.ai in Resources */,
-				557411111903111A00D991DC /* LogoNewColor.png in Resources */,
 				1DD2B68A18F363B60052D2AE /* UpperBar.ai in Resources */,
-				559B3C6618FCA98D0060B7A9 /* SCDC Logo.jpg in Resources */,
+				554E8EE5190B157B00D606A6 /* LogoOriginal.png in Resources */,
 				1DD2B68518F363B60052D2AE /* iPhoneUpperBar.jpg in Resources */,
 				1D4D268418B84CCF0019392A /* logo2.png in Resources */,
 				1DD2B68218F363B60052D2AE /* iPadRectangle.jpg in Resources */,
+				55D60D731908DE11004F44A4 /* KellyColorLogo.png in Resources */,
 				1DD2B68018F363B60052D2AE /* iPadCalendarButton.jpg in Resources */,
 				1D2B9296190481C200C01C2A /* AppIcon.png in Resources */,
 				1DD2B68718F363B60052D2AE /* Rectangle.ai in Resources */,
 				1D89942818A6CB4400F88DBA /* Images.xcassets in Resources */,
 				557411131903112F00D991DC /* UpperBarNewColor.png in Resources */,
+				55D60D751908DE1C004F44A4 /* LimeGreenColorLogo.png in Resources */,
 				1D89942018A6CB4400F88DBA /* Main_iPhone.storyboard in Resources */,
 				1DD2B68918F363B60052D2AE /* SCDC logo design.jpg in Resources */,
 				1DD2B67E18F363B60052D2AE /* CalendarButton.ai in Resources */,
