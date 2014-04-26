@@ -128,8 +128,10 @@
     //Disable scrolling when displaying popup
     self.tableView.scrollEnabled = NO;
     
-    
+    //
+    //Get view that we want to pop up
     AttendanceViewController *AttendanceVC = [[AttendanceViewController alloc] init];
+    //
     
     //Get the class to take attendance for
     UIButton * button = sender;
@@ -139,12 +141,16 @@
     
     AttendanceVC.classPassed = [classes objectAtIndex:indexPath.row];
     
+    
+    //
     //Create the Attendance table view with a nav bar
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:AttendanceVC];
     
     //Create a delgate to communicate that the user is done
     AttendanceVC.delegate = self;
     
+    
+    //
     
     
     //Works -- but no nav bar
@@ -153,21 +159,21 @@
     //    }];
     
     
-    
+    //
     //Set the frame for our popup view
     navController.view.frame = CGRectMake(0, 0, 250, 350);
-    
+    //
     
     
     //A compromise since I haven't found a way to get the pop up to show up other than the top
     self.tableView.contentOffset = CGPointMake(0, 0 - self.tableView.contentInset.top);
     
-    
+    //
     //Show the pop up
     [self presentPopupViewController:navController animated:YES completion:^(void) {
         NSLog(@"popup view presented");
     }];
-    
+    //
     
     
     

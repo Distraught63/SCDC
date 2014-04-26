@@ -87,6 +87,7 @@
 		55D60D731908DE11004F44A4 /* KellyColorLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D60D721908DE11004F44A4 /* KellyColorLogo.png */; };
 		55D60D751908DE1C004F44A4 /* LimeGreenColorLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D60D741908DE1C004F44A4 /* LimeGreenColorLogo.png */; };
 		57C066CF190B622700A5BD62 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C066CE190B622700A5BD62 /* Reachability.m */; };
+		57C066D2190B97B900A5BD62 /* RegisterStudentsToClassTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C066D1190B97B900A5BD62 /* RegisterStudentsToClassTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +230,8 @@
 		55D60D741908DE1C004F44A4 /* LimeGreenColorLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LimeGreenColorLogo.png; sourceTree = "<group>"; };
 		57C066CD190B622700A5BD62 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		57C066CE190B622700A5BD62 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		57C066D0190B97B900A5BD62 /* RegisterStudentsToClassTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterStudentsToClassTableViewController.h; sourceTree = "<group>"; };
+		57C066D1190B97B900A5BD62 /* RegisterStudentsToClassTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterStudentsToClassTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +399,8 @@
 				1D4A018C190655F60045916C /* AttendanceViewControllerDelegate.h */,
 				1D446EFE18E657E6001778E5 /* AttendanceViewController.h */,
 				1D2B92821904389200C01C2A /* ClassesViewController.m */,
+				57C066D0190B97B900A5BD62 /* RegisterStudentsToClassTableViewController.h */,
+				57C066D1190B97B900A5BD62 /* RegisterStudentsToClassTableViewController.m */,
 				1DF2729D18B2DD9F00F5E3A0 /* MainMenuViewController.h */,
 				1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */,
 				1D801D481905CE8E00E0696E /* AdminMenuViewController.h */,
@@ -647,6 +652,7 @@
 				1D446EE618E4E107001778E5 /* Dates.m in Sources */,
 				5549BFCD19033286002B0D19 /* PDTSimpleCalendarViewFlowLayout.m in Sources */,
 				5549BFCE19033286002B0D19 /* PDTSimpleCalendarViewHeader.m in Sources */,
+				57C066D2190B97B900A5BD62 /* RegisterStudentsToClassTableViewController.m in Sources */,
 				1D801D4A1905CE8E00E0696E /* AdminMenuViewController.m in Sources */,
 				1D2B9288190454C600C01C2A /* UIViewController+CWPopup.m in Sources */,
 				1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */,

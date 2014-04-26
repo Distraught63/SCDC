@@ -28,6 +28,9 @@
 //-(BOOL) updateStudent:(Student *) student;
 -(BOOL) updateAttendance : (NSMutableArray *) students   theClass:(ClassInfo *) theClass;
 
+
+-(NSMutableArray *) getStudents;
+
 -(NSMutableArray *) getAttendance:(ClassInfo *) theClass;
 
 -(NSMutableArray *)getAttendanceForStudentWithDates:(NSMutableArray *)dates student: (NSNumber *) studid;
