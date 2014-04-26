@@ -65,7 +65,21 @@
     //Set the frame for our popup view
     navController.view.frame = CGRectMake(0, 0, 250, 350);
     //Add UItext and labels to popup view
-    UILabel *FirstName = [[UILabel alloc] initWithFrame:CGRectMake(25, 99, 184, 30)];
+    UILabel *FirstName = [[UILabel alloc] initWithFrame:CGRectMake(25, 70, 89, 21)];
+    [FirstName setTextColor:[UIColor blackColor]];
+    [FirstName setBackgroundColor: [UIColor clearColor]];
+    CGRect textfieldFrame = CGRectMake(25,99,184,30);
+    _FirstName = [[UITextField alloc] initWithFrame: textfieldFrame];
+    UILabel *LastName = [[UILabel alloc]initWithFrame:CGRectMake(25,137,88,21)];
+    [LastName setTextColor: [UIColor blackColor]];
+    [LastName setBackgroundColor: [UIColor clearColor]];
+    CGRect textfieldFrame2 = CGRectMake(25,166,184,30);
+//    _LastName = [[UITextField alloc]initwithFrame: textfieldFrame2];
+    UILabel *email = [[UILabel alloc] initWithFrame:CGRectMake(25,197,46,21)];
+    [email setTextColor: [UIColor blackColor]];
+    [email setBackgroundColor:[UIColor clearColor]];
+    
+    
     
     //Show the pop up
     [self presentPopupViewController:navController animated:YES completion:^(void) {
