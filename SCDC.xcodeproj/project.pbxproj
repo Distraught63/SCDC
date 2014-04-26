@@ -85,6 +85,7 @@
 		559B3C6018FCA31D0060B7A9 /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B3C5F18FCA31D0060B7A9 /* Rectangle.png */; };
 		55D60D731908DE11004F44A4 /* KellyColorLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D60D721908DE11004F44A4 /* KellyColorLogo.png */; };
 		55D60D751908DE1C004F44A4 /* LimeGreenColorLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D60D741908DE1C004F44A4 /* LimeGreenColorLogo.png */; };
+		57C066CF190B622700A5BD62 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C066CE190B622700A5BD62 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,8 @@
 		559B3C5F18FCA31D0060B7A9 /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rectangle.png; sourceTree = "<group>"; };
 		55D60D721908DE11004F44A4 /* KellyColorLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KellyColorLogo.png; sourceTree = "<group>"; };
 		55D60D741908DE1C004F44A4 /* LimeGreenColorLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LimeGreenColorLogo.png; sourceTree = "<group>"; };
+		57C066CD190B622700A5BD62 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		57C066CE190B622700A5BD62 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +374,8 @@
 		1D89941218A6CB4400F88DBA /* SCDC */ = {
 			isa = PBXGroup;
 			children = (
+				57C066CD190B622700A5BD62 /* Reachability.h */,
+				57C066CE190B622700A5BD62 /* Reachability.m */,
 				1D898E29190B2F030077DCE4 /* AddStudentViewController.h */,
 				1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */,
 				5549BFC119033286002B0D19 /* PDTSimpleCalendar */,
@@ -522,7 +527,7 @@
 		1D89940118A6CB4400F88DBA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = GAI;
 				TargetAttributes = {
 					1D89942C18A6CB4400F88DBA = {
@@ -639,6 +644,7 @@
 				1D801D4A1905CE8E00E0696E /* AdminMenuViewController.m in Sources */,
 				1D2B9288190454C600C01C2A /* UIViewController+CWPopup.m in Sources */,
 				1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */,
+				57C066CF190B622700A5BD62 /* Reachability.m in Sources */,
 				1D5A26FC1906FF4A001A4B7A /* FMDatabasePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,7 +699,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -733,7 +738,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -796,7 +800,6 @@
 		1D89944218A6CB4400F88DBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SCDC.app/SCDC";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -819,7 +822,6 @@
 		1D89944318A6CB4400F88DBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SCDC.app/SCDC";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
