@@ -44,6 +44,7 @@
 		1D5A26FE1906FF4A001A4B7A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5A26F91906FF4A001A4B7A /* FMResultSet.m */; };
 		1D801D4A1905CE8E00E0696E /* AdminMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D491905CE8E00E0696E /* AdminMenuViewController.m */; };
 		1D801D4D1905CEA400E0696E /* EditMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D4C1905CEA400E0696E /* EditMenuViewController.m */; };
+		1D898E2B190B2F040077DCE4 /* AddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */; };
 		1D89940D18A6CB4400F88DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940C18A6CB4400F88DBA /* Foundation.framework */; };
 		1D89940F18A6CB4400F88DBA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940E18A6CB4400F88DBA /* CoreGraphics.framework */; };
 		1D89941118A6CB4400F88DBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89941018A6CB4400F88DBA /* UIKit.framework */; };
@@ -167,6 +168,8 @@
 		1D801D491905CE8E00E0696E /* AdminMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminMenuViewController.m; sourceTree = "<group>"; };
 		1D801D4B1905CEA400E0696E /* EditMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMenuViewController.h; sourceTree = "<group>"; };
 		1D801D4C1905CEA400E0696E /* EditMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMenuViewController.m; sourceTree = "<group>"; };
+		1D898E29190B2F030077DCE4 /* AddStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStudentViewController.h; sourceTree = "<group>"; };
+		1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStudentViewController.m; sourceTree = "<group>"; };
 		1D89940918A6CB4400F88DBA /* SCDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D89940C18A6CB4400F88DBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D89940E18A6CB4400F88DBA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -336,6 +339,8 @@
 		1D89940018A6CB4400F88DBA = {
 			isa = PBXGroup;
 			children = (
+				1D898E29190B2F030077DCE4 /* AddStudentViewController.h */,
+				1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */,
 				1D89941218A6CB4400F88DBA /* SCDC */,
 				1D89943418A6CB4400F88DBA /* SCDCTests */,
 				1D89940B18A6CB4400F88DBA /* Frameworks */,
@@ -623,6 +628,7 @@
 				1D5A26FB1906FF4A001A4B7A /* FMDatabaseAdditions.m in Sources */,
 				1D446EDF18E4E08E001778E5 /* BRRequestError.m in Sources */,
 				1D446EDB18E4E08E001778E5 /* BRRequest+_UserData.m in Sources */,
+				1D898E2B190B2F040077DCE4 /* AddStudentViewController.m in Sources */,
 				1D446EDE18E4E08E001778E5 /* BRRequestDownload.m in Sources */,
 				5549BFCC19033286002B0D19 /* PDTSimpleCalendarViewController.m in Sources */,
 				1D446EE118E4E08E001778E5 /* BRRequestQueue.m in Sources */,
