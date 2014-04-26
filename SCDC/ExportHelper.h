@@ -19,4 +19,6 @@
 
 -(void) exportAttendance:(ClassInfo *) theClass;
 
+-(void) exportAll; 
+
 @end
