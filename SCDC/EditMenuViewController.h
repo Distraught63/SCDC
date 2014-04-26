@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EditMenuViewController : UIViewController
-@property (strong, nonatomic) UITextField *FirstName;
-@property (strong, nonatomic) UITextField *LastName;
-@property (strong, nonatomic) UITextField *email;
+
+- (IBAction)unwindToEditMenu:(UIStoryboardSegue *)segue;
 
 @end

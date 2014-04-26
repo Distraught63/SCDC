@@ -1,22 +1,22 @@
 //
-//  AddStudentViewController.m
+//  AddClassViewController.m
 //  SCDC
 //
 //  Created by Leen  on 4/25/14.
 //  Copyright (c) 2014 GAI. All rights reserved.
 //
 
-#import "AddStudentViewController.h"
+#import "AddClassViewController.h"
 #import "DatabaseAccess.h"
 #import "FMDatabase.h"
 
-@interface AddStudentViewController ()
+@interface AddClassViewController ()
 
 @end
 
-@implementation AddStudentViewController
+@implementation AddClassViewController
 
-@synthesize FirstName,LastName,email;
+@synthesize ClassName, Teacher,Time,Day,Location;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,37 +34,36 @@
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Bus.png"]];
     self.view.backgroundColor = background;
     
-    FirstName.delegate = self;
-    LastName.delegate = self;
-    email.delegate = self;
+    ClassName.delegate = self;
+    Teacher.delegate = self;
+    Time.delegate = self;
+    Day.delegate = self;
+    Location.delegate = self;
 }
-
-//-(IBAction)addStudent:(id)sender;
--(IBAction)addStudent:(id)sender
+-(IBAction)addClass:(id)sender
 {
     
-    
-    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
+    FMDatabase*db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
     [db open];
     [db beginTransaction];
-    Student *temp = [[Student alloc]init];
     
-    temp.firstName = FirstName.text;
-    temp.lastName = LastName.text;
-    temp.email = email.text;
+    ClassInfo *temp = [[ClassInfo alloc]init];
     
-    [db executeUpdate:@"INSERT INTO student (firstname, lastname, email) VALUES (?,?,?);", FirstName.text,LastName.text,email.text];
+    temp.name = ClassName.text;
+    temp.instructor = Teacher.text;
+    temp.time = Time.text;
+    temp.day = Day.text;
+    temp.location = Location.text;
     
-    FMResultSet *check = [db executeQuery:@"select * from student where firstname =?", FirstName.text ];
+    [db executeUpdate:@"INSERT INTO class (name_of_class, instructor, time, day, location) VALUES (?,?,?,?,?);", ClassName.text,Teacher.text,Time.text, Day.text, Location.text];
     
-//    check.n
+    FMResultSet *check = [db executeQuery:@"select * from class where name_of_class =?", ClassName.text];
+    
     NSLog(@"Items were inserted successfully? %d", check.next);
-
+    
     [db close];
     
-    
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -90,7 +89,7 @@
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up
 {
-    const int movementDistance = 80; // tweak as needed
+    const int movementDistance = 130; // tweak as needed
     const float movementDuration = 0.3f; // tweak as needed
     
     int movement = (up ? -movementDistance : movementDistance);

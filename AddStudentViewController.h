@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddStudentViewController : UIViewController
-
+@interface AddStudentViewController : UIViewController <UITextFieldDelegate>
+//@property  UITextField *FirstName;
+@property (weak, nonatomic) IBOutlet UITextField *FirstName;
+//@property UITextField *LastName;
+//@property UITextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *LastName;
+@property (weak, nonatomic) IBOutlet UITextField *email;
 @end

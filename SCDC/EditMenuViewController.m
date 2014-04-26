@@ -10,11 +10,13 @@
 #import "AddStudentViewController.h"
 #import "UIViewController+CWPopup.h"
 
+
 @interface EditMenuViewController ()
 
 @end
 
 @implementation EditMenuViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,6 +25,8 @@
         // Custom initialization
     }
     return self;
+    
+    
 }
 
 - (void)viewDidLoad
@@ -32,6 +36,7 @@
     
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Bus.png"]];
     self.view.backgroundColor = background;
+    
     
     
 }
@@ -47,49 +52,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(IBAction)addStudent:(id)sender
-{
-    AddStudentViewController *AddStudentVC = [[AddStudentViewController alloc] init];
-    
-    //Create the AddStudent table view with a nav bar
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:AddStudentVC];
-  
-    
-    //Works -- but no nav bar
-    //    [self presentPopupViewController:AttendanceVC animated:YES completion:^(void) {
-    //        NSLog(@"popup view presented");
-    //    }];
-    
-    
-    
-    //Set the frame for our popup view
-    navController.view.frame = CGRectMake(0, 0, 250, 350);
-    //Add UItext and labels to popup view
-    UILabel *FirstName = [[UILabel alloc] initWithFrame:CGRectMake(25, 70, 89, 21)];
-    [FirstName setTextColor:[UIColor blackColor]];
-    [FirstName setBackgroundColor: [UIColor clearColor]];
-    CGRect textfieldFrame = CGRectMake(25,99,184,30);
-    _FirstName = [[UITextField alloc] initWithFrame: textfieldFrame];
-    UILabel *LastName = [[UILabel alloc]initWithFrame:CGRectMake(25,137,88,21)];
-    [LastName setTextColor: [UIColor blackColor]];
-    [LastName setBackgroundColor: [UIColor clearColor]];
-    CGRect textfieldFrame2 = CGRectMake(25,166,184,30);
-//    _LastName = [[UITextField alloc]initwithFrame: textfieldFrame2];
-    UILabel *email = [[UILabel alloc] initWithFrame:CGRectMake(25,197,46,21)];
-    [email setTextColor: [UIColor blackColor]];
-    [email setBackgroundColor:[UIColor clearColor]];
-    
-    
-    
-    //Show the pop up
-    [self presentPopupViewController:navController animated:YES completion:^(void) {
-        NSLog(@"popup view presented");
-    }];
-}
 
 
-    
-    
+
+
 /*
 #pragma mark - Navigation
 
@@ -100,6 +66,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)unwindToEditMenu:(UIStoryboardSegue *)segue
+{
+    
+}
 
 -(void)viewWillDisappear:(BOOL)animated
 {

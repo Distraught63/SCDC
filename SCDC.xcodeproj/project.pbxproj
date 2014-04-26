@@ -45,6 +45,7 @@
 		1D801D4A1905CE8E00E0696E /* AdminMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D491905CE8E00E0696E /* AdminMenuViewController.m */; };
 		1D801D4D1905CEA400E0696E /* EditMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D801D4C1905CEA400E0696E /* EditMenuViewController.m */; };
 		1D898E2B190B2F040077DCE4 /* AddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */; };
+		1D898E2E190B5B120077DCE4 /* AddClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D898E2D190B5B120077DCE4 /* AddClassViewController.m */; };
 		1D89940D18A6CB4400F88DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940C18A6CB4400F88DBA /* Foundation.framework */; };
 		1D89940F18A6CB4400F88DBA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89940E18A6CB4400F88DBA /* CoreGraphics.framework */; };
 		1D89941118A6CB4400F88DBA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89941018A6CB4400F88DBA /* UIKit.framework */; };
@@ -170,6 +171,8 @@
 		1D801D4C1905CEA400E0696E /* EditMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMenuViewController.m; sourceTree = "<group>"; };
 		1D898E29190B2F030077DCE4 /* AddStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStudentViewController.h; path = ../AddStudentViewController.h; sourceTree = "<group>"; };
 		1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStudentViewController.m; path = ../AddStudentViewController.m; sourceTree = "<group>"; };
+		1D898E2C190B5B110077DCE4 /* AddClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassViewController.h; sourceTree = "<group>"; };
+		1D898E2D190B5B120077DCE4 /* AddClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClassViewController.m; sourceTree = "<group>"; };
 		1D89940918A6CB4400F88DBA /* SCDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D89940C18A6CB4400F88DBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D89940E18A6CB4400F88DBA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -400,6 +403,8 @@
 				1D2B927F1904386700C01C2A /* CalendarViewController.h */,
 				557411141903133500D991DC /* MainMenuiPadViewController.h */,
 				557411151903133500D991DC /* MainMenuiPadViewController.m */,
+				1D898E2C190B5B110077DCE4 /* AddClassViewController.h */,
+				1D898E2D190B5B120077DCE4 /* AddClassViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
 				5574110E1903103200D991DC /* Main_iPad.storyboard */,
 				1D89942718A6CB4400F88DBA /* Images.xcassets */,
@@ -603,6 +608,7 @@
 				1D446EAF18E4DF67001778E5 /* ClassInfo.m in Sources */,
 				1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */,
 				1D446EEC18E4E550001778E5 /* Utility.m in Sources */,
+				1D898E2E190B5B120077DCE4 /* AddClassViewController.m in Sources */,
 				1D5A26FA1906FF4A001A4B7A /* FMDatabase.m in Sources */,
 				1D446EDD18E4E08E001778E5 /* BRRequestDelete.m in Sources */,
 				1D89941D18A6CB4400F88DBA /* AppDelegate.m in Sources */,

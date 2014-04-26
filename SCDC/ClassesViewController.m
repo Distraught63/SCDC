@@ -193,7 +193,7 @@
     }
     
     //Enable scrolling when popup is dismissed
-    self.tableView.scrollEnabled = NO;
+    self.tableView.scrollEnabled = YES;
 }
 
 //Refreshes table view when download is done.
