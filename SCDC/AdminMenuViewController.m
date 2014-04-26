@@ -9,6 +9,7 @@
 #import "AdminMenuViewController.h"
 #import "ImportHelper.h"
 #import "ExportHelper.h"
+#import "Reachability.h"
 
 @interface AdminMenuViewController ()
 
@@ -33,6 +34,25 @@
     
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Bus.png"]];
     self.view.backgroundColor = background;
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+    
+    if (internetStatus != NotReachable)
+        
+    {
+        // Write your code here.
+        
+        NSLog(@"Network Found");
+    }
+    
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Connection!" message:@"Please check your internet connection." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alert show];
+    }
     
 }
 

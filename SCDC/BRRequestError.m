@@ -230,6 +230,17 @@
             break;
     }
     
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Request Failed!" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+
+    static BOOL alertShowen = NO;
+    
+    if(alertShowen == NO)
+    {
+        [alert show];
+        alertShowen = YES;
+    }
+    
+    
     return errorMessage;
 }
 

@@ -388,13 +388,32 @@
         
         downloadFile = nil;
         
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not connect to FTP Server!" message:@"Please check your connection." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        static BOOL alertShowen = NO;
+        
+        if(alertShowen == NO)
+        {
+            [alert show];
+            alertShowen = YES;
+        }
     }
     
     if (request == uploadFile)
     {
         NSLog(@"%@", request.error.message);
-        
+        NSLog(@"Upload failed");
         uploadFile = nil;
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not connect to FTP Server!" message:@"Please check your connection." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+   
+        static BOOL alertShowen = NO;
+        
+        if(alertShowen == NO)
+        {
+            [alert show];
+            alertShowen = YES;
+        }
     }
     
     if (request == deleteFile)

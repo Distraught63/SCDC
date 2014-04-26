@@ -7,6 +7,7 @@
 //
 
 #import "MainMenuViewController.h"
+#import "Reachability.h"
 
 @interface MainMenuViewController ()
 
@@ -42,6 +43,25 @@
     
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"BusMain.png"]];
     self.view.backgroundColor = background;
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+    
+    if (internetStatus != NotReachable)
+        
+    {
+        // Write your code here.
+        
+        NSLog(@"Network Found");
+    }
+    
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Connection!" message:@"Please check your internet connection. \n Warning: Information may not be up to date without network connection." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alert show];
+    }
     
 //    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"scdc.jpg"]];
 //    self.view.backgroundColor = background;
