@@ -13,6 +13,8 @@
 
 @implementation ExportHelper
 
+
+
 /*Exports an attendance sheet to the ftp server, also writes the file in the app'sdocuments directory*/
 -(void) exportAttendance:(ClassInfo *) theClass
 {
@@ -38,6 +40,17 @@
     [ftp uploadCSV:path fileName:fileName];
     
     
+}
+
+- (void) exportAll
+{
+    DatabaseAccess *db  = [[DatabaseAccess alloc] init];
+    
+    NSMutableArray *classes = [db getClasses];
+    
+    for (ClassInfo *c in classes) {
+        [self exportAttendance: c];
+    }
 }
 
 

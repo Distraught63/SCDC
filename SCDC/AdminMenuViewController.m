@@ -53,6 +53,7 @@
 {
     ExportHelper *export = [[ExportHelper alloc] init];
     
+    [export exportAll];
 }
 
 /*
