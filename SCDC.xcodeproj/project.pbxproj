@@ -168,8 +168,8 @@
 		1D801D491905CE8E00E0696E /* AdminMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminMenuViewController.m; sourceTree = "<group>"; };
 		1D801D4B1905CEA400E0696E /* EditMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMenuViewController.h; sourceTree = "<group>"; };
 		1D801D4C1905CEA400E0696E /* EditMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMenuViewController.m; sourceTree = "<group>"; };
-		1D898E29190B2F030077DCE4 /* AddStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStudentViewController.h; sourceTree = "<group>"; };
-		1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStudentViewController.m; sourceTree = "<group>"; };
+		1D898E29190B2F030077DCE4 /* AddStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStudentViewController.h; path = ../AddStudentViewController.h; sourceTree = "<group>"; };
+		1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStudentViewController.m; path = ../AddStudentViewController.m; sourceTree = "<group>"; };
 		1D89940918A6CB4400F88DBA /* SCDC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D89940C18A6CB4400F88DBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D89940E18A6CB4400F88DBA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -339,8 +339,6 @@
 		1D89940018A6CB4400F88DBA = {
 			isa = PBXGroup;
 			children = (
-				1D898E29190B2F030077DCE4 /* AddStudentViewController.h */,
-				1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */,
 				1D89941218A6CB4400F88DBA /* SCDC */,
 				1D89943418A6CB4400F88DBA /* SCDCTests */,
 				1D89940B18A6CB4400F88DBA /* Frameworks */,
@@ -373,6 +371,8 @@
 		1D89941218A6CB4400F88DBA /* SCDC */ = {
 			isa = PBXGroup;
 			children = (
+				1D898E29190B2F030077DCE4 /* AddStudentViewController.h */,
+				1D898E2A190B2F030077DCE4 /* AddStudentViewController.m */,
 				5549BFC119033286002B0D19 /* PDTSimpleCalendar */,
 				1D446EB418E4DFF1001778E5 /* FMDB */,
 				1D446EC418E4E029001778E5 /* BlackRaccoon */,

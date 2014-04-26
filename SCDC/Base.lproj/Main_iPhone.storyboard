@@ -223,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="-16" y="1255"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Student View Controller-->
         <scene sceneID="NaZ-D4-NeU">
             <objects>
-                <viewController id="yek-wA-ED0" sceneMemberID="viewController">
+                <viewController id="yek-wA-ED0" customClass="AddStudentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L4H-JM-aml"/>
                         <viewControllerLayoutGuide type="bottom" id="r5z-BM-10O"/>
@@ -267,7 +267,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e16-zl-K7Y">
-                                <rect key="frame" x="25" y="226" width="189" height="30"/>
+                                <rect key="frame" x="25" y="226" width="184" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -519,6 +519,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addStudent:" destination="oD1-pp-O1V" eventType="touchUpInside" id="6Er-vO-NgZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJ0-QP-7eP">
                                 <rect key="frame" x="59" y="341" width="202" height="40"/>

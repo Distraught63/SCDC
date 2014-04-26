@@ -7,6 +7,8 @@
 //
 
 #import "EditMenuViewController.h"
+#import "AddStudentViewController.h"
+#import "UIViewController+CWPopup.h"
 
 @interface EditMenuViewController ()
 
@@ -45,6 +47,35 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(IBAction)addStudent:(id)sender
+{
+    AddStudentViewController *AddStudentVC = [[AddStudentViewController alloc] init];
+    
+    //Create the AddStudent table view with a nav bar
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:AddStudentVC];
+  
+    
+    //Works -- but no nav bar
+    //    [self presentPopupViewController:AttendanceVC animated:YES completion:^(void) {
+    //        NSLog(@"popup view presented");
+    //    }];
+    
+    
+    
+    //Set the frame for our popup view
+    navController.view.frame = CGRectMake(0, 0, 250, 350);
+    //Add UItext and labels to popup view
+    UILabel *FirstName = [[UILabel alloc] initWithFrame:CGRectMake(25, 99, 184, 30)];
+    
+    //Show the pop up
+    [self presentPopupViewController:navController animated:YES completion:^(void) {
+        NSLog(@"popup view presented");
+    }];
+}
+
+
+    
+    
 /*
 #pragma mark - Navigation
 
@@ -58,7 +89,6 @@
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-
 }
 
 @end
