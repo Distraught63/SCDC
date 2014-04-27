@@ -29,7 +29,7 @@
     
     //Import Students List
     [self importStudent];
-
+    
     
     //Import Registration List
     [self importRegistration];
@@ -175,33 +175,41 @@
 -(void) addClasses: (NSMutableArray * ) classes
 {
     
-    NSLog(@"Imported Classes array is of size %lu", [classes count]);
+    NSLog(@"Imported Classes array is of size %lu", (unsigned long)[classes count]);
     //Open Database
-//    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
+    //    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
     
-    [db open];
-    [db beginTransaction];
     
-    BOOL success =  [db executeUpdate:@"DELETE FROM class"];
-    
-    [db commit];
-    
-    if (success){
-        //Go through the list of students and record their attendance information to the db
-        for (ClassInfo *s in classes)
-        {
-            
-            NSLog(@"Class ID is %d", s.classId);
-            
-            //Add the attendance to dates
-            [db executeUpdate:@"INSERT INTO class (classid, name_of_class, time, day, location, instructor,startDate, endDate, type) VALUES (?,?,?,?,?,?,?,?,?);", [NSNumber numberWithInt: s.classId], s.name, s.time, s.day, s.location, s.instructor, s.startDate, s.endDate, s.type];
-            
-        }
+    if ([classes count] > 0) {
         
-        //Make the changes to the database and then close it.
+        
+        [db open];
+        [db beginTransaction];
+        
+        BOOL success =  [db executeUpdate:@"DELETE FROM class"];
+        
         [db commit];
+        
+        if (success){
+            //Go through the list of students and record their attendance information to the db
+            for (ClassInfo *s in classes)
+            {
+                
+                NSLog(@"Class ID is %d", s.classId);
+                
+                //Add the attendance to dates
+                [db executeUpdate:@"INSERT INTO class (classid, name_of_class, time, day, location, instructor,startDate, endDate, type) VALUES (?,?,?,?,?,?,?,?,?);", [NSNumber numberWithInt: s.classId], s.name, s.time, s.day, s.location, s.instructor, s.startDate, s.endDate, s.type];
+                
+            }
+            
+            //Make the changes to the database and then close it.
+            [db commit];
+        }
+        [db close];
+        
     }
-    [db close];
+    
+    NSLog(@"Import classes unsuccesful/or no data to import");
     
     
 }
@@ -209,71 +217,83 @@
 -(void) addStudents: (NSMutableArray * ) students
 {
     //Open Database
-//    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
+    //    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
     
-    [db open];
-    [db beginTransaction];
-    
-    BOOL success =  [db executeUpdate:@"DELETE  FROM student"];
-    [db commit];
-    
-    if (success) {
+    if ([students count] > 0) {
         
-        //Go through the list of students and record their attendance information to the db
-        for (Student *s in students)
-        {
-            //Add the attendance to dates
-            [db executeUpdate:@"INSERT INTO student (studentid, firstname, lastname, email, phone) VALUES (?,?,?,?,?);", [NSNumber numberWithInt:s.studentId], s.firstName, s.lastName, s.email, s.phone];
-            
-        }
         
-        //Make the changes to the database and then close it.
+        [db open];
+        [db beginTransaction];
+        
+        BOOL success =  [db executeUpdate:@"DELETE  FROM student"];
         [db commit];
+        
+        if (success) {
+            
+            //Go through the list of students and record their attendance information to the db
+            for (Student *s in students)
+            {
+                //Add the attendance to dates
+                [db executeUpdate:@"INSERT INTO student (studentid, firstname, lastname, email, phone) VALUES (?,?,?,?,?);", [NSNumber numberWithInt:s.studentId], s.firstName, s.lastName, s.email, s.phone];
+                
+            }
+            
+            //Make the changes to the database and then close it.
+            [db commit];
+        }
+        [db close];
     }
-    [db close];
+    
+    NSLog(@"Import students unsuccesful/or no data to import");
     
     
 }
 
 -(void) addRegistration: (NSMutableArray * ) regData
 {
-    //Open Database
-//    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
     
-    [db open];
-    [db beginTransaction];
-    
-    BOOL success =  [db executeUpdate:@"DELETE  FROM registration"];
-    
-    NSLog(@"Size of reg is %lu", [regData count]);
-    
-    [db commit];
-    
-    //Remove the first line
-//   [regData removeObjectAtIndex:0];
-    
-    if (success) {
+    if ([regData count] > 0) {
         
-        //Go through the list of students and record their attendance information to the db
-        for (NSArray *s in regData)
-        {
-            
-            if (s != nil) {
-                
-                  NSLog(@"Size of reg is %lu", [regData count]);
-                
-                NSLog(@"Student id is %@", s[0]);
-                //Add the attendance to dates
-                [db executeUpdate:@"INSERT INTO registration (regId,student_id, class_ID) VALUES (?,?,?);", s[0], s[1], s[2]];
-            }
-            
-        }
+        //Open Database
+        //    FMDatabase *db = [FMDatabase databaseWithPath:[Utility getDatabasePath]];
         
-        //Make the changes to the database and then close it.
+        [db open];
+        [db beginTransaction];
+        
+        BOOL success =  [db executeUpdate:@"DELETE  FROM registration"];
+        
+        NSLog(@"Size of reg is %lu", (unsigned long)[regData count]);
+        
         [db commit];
         
+        //Remove the first line
+        //   [regData removeObjectAtIndex:0];
+        
+        if (success) {
+            
+            //Go through the list of students and record their attendance information to the db
+            for (NSArray *s in regData)
+            {
+                
+                if (s != nil) {
+                    
+                    NSLog(@"Size of reg is %lu", (unsigned long)[regData count]);
+                    
+                    NSLog(@"Student id is %@", s[0]);
+                    //Add the attendance to dates
+                    [db executeUpdate:@"INSERT INTO registration (regId,student_id, class_ID) VALUES (?,?,?);", s[0], s[1], s[2]];
+                }
+                
+            }
+            
+            //Make the changes to the database and then close it.
+            [db commit];
+            
+        }
+        [db close];
     }
-    [db close];
+    
+    NSLog(@"Import registration unsuccesful/or no data to import");
     
 }
 @end

@@ -20,7 +20,7 @@
 
 @interface AttendanceViewController : UITableViewController
 {
-    id<AttendanceViewControllerDelegate> delegate;
+//    id<AttendanceViewControllerDelegate> delegate;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 

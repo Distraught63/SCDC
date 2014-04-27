@@ -211,7 +211,7 @@
     
     //Class information
     csv = [NSString stringWithFormat:@"Class:, %@\n", theClass.name];//Insert class name
-    csv = [NSString stringWithFormat:@"%@Number of Students Enrolled: , %lu\n\n\n", csv, students.count];//Number of students
+    csv = [NSString stringWithFormat:@"%@Number of Students Enrolled: , %lu\n\n\n", csv, (unsigned long)students.count];//Number of students
     
     //The column headers
     csv = [NSString stringWithFormat:@"%@Names/Dates, %@\n",csv, [sortedDates componentsJoinedByString:@", "]];
