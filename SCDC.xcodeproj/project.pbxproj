@@ -72,6 +72,7 @@
 		1DD2B68818F363B60052D2AE /* RegisterButton.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67B18F363B60052D2AE /* RegisterButton.ai */; };
 		1DD2B68918F363B60052D2AE /* SCDC logo design.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67C18F363B60052D2AE /* SCDC logo design.jpg */; };
 		1DD2B68A18F363B60052D2AE /* UpperBar.ai in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2B67D18F363B60052D2AE /* UpperBar.ai */; };
+		1DE70D6C190CCF0B0044D169 /* CalendarClassInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE70D6B190CCF0B0044D169 /* CalendarClassInfoTableViewController.m */; };
 		1DE867DE18F8960600D68BF5 /* ImportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE867DD18F8960600D68BF5 /* ImportHelper.m */; };
 		1DF2729C18B2D9DD00F5E3A0 /* PassCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729B18B2D9DD00F5E3A0 /* PassCodeViewController.m */; };
 		1DF2729F18B2DD9F00F5E3A0 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2729E18B2DD9F00F5E3A0 /* MainMenuViewController.m */; };
@@ -205,6 +206,8 @@
 		1DD2B67B18F363B60052D2AE /* RegisterButton.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RegisterButton.ai; sourceTree = "<group>"; };
 		1DD2B67C18F363B60052D2AE /* SCDC logo design.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SCDC logo design.jpg"; sourceTree = "<group>"; };
 		1DD2B67D18F363B60052D2AE /* UpperBar.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UpperBar.ai; sourceTree = "<group>"; };
+		1DE70D6A190CCF0B0044D169 /* CalendarClassInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarClassInfoTableViewController.h; sourceTree = "<group>"; };
+		1DE70D6B190CCF0B0044D169 /* CalendarClassInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarClassInfoTableViewController.m; sourceTree = "<group>"; };
 		1DE867DC18F8960600D68BF5 /* ImportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportHelper.h; sourceTree = "<group>"; };
 		1DE867DD18F8960600D68BF5 /* ImportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportHelper.m; sourceTree = "<group>"; };
 		1DF2729A18B2D9DD00F5E3A0 /* PassCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassCodeViewController.h; sourceTree = "<group>"; };
@@ -416,6 +419,8 @@
 				1D898E2C190B5B110077DCE4 /* AddClassViewController.h */,
 				1D898E2D190B5B120077DCE4 /* AddClassViewController.m */,
 				1D89941E18A6CB4400F88DBA /* Main_iPhone.storyboard */,
+				1DE70D6A190CCF0B0044D169 /* CalendarClassInfoTableViewController.h */,
+				1DE70D6B190CCF0B0044D169 /* CalendarClassInfoTableViewController.m */,
 				5574110E1903103200D991DC /* Main_iPad.storyboard */,
 				1D89942718A6CB4400F88DBA /* Images.xcassets */,
 				1D89941318A6CB4400F88DBA /* Supporting Files */,
@@ -631,6 +636,7 @@
 				1D446EDA18E4E08E001778E5 /* BRRequest.m in Sources */,
 				1D446EE318E4E08E001778E5 /* BRStreamInfo.m in Sources */,
 				5549BFCB19033286002B0D19 /* PDTSimpleCalendarViewCell.m in Sources */,
+				1DE70D6C190CCF0B0044D169 /* CalendarClassInfoTableViewController.m in Sources */,
 				1DE867DE18F8960600D68BF5 /* ImportHelper.m in Sources */,
 				1D2B927E190435E900C01C2A /* CalChildViewController.m in Sources */,
 				557411161903133500D991DC /* MainMenuiPadViewController.m in Sources */,

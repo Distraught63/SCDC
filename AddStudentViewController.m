@@ -39,7 +39,7 @@
     email.delegate = self;
 }
 
-//-(IBAction)addStudent:(id)sender;
+/*Add student to database with the information from the text field*/
 -(IBAction)addStudent:(id)sender
 {
     
@@ -55,13 +55,18 @@
     
     [db executeUpdate:@"INSERT INTO student (firstname, lastname, email) VALUES (?,?,?);", FirstName.text,LastName.text,email.text];
     
-    FMResultSet *check = [db executeQuery:@"select * from student where firstname =?", FirstName.text ];
     
-//    check.n
+    //Testing if items where inserted correctly to database
+    FMResultSet *check = [db executeQuery:@"select * from student where firstname =?", FirstName.text ];
     NSLog(@"Items were inserted successfully? %d", check.next);
+    
 
     [db close];
     
+    FTPHelper *ftp = [[FTPHelper alloc] init];
+    [ftp uploadFile];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 

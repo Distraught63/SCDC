@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "PDTSimpleCalendar.h"
+#import "CalendarClassInfoTableViewController.h"
 
-@interface CalendarViewController : UIViewController
+@interface CalendarViewController : UIViewController<ClassesInfoViewControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *calView;
 
 @end

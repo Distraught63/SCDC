@@ -9,5 +9,6 @@
 
 @interface CalChildViewController : PDTSimpleCalendarViewController
 
+-(void) reloadCollectionView;
 
 @end

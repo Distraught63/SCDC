@@ -23,4 +23,8 @@
 @property (nonatomic,strong) NSString *type;
 
 
+//Used for student registration for classes
+@property (nonatomic) BOOL registeredForClass;
+
+
 @end

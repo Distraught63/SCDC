@@ -36,6 +36,11 @@
     
 }
 
+-(void)reloadCollectionView
+{
+    [self.collectionView reloadData];
+}
+
 /*
 #pragma mark - Navigation
 

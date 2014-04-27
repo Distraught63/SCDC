@@ -23,6 +23,7 @@
 @property (nonatomic,strong) NSString *email;
 @property (nonatomic,strong) NSString *phone;
 
+//Used in attendance and registration
 @property (nonatomic) BOOL attendedClass;
 
 @end

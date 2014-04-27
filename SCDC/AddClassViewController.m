@@ -63,6 +63,11 @@
     
     [db close];
     
+    FTPHelper *ftp = [[FTPHelper alloc] init];
+    [ftp uploadFile];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

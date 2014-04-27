@@ -32,7 +32,6 @@
 
 -(IBAction) saveAttendance:(id)sender;
 
-//@property (nonatomic, weak) id<AttendanceViewControllerDelegate> delegate;
 @property (retain) id delegate;
 
 @end

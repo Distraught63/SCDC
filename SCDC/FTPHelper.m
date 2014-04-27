@@ -12,6 +12,9 @@
 #import "ImportHelper.h"
 
 @implementation FTPHelper
+{
+    BOOL alertShowen;
+}
 
 
 //For syncing
@@ -114,6 +117,7 @@
     
 }
 
+/*Used to sync the database*/
 - (void) uploadFile
 {
     //----- get the file to upload as an NSData object
@@ -132,6 +136,8 @@
     [uploadFile start];
 }
 
+
+/*uploads csv files*/
 - (void) uploadCSV: (NSString *) path fileName: (NSString * ) filename
 {
     //----- get the file to upload as an NSData object
@@ -149,6 +155,7 @@
     NSLog(@"Upload CSV Starting.....");
     [uploadFile start];
 }
+
 
 - (IBAction) createDirectory:(id)sender
 {
@@ -306,8 +313,6 @@
         
         NSData *data = downloadData;
         
-//        NSString *downloadedFilePath = pathCSV;
-        
         NSFileManager *fileManager = [NSFileManager defaultManager];
         
         NSString *writePath;
@@ -385,12 +390,13 @@
     if (request == downloadFile)
     {
         NSLog(@"%@", request.error.message);
+        NSLog(@"Download failed");
         
         downloadFile = nil;
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not connect to FTP Server!" message:@"Please check your connection." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
-        static BOOL alertShowen = NO;
+//        static BOOL alertShowen = NO;
         
         if(alertShowen == NO)
         {
@@ -407,7 +413,7 @@
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not connect to FTP Server!" message:@"Please check your connection." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
    
-        static BOOL alertShowen = NO;
+//        static BOOL alertShowen = NO;
         
         if(alertShowen == NO)
         {

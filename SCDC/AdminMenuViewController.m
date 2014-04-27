@@ -58,6 +58,7 @@
 
 -(IBAction)import:(id)sender
 {
+    NSLog(@"IMPORITNG DATABASE....");
     ImportHelper *import = [[ImportHelper alloc] init];
     
     [import importAll];
