@@ -32,10 +32,11 @@
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"Bus.png"]];
     self.view.backgroundColor = background;
     
+    //Connect textfields to the keyboard delegate in order to dimiss keyboard
     passwordField.delegate = self;
     usernameField.delegate = self;
+
     
-	// Do any additional setup after loading the view.
     
 }
 
